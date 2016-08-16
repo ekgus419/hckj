@@ -1,11 +1,9 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 
-</body>
-</html>
+<div id="menu_tap">
+	<div id="notice_tap">공지사항</div>
+	<div id="railro_tap">내일로</div>
+	<div id="travelInfo_tap">여행관련정보</div>
+	<div id="travelReview_tap">여행후기</div>
+	<div id="freeBoard_tap">자유게시판</div>
+</div>
