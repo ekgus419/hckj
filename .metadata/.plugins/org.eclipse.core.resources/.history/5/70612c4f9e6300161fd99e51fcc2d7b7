@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#header {
+	border: 1px solid black;
+	margin: 0 auto;
+	text-align: center;
+	background-color: aqua;
+}
+
+#menu_tap{
+	border: 1px solid black;
+	margin: 0 auto;
+	text-align: center;
+	background-color: aqua;
+}
+
+#footer{
+	border: 1px solid black;
+	margin: 0 auto;
+	text-align: center;
+	background-color: aqua;
+}

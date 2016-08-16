@@ -1,0 +1,5 @@
+<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+
+<div id="content" style="border:1px solid black;">
+	기본 페이지 컨텐츠 내용 
+</div>

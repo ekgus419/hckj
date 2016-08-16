@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<link href="index.css" type="text/css" rel="stylesheet"/>
+<title><tiles:getAsString name="title"/></title>
+<link href="${pageContext.request.contextPath}/css/<tiles:getAsString name="css"/>" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 	<!-- 헤더부분 -->
