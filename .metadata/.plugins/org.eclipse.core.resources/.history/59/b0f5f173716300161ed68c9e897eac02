@@ -1,0 +1,9 @@
+<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+
+<div id="menu_tap">
+	<div id="notice_tap"></div>
+	<div id="railro_tap"></div>
+	<div id="travelInfo_tap"></div>
+	<div id="travelReview_tap"></div>
+	<div id="freeBoard_tap"></div>
+</div>
