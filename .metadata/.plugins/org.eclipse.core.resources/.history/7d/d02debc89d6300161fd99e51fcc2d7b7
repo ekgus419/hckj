@@ -1,0 +1,5 @@
+@import url(css/layout.css);
+
+#content{
+	border : 1px solid black;
+}
