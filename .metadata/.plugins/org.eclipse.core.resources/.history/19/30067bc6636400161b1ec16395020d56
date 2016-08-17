@@ -1,0 +1,23 @@
+package com.hongchaegojung.railro.dto;
+
+import java.sql.Date;
+
+public class Board {
+
+	private int ID;
+	private int TYPE;
+	private String SUBJECT;
+	private String TITLE;
+	private String CONTENTS;
+	private String WRITER;
+	private String REFLOCATION;
+	private int REREF;
+	private int RELEV;
+	private int RESEQ;
+	private Date REGDATE;
+	private int HIT;
+	
+	
+	
+	
+}

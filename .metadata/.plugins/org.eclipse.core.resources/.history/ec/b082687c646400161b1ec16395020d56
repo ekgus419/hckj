@@ -1,0 +1,5 @@
+package com.hongchaegojung.railro.dto;
+
+public class Notice {
+
+}
