@@ -11,6 +11,10 @@
 	margin: 0 auto;
 	text-align: center;
 }
+#menu_tap li{
+	float: left;
+}
+
 
 #footer{
 	border: 1px solid black;
