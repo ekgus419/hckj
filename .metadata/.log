@@ -4979,3 +4979,185 @@ java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\github.c
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-08-17 16:31:09.098
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-08-17 16:36:17.754
+!MESSAGE An internal error occurred during: "Computing Git status for repository railro".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\github.com\hongchaegojung\hckj.git
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at java.io.File.toPath(Unknown Source)
+	at org.eclipse.jgit.util.FileUtils.exists(FileUtils.java:582)
+	at org.eclipse.jgit.util.FS.exists(FS.java:685)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.loadRulesFromFile(WorkingTreeIterator.java:1260)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1248)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:693)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:661)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:628)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:158)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:822)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:658)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$8(IndexDiffCacheEntry.java:646)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:399)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-08-17 16:36:21.930
+!MESSAGE An internal error occurred during: "Computing Git status for repository railro".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\github.com\hongchaegojung\hckj.git
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at java.io.File.toPath(Unknown Source)
+	at org.eclipse.jgit.util.FileUtils.exists(FileUtils.java:582)
+	at org.eclipse.jgit.util.FS.exists(FS.java:685)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.loadRulesFromFile(WorkingTreeIterator.java:1260)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1248)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:693)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:661)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:628)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:158)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:822)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:658)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$8(IndexDiffCacheEntry.java:646)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:399)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-08-17 16:36:21.960
+!MESSAGE An internal error occurred during: "Updating Git status for repository railro".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\github.com\hongchaegojung\hckj.git
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at java.io.File.toPath(Unknown Source)
+	at org.eclipse.jgit.util.FileUtils.exists(FileUtils.java:582)
+	at org.eclipse.jgit.util.FS.exists(FS.java:685)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.loadRulesFromFile(WorkingTreeIterator.java:1260)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1248)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:693)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:661)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:628)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:158)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:822)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:658)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataIncremental(IndexDiffCacheEntry.java:589)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$13(IndexDiffCacheEntry.java:582)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$5.updateIndexDiff(IndexDiffCacheEntry.java:528)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffUpdateJob.run(IndexDiffUpdateJob.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-08-17 16:36:37.075
+!MESSAGE An internal error occurred during: "Computing Git status for repository railro".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\github.com\hongchaegojung\hckj.git
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at java.io.File.toPath(Unknown Source)
+	at org.eclipse.jgit.util.FileUtils.exists(FileUtils.java:582)
+	at org.eclipse.jgit.util.FS.exists(FS.java:685)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.loadRulesFromFile(WorkingTreeIterator.java:1260)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1248)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:693)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:661)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:628)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:158)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:822)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:658)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$8(IndexDiffCacheEntry.java:646)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:399)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-08-17 16:36:37.194
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-08-17 16:36:37.201
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-08-17 16:37:01.248
+!MESSAGE An internal error occurred during: "Computing Git status for repository railro".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\github.com\hongchaegojung\hckj.git
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at java.io.File.toPath(Unknown Source)
+	at org.eclipse.jgit.util.FileUtils.exists(FileUtils.java:582)
+	at org.eclipse.jgit.util.FS.exists(FS.java:685)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.loadRulesFromFile(WorkingTreeIterator.java:1260)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1248)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:693)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:661)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:628)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:158)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:822)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:658)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$8(IndexDiffCacheEntry.java:646)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:399)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-08-17 16:37:01.400
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-08-17 16:37:01.408
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-08-17 16:38:36.185
+!MESSAGE An internal error occurred during: "Computing Git status for repository railro".
+!STACK 0
+java.nio.file.InvalidPathException: Illegal char <:> at index 5: https:\github.com\hongchaegojung\hckj.git
+	at sun.nio.fs.WindowsPathParser.normalize(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPathParser.parse(Unknown Source)
+	at sun.nio.fs.WindowsPath.parse(Unknown Source)
+	at sun.nio.fs.WindowsFileSystem.getPath(Unknown Source)
+	at java.io.File.toPath(Unknown Source)
+	at org.eclipse.jgit.util.FileUtils.exists(FileUtils.java:582)
+	at org.eclipse.jgit.util.FS.exists(FS.java:685)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.loadRulesFromFile(WorkingTreeIterator.java:1260)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1248)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:693)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:661)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:628)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:158)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:822)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:658)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$8(IndexDiffCacheEntry.java:646)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:399)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-08-17 16:38:36.335
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-08-17 16:38:36.343
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
