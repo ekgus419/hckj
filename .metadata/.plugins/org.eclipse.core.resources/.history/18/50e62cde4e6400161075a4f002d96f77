@@ -16,9 +16,8 @@
 	<tiles:insertAttribute name="nav"></tiles:insertAttribute>
 	
 	<!-- 컨텐츠부분 -->
-	<div id="main">
-		<tiles:insertAttribute name="content"></tiles:insertAttribute>
-	</div>
+	<tiles:insertAttribute name="content"></tiles:insertAttribute>
+	
 	<!-- 푸터부분 -->
 	<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 </body>
