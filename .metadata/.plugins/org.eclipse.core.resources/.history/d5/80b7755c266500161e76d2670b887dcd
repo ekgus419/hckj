@@ -23,7 +23,7 @@
 			
 			$(".sub-menu").hide();
 			
-			 $("ul.top-menu li").hover(function() { //마우스를 topnav에 오버시
+			 $("ul.top-menu").hover(function() { //마우스를 topnav에 오버시
 			 
 				 $("ul:not(:animated)",this).slideDown("fast");
 			 
