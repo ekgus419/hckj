@@ -9,17 +9,19 @@
 <link href="${pageContext.request.contextPath}/css/<tiles:getAsString name="css"/>" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-	<!-- 헤더부분 -->
-	<tiles:insertAttribute name="header"></tiles:insertAttribute>
-	
-	<!-- 메뉴 탭 부분 -->
-	<tiles:insertAttribute name="nav"></tiles:insertAttribute>
-	
-	<!-- 컨텐츠부분 -->
-	<div id="main">
-		<tiles:insertAttribute name="content"></tiles:insertAttribute>
+	<div class="wrap">
+		<!-- 헤더부분 -->
+		<tiles:insertAttribute name="header"></tiles:insertAttribute>
+		
+		<!-- 메뉴 탭 부분 -->
+		<tiles:insertAttribute name="nav"></tiles:insertAttribute>
+		
+		<!-- 컨텐츠부분 -->
+		<div class="container">
+			<tiles:insertAttribute name="content"></tiles:insertAttribute>
+		</div>
+		<!-- 푸터부분 -->
+		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 	</div>
-	<!-- 푸터부분 -->
-	<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 </body>
 </html>

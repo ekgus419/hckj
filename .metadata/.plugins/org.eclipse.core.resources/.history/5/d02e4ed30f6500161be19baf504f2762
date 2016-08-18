@@ -1,0 +1,17 @@
+@import url(layout.css);
+
+.content{
+	width: 100%;
+}
+
+.list{
+	width: 100%;
+}
+
+td, tr{
+	border-bottom: 1px solid #cfcfcf;
+}
+
+tr{
+	border-bottom: 1px solid #cfcfcf;
+}
