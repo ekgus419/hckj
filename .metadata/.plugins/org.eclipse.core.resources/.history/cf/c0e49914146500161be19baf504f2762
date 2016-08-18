@@ -1,0 +1,21 @@
+@import url(layout.css);
+
+.content{
+	padding: 50px;
+}
+
+.setting .list_num{
+	float: right;
+}
+
+.list{
+}
+
+td, tr{
+	border-bottom: 1px solid #cfcfcf;
+}
+
+tr{
+	height: 26px;
+	line-height: 26px;
+}

@@ -1,26 +1,30 @@
 @charset "UTF-8";
 @import url(reset.css);
 
-#header {
-	border: 1px solid black;
+.wrap {
+	width: 80%;
 	margin: 0 auto;
+	min-width: 978px;
+	height: 100%;
+}
+
+.header {
+	width: 100%; 
+	height: 180px; 
+	background-image: url("../images/top_img.png");
+}
+
+.menu_tap{
+	border: 1px solid black;
 	text-align: center;
 }
 
-#menu_tap{
-	border: 1px solid black;
-	margin: 0 auto;
-	text-align: center;
-}
-#menu_tap li{
-	float: left;
-	width: 150px;
-	padding: 5px;
+.container{
+	width: 100%; 
+	height: 500px;
 }
 
-
-#footer{
+.footer{
 	border: 1px solid black;
-	margin: 0 auto;
 	text-align: center;
 }
