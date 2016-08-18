@@ -1,0 +1,32 @@
+@import url(layout.css);
+
+.content{
+	padding: 50px;
+}
+
+.register{
+	padding: 50px;
+}
+
+tr{
+	height: 35px;
+	line-height: 35px;
+}
+
+input[type=text], textarea{
+	width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=file]{
+	width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}

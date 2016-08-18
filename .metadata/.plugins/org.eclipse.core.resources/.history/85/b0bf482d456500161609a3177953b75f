@@ -1,0 +1,35 @@
+@import url(layout.css);
+
+.content{
+	padding: 50px;
+}
+
+.setting .limit_setting{
+	float: left;
+}
+
+.setting span{
+	float: right;
+}
+
+.list{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+td, tr{
+	border-bottom: 1px solid #cfcfcf;
+}
+
+tr{
+	height: 35px;
+	line-height: 35px;
+}
+
+.register_btn{
+	margin-bottom: 50px;
+}
+
+.paging{
+	margin-bottom: 30px;
+}
