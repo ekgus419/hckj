@@ -1,0 +1,8 @@
+127.0.0.1 - - [18/Aug/2016:09:46:38 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [18/Aug/2016:09:46:38 +0900] "GET /railro/WEB-INF/views/index.jsp HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [18/Aug/2016:09:46:42 +0900] "GET /railro HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Aug/2016:09:46:43 +0900] "GET /railro/ HTTP/1.1" 200 928
+0:0:0:0:0:0:0:1 - - [18/Aug/2016:09:46:43 +0900] "GET /railro/css/index.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Aug/2016:09:46:43 +0900] "GET /railro/css/layout.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Aug/2016:09:46:43 +0900] "GET /railro/css/reset.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [18/Aug/2016:09:48:50 +0900] "GET /railro/WEB-INF/views/freeBoard/freeBoardList.jsp HTTP/1.1" 404 992
