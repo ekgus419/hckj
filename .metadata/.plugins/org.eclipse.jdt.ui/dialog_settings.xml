@@ -24,6 +24,8 @@
 	<section name="OptionalMessageDialog.hide.">
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
 	</section>
+<<<<<<< HEAD
+=======
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item value="540" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
@@ -50,6 +52,7 @@
 		<item value="false" key="FinalModifier"/>
 		<item value="10" key="LimitValue"/>
 	</section>
+>>>>>>> bd26b1dfefcf4d4fb3bda6f145798cb8db377980
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
 	</section>
@@ -60,10 +63,13 @@
 	</section>
 	<section name="completion_proposal_size">
 	</section>
+<<<<<<< HEAD
+=======
 	<section name="AddGetterSetterDialog">
 		<item value="false" key="SortOrdering"/>
 		<item value="false" key="RemoveFinal"/>
 	</section>
+>>>>>>> bd26b1dfefcf4d4fb3bda6f145798cb8db377980
 	<section name="JavaElementSearchActions">
 	</section>
 </section>
