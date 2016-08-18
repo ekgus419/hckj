@@ -2,22 +2,21 @@
 
 <div class="content">
 	<div class="setting">
-		<div class="limit_setting">
+		<div class="limit-setting">
 			<form action="" method="get">
-				<select name="limit">
+				<select name="limit" onchange="limit_submit()">
 					<option value="5">5</option>
 					<option value="10" selected="selected">10</option>
 					<option value="15">15</option>
 					<option value="20">20</option>
 				</select>
 				개씩 보기
-				<input class="submit" type="submit" value="선택"/>
 			</form>
 		</div>
 		<span>글 개수 :</span>
 	</div>
 	<table class="list" width="100%">
-		<tr class="list_col" align="center" valign="middle">
+		<tr class="list-col" align="center" valign="middle">
 			<td width="8%">
 				<div align="center">번호</div>
 			</td>
@@ -54,11 +53,11 @@
 			</td>
 		</tr>
 	</table>
-	<div class="register_btn" align="right">
-		<a href="">[글쓰기]</a>
+	<div class="register-btn" align="right">
+		<a href="">글쓰기</a>
 	</div>
 	<div class="paging" align="center">
-	[이전]&nbsp;[다음]
+	이전&nbsp;다음
 	</div>
 	<div class="search" align="center">
 		<form action="" method="get">

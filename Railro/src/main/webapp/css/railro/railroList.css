@@ -1,10 +1,10 @@
 @import url(layout.css);
 
 .content{
-	padding: 50px;
+	padding: 50px 100px;
 }
 
-.setting .limit_setting{
+.setting .limit-setting{
 	float: left;
 }
 
@@ -26,10 +26,32 @@ tr{
 	line-height: 35px;
 }
 
-.register_btn{
+.register-btn{
 	margin-bottom: 50px;
 }
 
 .paging{
 	margin-bottom: 30px;
 }
+input[type=text], input[type=submit], select{
+	display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+        vertical-align: middle;
+}
+
+input[type=text]{
+    padding: 6px 10px;
+
+}
+
+input[type=submit]{
+	padding: 6px 15px;
+    background-color: #ffffff;
+}
+
+select{
+	padding: 4px 8px;
+}
+

@@ -1,0 +1,24 @@
+@import url(layout.css);
+
+.content{
+	padding: 50px;
+}
+
+.register{
+	margin: 50px auto 20px auto;
+}
+
+tr{
+	height: 35px;
+	line-height: 35px;
+}
+
+input[type=text]{
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><tiles:getAsString name="title"/></title>
 <link href="${pageContext.request.contextPath}/css/<tiles:getAsString name="css"/>" type="text/css" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/nav.js"></script>
 </head>
 <body>
 	<div class="wrap">

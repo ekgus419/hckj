@@ -1,0 +1,12 @@
+@import url(layout.css);
+
+.content{
+	padding: 50px;
+}
+
+.register{
+}
+
+tr{
+	width: 100%;
+}
