@@ -1,13 +1,41 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
-
-<div class="menu_tap">
-	<ul>
-		<li id="notice_tap">공지사항</li>
-		<li id="railro_tap">내일로</li>
-		<li id="travelInfo_tap">여행관련정보</li>
-		<li id="travelReview_tap">여행후기</li>
-		<li id="freeBoard_tap">자유게시판</li>
+<div class="main-menu">
+	<ul class="top-menu">
+		<li><a href="#">메뉴1</a>
+			<ul class="sub-menu">
+				<li><a href="#">서브1</a></li>
+				<li><a href="#">서브1</a></li>
+				<li><a href="#">서브1</a></li>
+			</ul>
+		</li>
+		<li><a href="">메뉴2</a>
+			<ul class="sub-menu">
+				<li><a href="">서브2</a></li>
+				<li><a href="">서브2</a></li>
+				<li><a href="">서브2</a></li>
+			</ul>
+		</li>
+		<li><a href="">메뉴3</a>
+			<ul class="sub-menu">
+				<li><a href="">서브3</a></li>
+				<li><a href="">서브3</a></li>
+				<li><a href="">서브3</a></li>
+			</ul>
+		</li>
+		<li><a href="">메뉴4</a>
+			<ul class="sub-menu">
+				<li><a href="">서브4</a></li>
+				<li><a href="">서브4</a></li>
+				<li><a href="">서브4</a></li>
+			</ul>
+		</li>
+		<li><a href="">메뉴5</a>
+			<ul class="sub-menu">
+				<li><a href="">서브5</a></li>
+				<li><a href="">서브5</a></li>
+				<li><a href="">서브5</a></li>
+			</ul>
+		</li>
 	</ul>
-	
 </div>
