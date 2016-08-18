@@ -2938,3 +2938,155 @@ Caused by: java.io.FileNotFoundException: D:\railro\.metadata\.plugins\org.eclip
 2016-08-18 17:01:18,372 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2016-08-18 17:01:18,374 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-08-18 17:01:18,382 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-18 18:29:33,842 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-18 18:29:33,845 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:29:33,851 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-18 18:29:34,774 [Worker-44] ERROR o.e.j.i.s.file.ObjectDirectory - ERROR: Exception caught while accessing pack file D:\railro\.git\objects\pack\pack-0ee02489f1f8a55394c6e58edb82112224c69a94.pack, the pack file might be corrupt
+java.io.IOException: 파일의 볼륨이 실제로 바뀌었으므로 열린 파일이 이제 유효하지 않습니다
+	at java.io.RandomAccessFile.readBytes(Native Method) ~[na:1.8.0_77]
+	at java.io.RandomAccessFile.read(RandomAccessFile.java:377) ~[na:1.8.0_77]
+	at java.io.RandomAccessFile.readFully(RandomAccessFile.java:436) ~[na:1.8.0_77]
+	at org.eclipse.jgit.internal.storage.file.PackFile.read(PackFile.java:667) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.load(WindowCache.java:289) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.getOrLoad(WindowCache.java:368) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.get(WindowCache.java:179) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.pin(WindowCursor.java:336) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.copy(WindowCursor.java:237) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.readFully(PackFile.java:574) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.load(PackFile.java:736) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.get(PackFile.java:263) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedObject(ObjectDirectory.java:420) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedFromSelfOrAlternate(ObjectDirectory.java:389) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openObject(ObjectDirectory.java:381) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:154) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.reset(CanonicalTreeParser.java:214) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator0(CanonicalTreeParser.java:248) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator(CanonicalTreeParser.java:226) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator(CanonicalTreeParser.java:70) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.TreeWalk.enterSubtree(TreeWalk.java:1210) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:828) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:658) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$8(IndexDiffCacheEntry.java:646) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:399) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.8.0.v20160509-0411.jar:na]
+2016-08-18 18:29:48,869 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:29:48,875 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-18 18:29:48,877 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:29:48,885 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-18 18:30:05,610 [Worker-48] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-08-18 18:30:06,697 [Worker-48] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.hongchaegojung:railro:1.0.0-BUILD-SNAPSHOT @ D:\railro\Railro\pom.xml.
+2016-08-18 18:30:08,362 [Worker-48] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Railro/src/main/java
+2016-08-18 18:30:08,363 [Worker-48] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Railro/src/main/resources
+2016-08-18 18:30:08,364 [Worker-48] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Railro/src/test/java
+2016-08-18 18:30:08,365 [Worker-48] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Railro/src/test/resources
+2016-08-18 18:30:09,695 [Worker-48] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for Railro
+2016-08-18 18:30:09,781 [Worker-48] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 4 sec
+2016-08-18 18:30:10,187 [Worker-47] ERROR o.e.j.i.s.file.ObjectDirectory - ERROR: Exception caught while accessing pack file D:\railro\.git\objects\pack\pack-ce0d91f2fa166252c69ff2e2efe0282674121026.pack, the pack file might be corrupt
+java.io.IOException: 파일의 볼륨이 실제로 바뀌었으므로 열린 파일이 이제 유효하지 않습니다
+	at java.io.RandomAccessFile.readBytes(Native Method) ~[na:1.8.0_77]
+	at java.io.RandomAccessFile.read(RandomAccessFile.java:377) ~[na:1.8.0_77]
+	at java.io.RandomAccessFile.readFully(RandomAccessFile.java:436) ~[na:1.8.0_77]
+	at org.eclipse.jgit.internal.storage.file.PackFile.read(PackFile.java:667) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.load(WindowCache.java:289) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.getOrLoad(WindowCache.java:368) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.get(WindowCache.java:179) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.pin(WindowCursor.java:336) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.copy(WindowCursor.java:237) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.readFully(PackFile.java:574) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.load(PackFile.java:736) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.get(PackFile.java:263) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedObject(ObjectDirectory.java:420) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedFromSelfOrAlternate(ObjectDirectory.java:389) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openObject(ObjectDirectory.java:381) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:154) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.reset(CanonicalTreeParser.java:214) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator0(CanonicalTreeParser.java:248) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator(CanonicalTreeParser.java:226) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator(CanonicalTreeParser.java:70) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.TreeWalk.enterSubtree(TreeWalk.java:1210) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:828) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataIncremental(IndexDiffCacheEntry.java:603) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$13(IndexDiffCacheEntry.java:582) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$5.updateIndexDiff(IndexDiffCacheEntry.java:528) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffUpdateJob.run(IndexDiffUpdateJob.java:75) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.8.0.v20160509-0411.jar:na]
+2016-08-18 18:30:10,210 [Worker-47] ERROR o.e.j.i.s.file.ObjectDirectory - ERROR: Exception caught while accessing pack file D:\railro\.git\objects\pack\pack-5d452216916b427451246ed09af6713db003f3a0.pack, the pack file might be corrupt
+java.io.IOException: 파일의 볼륨이 실제로 바뀌었으므로 열린 파일이 이제 유효하지 않습니다
+	at java.io.RandomAccessFile.readBytes(Native Method) ~[na:1.8.0_77]
+	at java.io.RandomAccessFile.read(RandomAccessFile.java:377) ~[na:1.8.0_77]
+	at java.io.RandomAccessFile.readFully(RandomAccessFile.java:436) ~[na:1.8.0_77]
+	at org.eclipse.jgit.internal.storage.file.PackFile.read(PackFile.java:667) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.load(WindowCache.java:289) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.getOrLoad(WindowCache.java:368) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.get(WindowCache.java:179) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.pin(WindowCursor.java:336) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.copy(WindowCursor.java:237) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.readFully(PackFile.java:574) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.load(PackFile.java:736) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.get(PackFile.java:263) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedObject(ObjectDirectory.java:420) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedFromSelfOrAlternate(ObjectDirectory.java:389) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openObject(ObjectDirectory.java:381) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:154) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.reset(CanonicalTreeParser.java:214) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator0(CanonicalTreeParser.java:248) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator(CanonicalTreeParser.java:226) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator(CanonicalTreeParser.java:70) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.TreeWalk.enterSubtree(TreeWalk.java:1210) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:828) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataIncremental(IndexDiffCacheEntry.java:603) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$13(IndexDiffCacheEntry.java:582) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$5.updateIndexDiff(IndexDiffCacheEntry.java:528) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffUpdateJob.run(IndexDiffUpdateJob.java:75) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.8.0.v20160509-0411.jar:na]
+2016-08-18 18:30:12,411 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:30:12,419 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-18 18:30:12,450 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:30:12,456 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-18 18:30:12,474 [Worker-47] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Railro
+2016-08-18 18:30:12,476 [Worker-47] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Railro
+2016-08-18 18:30:12,492 [Worker-47] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:38:01,852 [Worker-56] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.hongchaegojung:railro:1.0.0-BUILD-SNAPSHOT @ D:\railro\Railro\pom.xml.
+2016-08-18 18:38:04,368 [Worker-56] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:38:04,376 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-18 18:38:04,379 [Worker-56] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:38:04,385 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-18 18:38:04,386 [Worker-56] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Railro
+2016-08-18 18:38:04,386 [Worker-56] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Railro
+2016-08-18 18:38:04,392 [Worker-56] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:38:08,290 [Worker-58] ERROR o.e.j.i.s.file.ObjectDirectory - ERROR: Exception caught while accessing pack file D:\railro\.git\objects\pack\pack-0ee02489f1f8a55394c6e58edb82112224c69a94.pack, the pack file might be corrupt
+java.io.IOException: 파일의 볼륨이 실제로 바뀌었으므로 열린 파일이 이제 유효하지 않습니다
+	at java.io.RandomAccessFile.readBytes(Native Method) ~[na:1.8.0_77]
+	at java.io.RandomAccessFile.read(RandomAccessFile.java:377) ~[na:1.8.0_77]
+	at java.io.RandomAccessFile.readFully(RandomAccessFile.java:436) ~[na:1.8.0_77]
+	at org.eclipse.jgit.internal.storage.file.PackFile.read(PackFile.java:667) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.load(WindowCache.java:289) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.getOrLoad(WindowCache.java:368) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCache.get(WindowCache.java:179) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.pin(WindowCursor.java:336) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.copy(WindowCursor.java:237) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.readFully(PackFile.java:574) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.load(PackFile.java:736) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.PackFile.get(PackFile.java:263) ~[org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedObject(ObjectDirectory.java:420) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openPackedFromSelfOrAlternate(ObjectDirectory.java:389) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectory.openObject(ObjectDirectory.java:381) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.open(WindowCursor.java:154) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.reset(CanonicalTreeParser.java:214) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator0(CanonicalTreeParser.java:248) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator(CanonicalTreeParser.java:226) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.CanonicalTreeParser.createSubtreeIterator(CanonicalTreeParser.java:70) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.TreeWalk.enterSubtree(TreeWalk.java:1210) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:828) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:437) [org.eclipse.jgit_4.4.0.201606070830-r.jar:4.4.0.201606070830-r]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:658) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$8(IndexDiffCacheEntry.java:646) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:399) [org.eclipse.egit.core_4.4.0.201606070830-r.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.8.0.v20160509-0411.jar:na]
+2016-08-18 18:38:16,353 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:38:16,369 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-18 18:38:16,398 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-18 18:38:16,409 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
