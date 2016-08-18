@@ -1,0 +1,34 @@
+@import url(layout.css);
+
+.content{
+	padding: 50px;
+}
+
+.setting .limit_setting{
+	float: left;
+}
+
+.setting span{
+	float: right;
+}
+
+.list{
+}
+
+td, tr{
+	border-bottom: 1px solid #cfcfcf;
+}
+
+tr{
+	height: 26px;
+	line-height: 26px;
+}
+
+.register_btn a{
+	display: block;
+	float: right;
+}
+
+.paging{
+	padding: 0 auto;
+}

@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 
-<div id="menu_tap">
+<div class="menu_tap">
 	<ul>
 		<li id="notice_tap">공지사항</li>
 		<li id="railro_tap">내일로</li>
