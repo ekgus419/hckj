@@ -3,8 +3,7 @@ package com.hongchaegojung.railro.dto;
 import java.sql.Date;
 
 public class Member { // 13°³
-	
-	private int IDX;
+
 	private String ID;
 	private String PWD;
 	private String NAME;
@@ -19,12 +18,6 @@ public class Member { // 13°³
 	private Date JOINDATE;
 	private int CONFIRMFLAG;
 	
-	public int getIDX() {
-		return IDX;
-	}
-	public void setIDX(int iDX) {
-		IDX = iDX;
-	}
 	public String getID() {
 		return ID;
 	}
@@ -105,8 +98,8 @@ public class Member { // 13°³
 	}
 	@Override
 	public String toString() {
-		return "Member [IDX=" + IDX + ", ID=" + ID + ", PWD=" + PWD + ", NAME=" + NAME + ", AGE=" + AGE + ", GENDER="
-				+ GENDER + ", INTEREST=" + INTEREST + ", PHONE=" + PHONE + ", EMAIL=" + EMAIL + ", ADDRESS=" + ADDRESS
+		return "Member [ID=" + ID + ", PWD=" + PWD + ", NAME=" + NAME + ", AGE=" + AGE + ", GENDER=" + GENDER
+				+ ", INTEREST=" + INTEREST + ", PHONE=" + PHONE + ", EMAIL=" + EMAIL + ", ADDRESS=" + ADDRESS
 				+ ", ZIPCODE=" + ZIPCODE + ", PROFILEURL=" + PROFILEURL + ", JOINDATE=" + JOINDATE + ", CONFIRMFLAG="
 				+ CONFIRMFLAG + "]";
 	}
