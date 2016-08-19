@@ -20,24 +20,24 @@
 			<td width="10%">
 				<div align="center">번호</div>
 			</td>
-			<td width="20%">
+			<td width="10%">
 				<div align="center">분류</div>
 			</td>
-			<td width="40%">
+			<td width="50%">
 				<div align="center">제목</div>
 			</td>
 			<td width="10%">
 				<div align="center">작성자</div>
 			</td>
-			<td width="15%">
+			<td width="10%">
 				<div align="center">날짜</div>
 			</td>
-			<td width="8%">
+			<td width="10%">
 				<div align="center">조회수</div>
 			</td>
 		</tr>
 		<tr class="list_contents" align="center" valign="middle"
-			onmouseover="this.style.backgroundColor='#E8E8E8'"
+			onmouseover="this.style.backgroundColor='#fcfcfc'"
 			onmouseout="this.style.backgroundColor=''">
 			<td>
 				<div align="center">1</div>
@@ -60,7 +60,7 @@
 		</tr>
 	</table>
 	<div class="register-btn" align="right">
-		<a href="">글쓰기</a>
+		<span><a href="">글쓰기</a></span>
 	</div>
 	<div class="paging" align="center">
 	이전&nbsp;다음

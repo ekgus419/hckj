@@ -25,7 +25,7 @@
 					<div align="left">내 용</div>
 				</td>
 				<td>
-					<textarea name="BOARD_CONTENT" cols="67" rows="5"></textarea>
+					<textarea name="BOARD_CONTENT" cols="67" rows="10"></textarea>
 				</td>
 			</tr>
 			<tr>

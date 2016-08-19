@@ -1,7 +1,8 @@
 @import url(layout.css);
 
 .content{
-	padding: 50px 100px;
+	padding: 50px 150px;
+	font-size: 12px;
 }
 
 .setting .limit-setting{
@@ -9,6 +10,7 @@
 }
 
 .setting span{
+	padding: 8px;
 	float: right;
 }
 
@@ -17,8 +19,12 @@
 	margin-bottom: 20px;
 }
 
+.list-col{
+	background-color: #eaeaea;
+}
+
 td, tr{
-	border-bottom: 1px solid #cfcfcf;
+	border-bottom: 1px solid #eaeaea;
 }
 
 tr{
@@ -30,15 +36,24 @@ tr{
 	margin-bottom: 50px;
 }
 
+.register-btn span{
+	padding: 6px 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
 .paging{
 	margin-bottom: 30px;
 }
+
 input[type=text], input[type=submit], select{
 	display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-        vertical-align: middle;
+    vertical-align: middle;
 }
 
 input[type=text]{
@@ -54,4 +69,6 @@ input[type=submit]{
 select{
 	padding: 4px 8px;
 }
+
+
 
