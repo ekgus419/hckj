@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
+<<<<<<< HEAD
 		<item value="411" key="DIALOG_X_ORIGIN"/>
+<<<<<<< HEAD
 		<item value="11" key="DIALOG_Y_ORIGIN"/>
+=======
+		<item value="68" key="DIALOG_Y_ORIGIN"/>
+=======
+		<item value="651" key="DIALOG_X_ORIGIN"/>
+		<item value="158" key="DIALOG_Y_ORIGIN"/>
+>>>>>>> 5d18c4e12ed14c66a4b5b60c2478e0f9f15e83ea
+>>>>>>> a264ed49fa5e3bac7e3746d05736c46d61d1d33f
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>
@@ -14,6 +23,12 @@
 		<list key="orderedProviders">
 		</list>
 		<list key="textArray">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.wst.jsdt.ui.NewJSWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.jsdt.ui.java"/>
 		</list>
 	</section>
 </section>

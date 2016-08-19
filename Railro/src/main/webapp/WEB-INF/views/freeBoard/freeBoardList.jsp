@@ -36,5 +36,30 @@ th {
   </tr>
 
 </table>
+
+</head>
+
+
+<button class="button button1">글등록</button>
+
+      <!-- 검색입력 폼 -->
+   <form method= post action='list.php'>
+   <tr>
+      <td width=100%  colspan=5 alingn=center> 
+         <select name = src_name>
+         <option value=name>이름 </option>
+         <option value=subject selected>제목 </option>
+         <option value=memo>내용 </option>
+         </select>
+         
+         <input type=text name = src_value size=30>
+         <input type=submit value = 검색>
+      
+      </td>
+   </tr>
+   </form>
+   
 </body>
 </html>
+</div>
+
