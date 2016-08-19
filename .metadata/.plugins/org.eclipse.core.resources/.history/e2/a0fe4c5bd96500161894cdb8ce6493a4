@@ -1,0 +1,14 @@
+@import url(layout.css);
+
+.button{
+        margin: 0 auto; 
+
+        width:80px;
+        
+        align: middle;
+        
+@using (Html.BeginForm("Index", "Join", FormMethod.Post, new { @style = "margin: 0 auto; width: 250px" }))
+}
+
+
+

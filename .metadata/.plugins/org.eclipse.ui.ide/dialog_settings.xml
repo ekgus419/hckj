@@ -153,4 +153,11 @@
 		<item value="710" key="DIALOG_X_ORIGIN"/>
 		<item value="269" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="613" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="645" key="DIALOG_HEIGHT"/>
+		<item value="663" key="DIALOG_X_ORIGIN"/>
+		<item value="94" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>
