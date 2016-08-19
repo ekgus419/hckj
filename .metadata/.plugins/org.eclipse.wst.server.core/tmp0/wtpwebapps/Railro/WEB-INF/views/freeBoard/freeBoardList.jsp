@@ -43,6 +43,7 @@ th {
 <button class="button button1">글등록</button>
 
       <!-- 검색입력 폼 -->
+   <div class=aaa></div>
    <form method= post action='list.php'>
    <tr>
       <td width=100%  colspan=5 alingn=center> 
@@ -58,7 +59,7 @@ th {
       </td>
    </tr>
    </form>
-   
+   </div>
 </body>
 </html>
 </div>
