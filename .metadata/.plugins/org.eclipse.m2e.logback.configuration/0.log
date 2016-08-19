@@ -5220,3 +5220,7 @@ Caused by: java.io.FileNotFoundException: D:\railro\.metadata\.plugins\org.eclip
 2016-08-19 16:56:00,367 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2016-08-19 16:56:00,369 [Worker-53] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-08-19 16:56:00,375 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-19 16:58:35,166 [Worker-55] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-19 16:58:35,176 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-19 16:58:35,180 [Worker-55] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-19 16:58:35,193 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
