@@ -2,24 +2,26 @@
 
 <div class="content">
 	<div class="setting">
-		<div class="limit_setting">
+		<div class="limit-setting">
 			<form action="" method="get">
-				<select name="limit">
+				<select name="limit" onchange="limit_submit()">
 					<option value="5">5</option>
 					<option value="10" selected="selected">10</option>
 					<option value="15">15</option>
 					<option value="20">20</option>
 				</select>
 				개씩 보기
-				<input class="submit" type="submit" value="선택"/>
 			</form>
 		</div>
 		<span>글 개수 :</span>
 	</div>
 	<table class="list" width="100%">
-		<tr class="list_col" align="center" valign="middle">
-			<td width="8%">
+		<tr class="list-col" align="center" valign="middle">
+			<td width="10%">
 				<div align="center">번호</div>
+			</td>
+			<td width="20%">
+				<div align="center">분류</div>
 			</td>
 			<td width="40%">
 				<div align="center">제목</div>
@@ -39,6 +41,9 @@
 			onmouseout="this.style.backgroundColor=''">
 			<td>
 				<div align="center">1</div>
+			</td>
+			<td>
+				<div align="center">분류명</div>
 			</td>	
 			<td>
 				<div align="left">글제목ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ</div>
@@ -54,11 +59,11 @@
 			</td>
 		</tr>
 	</table>
-	<div class="register_btn" align="right">
-		<a href="">[글쓰기]</a>
+	<div class="register-btn" align="right">
+		<a href="">글쓰기</a>
 	</div>
 	<div class="paging" align="center">
-	[이전]&nbsp;[다음]
+	이전&nbsp;다음
 	</div>
 	<div class="search" align="center">
 		<form action="" method="get">
@@ -66,6 +71,7 @@
 				<option value="BOARD_NUM">번호</option>
 				<option value="BOARD_ID">작성자</option>
 				<option value="BOARD_SUBJECT">제목</option>
+				<option value="BOARD_SUBJECT">분류</option>
 			</select>
 			<input type="text" name="keyWord"/>
 			<input class="submit" type="submit" value="검색"/>
