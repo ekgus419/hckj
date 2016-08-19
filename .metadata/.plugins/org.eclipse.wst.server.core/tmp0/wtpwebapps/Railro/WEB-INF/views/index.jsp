@@ -1,5 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
+<<<<<<< HEAD
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <div class="content">
 <html>
@@ -80,3 +81,8 @@ body {
 
 </body>
 </html>
+=======
+<div id="content">
+
+</div>
+>>>>>>> a1e14330cc56f5985cb47b0468fa4c1d28eb3eaa

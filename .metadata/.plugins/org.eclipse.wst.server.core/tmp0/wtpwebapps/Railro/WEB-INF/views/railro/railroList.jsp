@@ -17,8 +17,11 @@
 	</div>
 	<table class="list" width="100%">
 		<tr class="list-col" align="center" valign="middle">
-			<td width="8%">
+			<td width="10%">
 				<div align="center">번호</div>
+			</td>
+			<td width="20%">
+				<div align="center">분류</div>
 			</td>
 			<td width="40%">
 				<div align="center">제목</div>
@@ -38,6 +41,9 @@
 			onmouseout="this.style.backgroundColor=''">
 			<td>
 				<div align="center">1</div>
+			</td>
+			<td>
+				<div align="center">분류명</div>
 			</td>	
 			<td>
 				<div align="left">글제목ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ</div>
@@ -65,6 +71,7 @@
 				<option value="BOARD_NUM">번호</option>
 				<option value="BOARD_ID">작성자</option>
 				<option value="BOARD_SUBJECT">제목</option>
+				<option value="BOARD_SUBJECT">분류</option>
 			</select>
 			<input type="text" name="keyWord"/>
 			<input class="submit" type="submit" value="검색"/>
