@@ -1,5 +1,8 @@
 @import url(layout.css);
 
+.content{
+
+}
 .wrap1{
 	border:1px solid #dadada;
 	background-color:#fff;
@@ -216,3 +219,4 @@
 	padding:0px 0px 11px 13px;
 	display:none;
 }
+

@@ -1,4 +1,5 @@
 @import url(layout.css);
+@charset "UTF-8";
 
 .wrap1{
 	border:1px solid #dadada;

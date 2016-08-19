@@ -15,16 +15,20 @@
 }
 
 .main-menu { 
-	text-align: center; 
+	width: 100%; 
+	margin: 0 auto; 
 	height: 35px; 
 	background: #fff; 
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #eee; 
+	position: relative; 
 }
 
-.top-menu {  
-	display: inline-block; 
+.top-menu { 
+	width: 75%; 
 	line-height: 35px; 
-	zoom: 1;  
+	text-align: center; 
+	margin: 0 auto; 
+	position: relative; 
 }
 
 .top-menu>li { 
@@ -62,36 +66,8 @@
 .footer { 
 	width: 100%; 
 	height: 80px; 
-	border-top: 1px solid #eee; 
-	font-size: 10px; 
-	color: #c1c1c1; 
-	text-align: center;
-	padding-top: 10px; 
+	background: gray; 
 }
 
-/* common */
-.ellipsis { 
-	text-overflow: ellipsis; 
-	white-space: nowrap; 
-	overflow: hidden; 
-	font-size: 10px;  
-}
-
-.icon-notice { 
-	background-image: url("../images/icon2.png"); 
-	background-position: -263px -2px; 
-	width: 20px; 
-	height: 11px; 
-	display: inline-block; 
-}
-
-.icon-board {     
-	background-image: url("../images/icon2.png"); 
-	background-position: -468px -73px; 
-	width: 20px; 
-	height: 11px; 
-	display: inline-block; 
-}
-		
 
 

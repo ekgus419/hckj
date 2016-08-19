@@ -1,25 +1,5 @@
 @import url(layout.css);
 
-@CHARSET "UTF-8";
-#header{
-	width:458px;
-	height:200px;
-	margin:0 auto;
-	position:relative;
-}
-#header .logo{
-	margin:0 auto;
-	line-height:200px;
-	color:#1fbc02;
-	font-weight:bolder;
-	font-size:45px;
-	font-family:"³ª´®°íµñ","µ¸¿ò",Dotum;
-	text-align:center;
-	letter-spacing:10px;
-}
-body{
-	background-color:#f5f6f7;
-}
 .wrap1{
 	border:1px solid #dadada;
 	background-color:#fff;
