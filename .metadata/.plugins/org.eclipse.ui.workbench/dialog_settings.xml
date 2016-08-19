@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
+<<<<<<< HEAD
 		<item value="474" key="DIALOG_X_ORIGIN"/>
 		<item value="110" key="DIALOG_Y_ORIGIN"/>
+=======
+<<<<<<< HEAD
+		<item value="411" key="DIALOG_X_ORIGIN"/>
+<<<<<<< HEAD
+		<item value="11" key="DIALOG_Y_ORIGIN"/>
+=======
+		<item value="68" key="DIALOG_Y_ORIGIN"/>
+=======
+		<item value="651" key="DIALOG_X_ORIGIN"/>
+		<item value="158" key="DIALOG_Y_ORIGIN"/>
+>>>>>>> 5d18c4e12ed14c66a4b5b60c2478e0f9f15e83ea
+>>>>>>> a264ed49fa5e3bac7e3746d05736c46d61d1d33f
+>>>>>>> 9476964a23513f0ffd5f2aefadae99951c7dfe8f
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
 		<item value="-1" key="dialogHeight"/>

@@ -1,0 +1,29 @@
+@import url(layout.css);
+
+.content{
+	font-size: 13px;
+}
+
+.detail{
+	padding: 50px 200px;
+	font-size: 13px;
+}
+
+tr, td{
+	padding: 0 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+tr{
+	height: 35px;
+	line-height: 35px;
+}
+
+
+.title{
+	background-color: #eaeaea;
+}
+
+.btn{
+	text-align: center;
+}
