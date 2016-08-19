@@ -1,0 +1,10 @@
+@import url(layout.css);
+
+.button span{
+	padding: 10px;
+	color: white;
+	background: #4CAF50;
+	margin: 0 auto;
+}
+
+
