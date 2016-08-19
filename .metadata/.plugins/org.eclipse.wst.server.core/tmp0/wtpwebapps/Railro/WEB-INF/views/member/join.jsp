@@ -1,76 +1,192 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/join.js"></script>
+
 <div class="content">
-	<form action="" method="post" name="joinForm">
-		<div class="wrap1">
-			<div class="id">
-				<input type="text" name="MEMBER_ID" value="" maxlength="20" autocomplete="off" placeholder="아이디">
-				<div id="checkId"></div>
-			</div>
-			<div class="pwd">
-				<input type="password" name="MEMBER_PW" maxlength="16" placeholder="비밀번호">
-				<div id="checkPwd"></div>
-				<input type="password" name="MEMBER_PW_CK" maxlength="16" placeholder="비밀번호 재확인" 
-					   onkeyup="checkPwd()"> 
-				<div id="checkPwdCk"></div>
-			</div>
-		</div>
-		<div class="wrap2">
-			<div class="name">
-				<input type="text" name="MEMBER_NAME" value="" maxlength="40" placeholder="이름">
-				<div id="checkName"></div>
-			</div>
-			<div class="gender">
-				<span class="gender_sel">
-					<span class="man">
-						<input id="man" name="MEMBER_GENDER" type="radio" value="M">
-						<label for="man">남자 </label>
-					</span>
-					<span class="woman">
-						<input id="woman" name="MEMBER_GENDER" type="radio" value="W">
-						<label for="woman">여자 </label>
-					</span>
-				</span>
-			</div>
-			<div class="birthday">
-				<div class="bir_title">생일</div>
-				<div class="bir_yy">
-					<span>
-						<input type="text" name="MEMBER_BIRTH_YEAR" id="yy" maxlength="4" value="" placeholder="년(4자)"> 
-					</span>
-				</div>
-				<div class="bir_mm">
-					<span>
-					<select id="mm" title="월" class="sel" name="MEMBER_BIRTH_MONTH">
-						<option value="">월</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
+	<form name="joinform" action="" method="get" onsubmit="return check()">
+		<table class="join" width="80%">
+			<tr>
+				<th colspan="100%">
+					<div class="join-title"><span>회원가입</span></div>
+				</th>
+			</tr>
+			<tr>
+				<td colspan=2>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					이름
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="NAME" size="20"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					아이디
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="ID" size="10" maxlength=15/>
+					<input type="button" name="confirm_id" value="중복확인" 
+						onclick="openConfirmId(this.form)" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					비밀번호
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="password" name="PWD" size="15"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					비밀번호 확인
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="password" name="PWD_CK" size="15" />
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+				&nbsp;&nbsp;&nbsp;
+				(아이디와 비밀번호는 문자와 숫자를 조합하여 2~12자리로 만들어 주세요)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					생년월일
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="YEAR" size="4" maxlength="4"/>
+					년
+					&nbsp;&nbsp;
+					<input type="text" name="MONTH" size="1" maxlength="2"/>
+					월
+					&nbsp;&nbsp;
+					<input type="text" name="DAY" size="1" maxlength="2"/>
+					일	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					성별
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="GENDER" value="M" checked/>
+					남
+					&nbsp;&nbsp;
+					<input type="radio" name="GENDER" value="W"/>
+					여	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					이메일 주소
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="EMAIL" size="25" placeholder="ex) railro@gmail.com"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					메일 수신 여부
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="EMAIL_GET" value="YES" checked/>
+					수신
+					&nbsp;&nbsp;
+					<input type="radio" name="EMAIL_GET" value="NO"/>
+					수신 안함
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					관심분야
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<select name="INTEREST">
+						<option>관심분야1</option>
+						<option>관심분야2</option>
+						<option>관심분야3</option>
+						<option>관심분야4</option>
+						<option>관심분야5</option>
+						<option>관심분야6</option>
 					</select>
-					</span>
-				</div>
-				<div class="bir_dd">
-					<span>
-					<input type="text" name="MEMBER_BIRTH_DAY" id="dd" maxlength="2" value="" placeholder="일">
-					</span>
-				</div>
-			</div>
-			<div class="email">
-				<input type="text" id="email" name="MEMBER_EMAIL" maxlength="100" value="" placeholder="비상연락용 이메일">
-				<div id="checkEmail"></div>
-			</div>
-		</div>
-		<div class="join_submit">
-			<input type="submit" title="회원가입" alt="회원가입" value="가입하기" onclick="return joinCheck()">
-		</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					휴대폰
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="PHONE" size="20" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					우편번호
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="ZIPCODE1" size="6" 
+						onkeypress="gNumCheck()" maxlength="3"/>
+					- 
+					<input type="text" name="ZIPCODE2" size="6" 
+						onkeypress="gNumCheck()" maxlength="3" />&nbsp;&nbsp;
+					<input type="button" name="zipcode" value="우편번호 검색" 
+						onclick="openZipcode(this.form)" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					집주소
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="ADDRESS" size="50" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					상세주소
+				</td>
+				<td>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" name="ADDRESS2" size="50" />
+				</td>
+			</tr>
+			<tr>
+				<td class="btn" colspan="100%">
+					<br />
+					<input type="submit" value="확 인" />
+					&nbsp;&nbsp;&nbsp;
+					<input type="reset" value="다시쓰기" />
+				</td>
+			</tr>
+		</table>
 	</form>
 </div>
