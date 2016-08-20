@@ -1,9 +1,0 @@
-@import url(layout.css);
-
-.content{
-	width: 100%;
-}
-
-.join{
-	margin: 0 auto;
-}

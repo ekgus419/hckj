@@ -69,7 +69,7 @@ function check(){
 
 function openConfirmId(joinform){			
 	var id = joinform.ID.value;
-	var url="./idCheck.jsp";
+	var url="idCheck.htm";
 	
 	if(id.length == 0){
 		alert("아이디를 입력하세요.");
@@ -81,7 +81,7 @@ function openConfirmId(joinform){
 }
 
 function openZipcode(joinform){			
-	var url="./zipcode.jsp"
+	var url="zipcode.htm"
 	open(url, "confirm", "toolbar=no,location=no,"
 						+"status=no,menubar=no,"
 						+"scrollbars=yes,resizable=no,"

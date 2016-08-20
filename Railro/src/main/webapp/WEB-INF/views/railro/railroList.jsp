@@ -60,7 +60,7 @@
 		</tr>
 	</table>
 	<div class="register-btn" align="right">
-		<span><a href="">글쓰기</a></span>
+		<span><a href="javascript:void(0)" onclick="location.href='railroReg.htm'">글쓰기</a></span>
 	</div>
 	<div class="paging" align="center">
 	이전&nbsp;다음

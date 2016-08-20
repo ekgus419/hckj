@@ -1,9 +1,9 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/join.js"></script>
+<script src="${pageContext.request.contextPath}/js/join.js"></script>
 
 <div class="content">
-	<form name="joinform" action="" method="get" onsubmit="return check()">
+	<form name="joinform" action="" method="post" onsubmit="return check()">
 		<table class="join" width="80%">
 			<tr>
 				<th colspan="100%">

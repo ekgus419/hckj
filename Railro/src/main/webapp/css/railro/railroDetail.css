@@ -1,20 +1,24 @@
 @import url(layout.css);
 
 .content{
-
 }
 
 form{
 	font-size: 12px;
+	padding: 50px 200px;
 }
 
 .detail{
-	padding: 50px 200px;
+	
+}
+
+span{
+	color: #8C8C8C;
 }
 
 tr, td{
 	padding: 0 10px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #eaeaea;
 }
 
 tr{
@@ -29,4 +33,11 @@ tr{
 
 .btn{
 	text-align: center;
+	margin-top: 40px;
+}
+
+.btn span{
+	padding: 8px 20px;
+	border: 1px solid #ccc;
+    border-radius: 4px;
 }

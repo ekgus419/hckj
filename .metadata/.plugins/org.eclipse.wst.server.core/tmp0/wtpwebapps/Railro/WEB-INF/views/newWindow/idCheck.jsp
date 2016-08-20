@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=euc-kr" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+
 <%
 	String id=(String)request.getAttribute("id");
 	int check=((Integer)(request.getAttribute("check"))).intValue();
@@ -6,6 +8,7 @@
 <html>
 <head>
 <title>ºÓ«Œ∏Ù</title>
+<link href="${pageContext.request.contextPath}/css/<tiles:getAsString name="css"/>" type="text/css" rel="stylesheet"/>
 <script>
 function windowclose(){
 	opener.document.joinform.MEMBER_ID.value="<%=id %>";
