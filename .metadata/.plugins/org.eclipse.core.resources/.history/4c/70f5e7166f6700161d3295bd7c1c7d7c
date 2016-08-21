@@ -1,0 +1,28 @@
+@import url(layout.css);
+
+form{
+	font-size: 12px;
+}
+
+tr{
+	height: 40px;
+	line-height: 40px;
+	
+}
+
+input[type=text], input[type=password], textarea{
+	padding : 6px 6px;
+	border : 1px solid black ;
+	border-radius: 4px;
+}
+
+.button{
+	text-align: center;
+}
+
+.button button{
+	padding : 6px 6px;
+	border-radius: 4px;
+}
+
+

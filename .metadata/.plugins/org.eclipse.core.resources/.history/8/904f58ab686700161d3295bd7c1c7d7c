@@ -1,0 +1,54 @@
+<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+
+<div class="content">		
+		<h1> 삭제 폼(비밀번호)</h1>
+		<br>
+		
+		<div class="row">
+			<form action="/board/removeArticlePro.jsp">
+				<div class="col-md-4">
+					<input type="hidden" name="articleNo" value=<%=articleNo%>>
+				</div>
+				<div class="col-md-2">
+					<input class="articlePw form-control" type="password" name="articlePw">
+				</div>
+				<div class="col-md-1">
+					<input class="btn" type="button" value="확인">
+				</div>
+				<div class="col-md-5 exitenceHelper">
+				</div>
+			</form>
+		</div>
+		<br>
+		
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-2 helper">
+			</div>
+			<div class="col-md-6">
+			</div>
+		</div>
+		
+		<script>
+			$(".btn").on("click",function(){
+				/* 비밀번호가 맞으면 댓글이 있는 글인지 확인해서 댓글이 있으면 삭제 불가능하도록 유효성 검사 */
+				if($(".articlePw").val()=="<%=rs.getString("article_pw")%>")
+				{
+					if(<%=rs2.next()%>)
+					{
+						$(".exitenceHelper").text("답글이 있는 게시글은 삭제 불가능합니다.");
+					}
+					else
+					{
+						$("form").submit();
+					}
+				}
+				else
+				{
+					$(".helper").text("비밀번호가 틀렸습니다.");
+				}
+			});
+		</script>
+		
+</div>

@@ -1,0 +1,33 @@
+@import url(layout.css);
+
+form{
+	font-size: 12px;
+}
+
+tr{
+	height: 40px;
+	line-height: 40px;
+	
+}
+
+input[type=text],textarea{
+	padding : 6px 6px;
+	border : 1px solid black ;
+	border-radius: 4px;
+	margin : 10px 0px 10px 0px;
+}
+table{
+	margin : 10px 10px 10px 10px;
+}
+
+.button{
+	text-align: center;
+	margin: 3px 20px 10px 0px;
+}
+
+.button button{
+	padding : 6px 6px;
+	border-radius: 4px;
+}
+
+

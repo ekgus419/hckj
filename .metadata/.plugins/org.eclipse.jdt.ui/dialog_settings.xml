@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="ProblemSeveritiesConfigurationBlock">
+		<item value="false" key="expanded2"/>
+		<item value="false" key="expanded1"/>
+		<item value="false" key="expanded4"/>
+		<item value="false" key="expanded3"/>
+		<item value="false" key="expanded6"/>
+		<item value="false" key="expanded5"/>
+		<item value="false" key="expanded7"/>
+		<item value="true" key="expanded0"/>
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
@@ -7,22 +17,6 @@
 		<item value="1" key="rootMode"/>
 		<item value="false" key="linkWithEditor"/>
 	</section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	<section name="SourceActionDialog.methods">
-		<item value="true" key="IgnoreDefault"/>
-		<item value="false" key="SynchronizedModifier"/>
-		<item value="false" key="Comments"/>
-		<item value="1" key="VisibilityModifier"/>
-		<item value="0" key="StringStyle"/>
-		<item value="0" key="ToStringTemplateSelected"/>
-		<item value="false" key="LimitElements"/>
-		<item value="false" key="SkipNull"/>
-		<item value="false" key="FinalModifier"/>
-		<item value="10" key="LimitValue"/>
-	</section>
->>>>>>> a6b7c536ed98c048eab4459b1a35b41f29fca465
 	<section name="NewClassWizardPage">
 		<item value="false" key="create_constructor"/>
 		<item value="true" key="create_unimplemented"/>
@@ -33,29 +27,13 @@
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
 	</section>
-=======
->>>>>>> f408e162c4741c51bd06fc9c4305f5b0409c09b0
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
 	</section>
 	<section name="completion_proposal_size">
 	</section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	<section name="DialogBounds_GenerateToStringDialog">
-		<item value="516" key="DIALOG_WIDTH"/>
-		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
-		<item value="690" key="DIALOG_HEIGHT"/>
-		<item value="535" key="DIALOG_X_ORIGIN"/>
-		<item value="68" key="DIALOG_Y_ORIGIN"/>
-	</section>
-	<section name="AddGetterSetterDialog">
-		<item value="false" key="SortOrdering"/>
-		<item value="false" key="RemoveFinal"/>
-	</section>
-=======
->>>>>>> f408e162c4741c51bd06fc9c4305f5b0409c09b0
->>>>>>> a6b7c536ed98c048eab4459b1a35b41f29fca465
 	<section name="JavaElementSearchActions">
 	</section>
 </section>

@@ -1,65 +1,59 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
-<div class="content">
-<h2>게시판 목록</h2>
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-</style>
-<body>
-<table>
-  <tr>
-    <th>글번호</th>
-    <th>제목</th>
-    <th>작성자</th>
-    <th>조회수</th>
-    <th>작성일</th>
-  </tr>
-
-</table>
-
-</head>
-
-
-<button class="button button1">글등록</button>
-
-      <!-- 검색입력 폼 -->
-   <form method= post action='list.php'>
-   <tr>
-      <td width=100%  colspan=5 alingn=center> 
-         <select name = src_name>
-         <option value=name>이름 </option>
-         <option value=subject selected>제목 </option>
-         <option value=memo>내용 </option>
-         </select>
-         
-         <input type=text name = src_value size=30>
-         <input type=submit value = 검색>
-      
-      </td>
-   </tr>
-   </form>
-   
-</body>
-</html>
+<div id="content">
+	<div class="setting">
+		<div class="limit-setting">
+			<form action="" method="get">
+				<select name="limit" onchange="limit_submit()">
+					<option value="5">5</option>
+					<option value="10" selected="selected">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+				</select>
+				개씩 보기
+			</form>
+		</div>
+		<span>글 개수 :</span>
+	</div>
+	<br />
+	<table width="50%">
+	  <tr>
+	    <th width="5%">글번호</th>
+	    <th width="15%" style="text-align: left">제목</th>
+	    <th width="5%">작성자</th>
+	    <th width="2%">조회수</th>
+	    <th width="5%">작성일</th>
+	  </tr>
+	  
+	  <tr>
+	  	<td>1</td>
+	  	<td style="text-align: left">제목입니다</td>
+	  	<td>홍혜진</td>
+	  	<td>4</td>
+	  	<td>2016.08.21</td>
+	  </tr>
+	  
+	</table>
+	<div class="button1">
+		<button class="button" onclick="location.href='freeBoardReg.htm'">글등록</button>
+	</div>
+		
+	<div class="paging" align="center">
+	이전&nbsp;다음
+	</div>
+	
+	      <!-- 검색입력 폼 -->
+	<form method= post action=''>
+		<div class="search">
+		  	<select name = src_name>
+		        <option value=name>이름 </option>
+		        <option value=subject selected>제목 </option>
+				<option value=memo>내용 </option>
+		    </select>
+		  	<input type=text name = src_value size=15>
+			<input type=submit value = 검색>
+		</div>
+	 </form>
 </div>
+
 
