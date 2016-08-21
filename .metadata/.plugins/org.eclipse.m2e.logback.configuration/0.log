@@ -8483,3 +8483,65 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact junit:junit:j
 2016-08-20 23:40:43,879 [Worker-56] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-08-20 23:40:43,888 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 >>>>>>> f408e162c4741c51bd06fc9c4305f5b0409c09b0
+2016-08-21 13:39:58,259 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 13:39:58,270 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 13:39:58,278 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 13:39:58,279 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 13:41:46,414 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-context:3.2.3.RELEASE
+2016-08-21 13:41:46,418 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-aop:3.2.3.RELEASE
+2016-08-21 13:41:46,422 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for aopalliance:aopalliance:1.0
+2016-08-21 13:41:46,428 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-beans:3.2.3.RELEASE
+2016-08-21 13:41:46,433 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-core:3.2.3.RELEASE
+2016-08-21 13:41:46,437 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-expression:3.2.3.RELEASE
+2016-08-21 13:41:46,441 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-webmvc:3.2.3.RELEASE
+2016-08-21 13:41:46,477 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-web:3.2.3.RELEASE
+2016-08-21 13:41:46,482 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tiles:tiles-core:2.2.2
+2016-08-21 13:41:46,489 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tiles:tiles-api:2.2.2
+2016-08-21 13:41:46,493 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-digester:commons-digester:2.0
+2016-08-21 13:41:46,498 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-beanutils:commons-beanutils:1.8.0
+2016-08-21 13:41:46,501 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tiles:tiles-jsp:2.2.2
+2016-08-21 13:41:46,505 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tiles:tiles-template:2.2.2
+2016-08-21 13:41:46,509 [Worker-23] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.tiles:tiles-servlet:2.2.2
+2016-08-21 13:41:50,055 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 13:41:50,227 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 13:41:50,275 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 13:41:50,276 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 13:45:15,160 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @389598ms
+2016-08-21 13:45:15,385 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2016-08-21 13:45:15,496 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@30f11f46{/help,null,AVAILABLE}
+2016-08-21 13:45:15,544 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@1d570aab{HTTP/1.1,[http/1.1]}{127.0.0.1:54425}
+2016-08-21 13:45:15,545 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @389984ms
+2016-08-21 14:09:30,600 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 14:09:30,602 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 14:09:30,605 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 14:09:30,607 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-21 14:10:55,260 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 14:10:55,262 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 14:10:55,264 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 14:10:55,265 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-21 14:11:57,399 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 14:11:57,400 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 14:11:57,402 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 14:11:57,403 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-21 14:28:13,047 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 14:28:13,048 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 14:28:13,049 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 14:28:13,050 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-21 14:28:14,226 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@1d570aab{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2016-08-21 14:28:14,261 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@30f11f46{/help,null,UNAVAILABLE}
+2016-08-21 16:02:55,489 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 16:02:55,502 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 16:02:55,550 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 16:02:55,551 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 17:32:49,296 [Worker-54] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 17:32:49,336 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 17:32:49,346 [Worker-54] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 17:32:49,354 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-21 17:34:06,753 [Worker-55] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 17:34:06,755 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 17:34:06,757 [Worker-55] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 17:34:06,758 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-21 17:46:19,990 [Worker-53] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 17:46:19,996 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-21 17:46:19,999 [Worker-53] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-21 17:46:20,001 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
