@@ -5,7 +5,35 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-08-16T12:43:32Z</updated>
+  <updated>2016-08-19T16:02:21Z</updated>
+  <entry>
+    <title>Spring Cloud Spinnaker 1.0.0.M1</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/19/spring-cloud-spinnaker-1-0-0-m1" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Greg Turnquist</name>
+    </author>
+    <id>tag:spring.io,2016-08-19:2586</id>
+    <updated>2016-08-19T16:02:21Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Greetings Spring community,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;I am happy to release the first milestone for &lt;a href="https://github.com/spring-cloud/spring-cloud-spinnaker"&gt;Spring Cloud Spinnaker&lt;/a&gt;. Spring Cloud Spinnaker bundles up the &lt;a href="http://www.spinnaker.io/"&gt;continuous delivery Spinnaker tool&lt;/a&gt;, and provides a 1-click installer to let you install it to any &lt;a href="https://www.cloudfoundry.org/use/cloud-foundry-certified/"&gt;certified Cloud Foundry provider&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;At this year&amp;#8217;s SpringOne Platform conference, there were two talks about Spinnaker. If you have early release access and missed them, you can watch right now. If not, I&amp;#8217;m afraid you&amp;#8217;ll have to wait.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If your team/meetup/JUG is interested in hearing more about Spinnaker, &lt;a href="https://spring.io/team/gturnquist"&gt;check in with me&lt;/a&gt; and we can arrange a Google Hangout.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-spinnaker"&gt;Source&lt;/a&gt; | &lt;a href="https://circleci.com/gh/spring-cloud/spring-cloud-spinnaker"&gt;PR CI&lt;/a&gt; | &lt;a href="https://jenkins.spring.io/view/All/job/spring-cloud-spinnaker/"&gt;Master CI&lt;/a&gt; | &lt;a href="http://www.spinnaker.io/docs"&gt;Docs&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spinnaker"&gt;Questions&lt;/a&gt; | &lt;a href="http://join.spinnaker.io/"&gt;Slack&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - August 16th, 2016</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/16/this-week-in-spring-august-16th-2016" />
@@ -467,6 +495,20 @@ public class MySqlApplication {&#xD;
 &lt;p&gt;We look forward to your feedback in &lt;a href="https://github.com/spring-cloud/spring-cloud-task/issues"&gt;Github&lt;/a&gt;, &lt;a href="http://stackoverflow.com/tags/spring-cloud-task"&gt;StackOverflow&lt;/a&gt;, to me directly via Twitter &lt;a href="twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt; or at &lt;a href="https://springoneplatform.io/"&gt;SpringOnePlatform&lt;/a&gt; next week!&lt;/p&gt;</content>
   </entry>
   <entry>
+    <title>Webinar Replay: Introducing Spring Cloud Task</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/07/29/webinar-replay-introducing-spring-cloud-task" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-08-19:2589</id>
+    <updated>2016-07-29T13:24:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: Michael Minella, Pivotal&lt;br/&gt;One of the major promises of the cloud is that of flexibility. Today, most applications deployed to the cloud are long running processes that use the flexibility of cloud scaling. But computing is full of short lived tasks that start up, do their work, and then terminate. These tasks are excellent cloud use cases since resources can quickly be provisioned - and reclaimed.&lt;/p&gt;
+&lt;p&gt;In this webinar, we¡¯ll explore a new project in the Spring Cloud portfolio, Spring Cloud Task, a new framework for developing and orchestrating short-lived microservices. We¡¯ll explore various use cases, build your first task, and discuss how to orchestrate tasks using various techniques. Finally, we¡¯ll peek into the roadmap for the Spring Cloud Task project.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/EB3g-H51AN0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Spring Cloud Data Flow 3 part webinar series:&lt;br/&gt;&lt;a href="https://spring.io/blog/2016/03/30/webinar-replay-stream-processing-in-the-cloud-with-data-microservices"&gt;Spring Cloud Stream&lt;/a&gt;&lt;br/&gt;&lt;a href="https://spring.io/blog/2016/08/19/webinar-replay-data-microservices-with-spring-cloud-data-flow"&gt;Spring Cloud Data Flow&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
     <title>Spring IO Platform 2.0.7.RELEASE</title>
     <link rel="alternate" href="https://spring.io/blog/2016/07/29/spring-io-platform-2-0-7-release" />
     <category term="releases" label="Releases" />
@@ -669,61 +711,5 @@ public Flux&amp;lt;Alert&amp;gt; getAccountAlerts(@PathVariable Long id) {&#xD;
   &lt;li&gt;Spring Data Couchbase 2.2 M1 - &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/data/spring-data-couchbase/2.2.0.M1"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.M1/api"&gt;JavaDocs&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.M1/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/2.2.0.M1/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;On a final note, SpringOne Platform 2016 is around the corner! Meet the Spring Data team at SpringOne Platform 2016 in Las Vegas, Nevada, next week. We&amp;rsquo;ve prepared a &lt;a href="https://2016.event.springoneplatform.io/schedule/2016-08-02"&gt;lot of sessions&lt;/a&gt; to cover Spring &amp;amp; Data related topics and it&amp;rsquo;s not too late to &lt;a href="https://2016.event.springoneplatform.io/register"&gt;register&lt;/a&gt;. Vegas is never a bad place to be at, even more so with the Spring team around!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - July 26th, 2016</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/26/this-week-in-spring-july-26th-2016" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-07-26:2568</id>
-    <updated>2016-07-26T21:14:29Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installation of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m mostly in San Francisco and Saint Louis, busily preparing for the big event next week!&lt;/p&gt;
-&lt;p&gt;This is my favorite time of year! As we lead to &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt;, there&amp;rsquo;s so much good stuff being released that one can hardly keep up! I am &lt;em&gt;really&lt;/em&gt; looking forward to this year&amp;rsquo;s &lt;strong&gt;&lt;a href="http://springoneplatform.io"&gt;SpringOne Platform&lt;/a&gt;&lt;/strong&gt; show, coming in early August. It&amp;rsquo;s an amazing time to build applications, and SpringOne Platform is in a unique position to capture the larger discussion: why do we #devops, #cloud, #agile, or #microservice? Join the discussion August 1-4, 2016 in beautiful Las Vegas and let&amp;rsquo;s find out!&lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;ve got a lot to cover and very little time in which to do it so let&amp;rsquo;s get to it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Cloud Contract &lt;a href="https://spring.io/blog/2016/07/25/spring-cloud-contract-1-0-0-m1-released"&gt;lead Marcin Grzejszczak has just announced that M1 is now available&lt;/a&gt;. The blog features a good look at the concepts behind consumer driven contracts, too, and so is well worth a read!&lt;/li&gt;
-  &lt;li&gt;Spring Cloud Data Flow product manager Sabby Anandan wrote up a &lt;a href="https://blog.pivotal.io/big-data-pivotal/products/data-goes-cloud-native-with-the-new-spring-cloud-data-flow"&gt;very nice piece for the Pivotal blog on Spring Cloud Data Flow 1.0&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;check out this epic &lt;a href="https://www.youtube.com/watch?v=Z6_ttC33N0U"&gt;presentation by Spring Cloud Data Flow leads Dr. Pollack and Mark Fisher to learn more about data-driven microservices&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Integration ninja Artem Bilan has just &lt;a href="https://spring.io/blog/2016/07/26/spring-integration-aws-1-0-0-ga-available-now"&gt;announced Spring Integration AWS 1.0.0.RELEASE&lt;/a&gt; is now available. The final Release is a recommended update &lt;a href="https://spring.io/blog/2016/04/14/spring-integration-aws-1-0-0-m1-is-now-available"&gt;for all those using Spring Integration AWS M1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Never one to rest on his laurels, Artem &lt;em&gt;also&lt;/em&gt; &lt;a href="https://spring.io/blog/2016/07/26/spring-integration-4-3-1-4-2-9-4-1-9-4-0-9-are-available"&gt;announced that Spring Integration 4.3.1, 4.2.9, 4.1.9, 4.0.9 are available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;do you want to use Hazelcast on Cloud Foundry? &lt;a href="http://blog.hazelcast.com/cloud-foundry/"&gt;Take a look at the service broker and information on its features, here&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring REST Docs lead Andy Wilkinson&amp;rsquo;s &lt;a href="https://spring.io/blog/2016/07/25/spring-rest-docs-1-1-1-release"&gt;just announced Spring REST Docs 1.1.1&lt;/a&gt; which features a littany of &lt;a href="https://github.com/spring-projects/spring-restdocs/issues?q=milestone%3A1.1.1.RELEASE"&gt;small improvements and bugfixes&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2016/07/20/spring-web-flow-2-4-4-released"&gt;Rossen Stoyanchev just announced that Spring Web Flow 2.4.4&lt;/a&gt; is now available. This is a maintenance release that, among other things, ensures compatability with Hibernate 5.2 and fixes several small things in JSF.&lt;/li&gt;
-  &lt;li&gt;the good Dr. Syer has published another installment in his series on building reactive applications, &lt;a href="https://spring.io/blog/2016/07/20/notes-on-reactive-programming-part-iii-a-simple-http-server-application"&gt;this time looking at building a simple Reactive HTTP server&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Krishna Srinivasan put together a nice look at how to &lt;a href="http://www.tutorialspoint.com/articles/spring-boot-actuator-a-production-grade-feature-in-spring-boot"&gt;use some of the Spring Boot Actuator module&amp;rsquo;s exposed endpoints&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I love what they&amp;rsquo;re doing at Stormpath, &lt;a href="https://stormpath.com/blog/microservices-spring-boot-screencast"&gt;and this latest screencast is a good example of why&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Did you know that Pivotal has classes you can take to &lt;a href="http://pivotal.io/academy"&gt;learn about Pivotal Cloud Foundry and Spring Cloud Services&lt;/a&gt;?&lt;/li&gt;
-  &lt;li&gt;the CAS project, series 5, continues &lt;a href="https://mmoayyed.github.io/2016/07/23/cas5-m3-release/"&gt;their march to GA and to a comprehensive Spring &lt;em&gt;Bootification&lt;/em&gt; of the code in their latest release, M3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Integration AWS 1.0.0 GA available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/26/spring-integration-aws-1-0-0-ga-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2016-07-25:2566</id>
-    <updated>2016-07-26T14:56:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;It is my pleasure to announce that the Spring Integration AWS &lt;code&gt;1.0.0.RELEASE&lt;/code&gt; is available now.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As usual, thanks to the community for any feedback and contributions!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release contains several critical bug fixes (mostly community driven) and aligns requirements of the upcoming &lt;a href="http://cloud.spring.io/spring-cloud-stream-app-starters/"&gt;Spring Cloud Stream Application Starters&lt;/a&gt; release.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We haven&amp;#8217;t added any new features since the &lt;a href="https://spring.io/blog/2016/04/14/spring-integration-aws-1-0-0-m1-is-now-available"&gt;latest announcement&lt;/a&gt; and have concentrated mostly on improvements, bug fixes and integration testing, to deliver this product as soon as possible. For the next &lt;code&gt;1.1&lt;/code&gt; version we would like to hear from you about priorities since there are still many &lt;a href="https://aws.amazon.com/"&gt;Amazon features&lt;/a&gt; to cover.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-integration-aws/"&gt;Project Page&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration-aws/blob/master/README.md"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
   </entry>
 </feed>
