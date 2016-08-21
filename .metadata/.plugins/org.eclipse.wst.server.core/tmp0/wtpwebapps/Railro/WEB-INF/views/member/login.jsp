@@ -11,6 +11,7 @@
 				</th>
 			</tr>
 			<tr>
+<<<<<<< HEAD
 				<td colspan="30%">
 					아이디
 					&nbsp;&nbsp;&nbsp;
@@ -18,12 +19,22 @@
 				<td colspan="40%">
 					<input type="text" name="ID" size="18" maxlength="15"/>
 					&nbsp;
+=======
+				<td colspan="20%">
+					아이디
+					&nbsp;&nbsp;&nbsp;
+				</td>
+				<td colspan="30%">
+					<input type="text" name="ID" size="13" maxlength="15"/>
+					
+>>>>>>> c812f8a7d774aac5a2bf2e2dc6c084c9d49451c3
 				</td>
 				<td rowspan="2" colspan="30%">
 					<input type="submit" value="로그인" />
 				</td>
 			</tr>
 			<tr>
+<<<<<<< HEAD
 				<td colspan="30%">
 					비밀번호
 					&nbsp;&nbsp;&nbsp;
@@ -31,6 +42,15 @@
 				<td colspan="40%">
 					<input type="password" name="PWD" size="18" maxlength="20"/>
 					&nbsp;
+=======
+				<td colspan="20%">
+					비밀번호
+					&nbsp;&nbsp;&nbsp;
+				</td>
+				<td colspan="30%">
+					<input type="password" name="PWD" size="13" maxlength="20"/>
+					
+>>>>>>> c812f8a7d774aac5a2bf2e2dc6c084c9d49451c3
 				</td>
 			</tr>
 			<tr>

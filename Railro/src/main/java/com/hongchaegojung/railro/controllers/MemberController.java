@@ -31,4 +31,9 @@ public class MemberController {
 	public String test2() {
 		return "member.login";
 	}
+	
+	@RequestMapping(value={"mypage.htm"}, method=RequestMethod.GET)
+	public String test3() {
+		return "member.mypage";
+	}
 }
