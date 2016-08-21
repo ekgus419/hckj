@@ -1,5 +1,5 @@
 package com.hongchaegojung.railro.dao;
 
-public class TravelReviewDAO {
+public interface TravelReviewDAO {
 
 }
