@@ -11,26 +11,26 @@
 				</th>
 			</tr>
 			<tr>
-				<td>
+				<td colspan="20%">
 					아이디
 					&nbsp;&nbsp;&nbsp;
 				</td>
-				<td>
+				<td colspan="30%">
 					<input type="text" name="ID" size="13" maxlength="15"/>
-					&nbsp;
+					
 				</td>
-				<td rowspan="2">
+				<td rowspan="2" colspan="30%">
 					<input type="submit" value="로그인" />
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td colspan="20%">
 					비밀번호
 					&nbsp;&nbsp;&nbsp;
 				</td>
-				<td>
+				<td colspan="30%">
 					<input type="password" name="PWD" size="13" maxlength="20"/>
-					&nbsp;
+					
 				</td>
 			</tr>
 			<tr>

@@ -21,7 +21,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td style="vertical-align: top">
+				<td >
 					<div align="left">내 용</div>
 				</td>
 				<td>
