@@ -7,6 +7,7 @@
 		<item value="1" key="rootMode"/>
 		<item value="false" key="linkWithEditor"/>
 	</section>
+<<<<<<< HEAD
 	<section name="SourceActionDialog.methods">
 		<item value="true" key="IgnoreDefault"/>
 		<item value="false" key="SynchronizedModifier"/>
@@ -29,20 +30,13 @@
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
 	</section>
+=======
+>>>>>>> f408e162c4741c51bd06fc9c4305f5b0409c09b0
 	<section name="quick_assist_proposal_size">
-	</section>
-	<section name="BuildPathsPropertyPage">
-		<item value="2" key="pageIndex"/>
-	</section>
-	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item value="540" key="DIALOG_WIDTH"/>
-		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
-		<item value="695" key="DIALOG_HEIGHT"/>
-		<item value="511" key="DIALOG_X_ORIGIN"/>
-		<item value="65" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="completion_proposal_size">
 	</section>
+<<<<<<< HEAD
 	<section name="DialogBounds_GenerateToStringDialog">
 		<item value="516" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
@@ -54,6 +48,8 @@
 		<item value="false" key="SortOrdering"/>
 		<item value="false" key="RemoveFinal"/>
 	</section>
+=======
+>>>>>>> f408e162c4741c51bd06fc9c4305f5b0409c09b0
 	<section name="JavaElementSearchActions">
 	</section>
 </section>
