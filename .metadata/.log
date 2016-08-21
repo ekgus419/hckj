@@ -10785,3 +10785,72 @@ org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 2; 요소 콘텐츠�
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-08-21 19:54:17.118
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.ide.eclipse.core 4 2 2016-08-21 20:07:08.582
+!MESSAGE Problems occurred when invoking code from plug-in: "org.springframework.ide.eclipse.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.springframework.ide.eclipse.aop.core.Activator.getResourceString(Activator.java:151)
+	at org.springframework.ide.eclipse.aop.core.Activator.getFormattedMessage(Activator.java:142)
+	at org.springframework.ide.eclipse.aop.core.builder.AopReferenceModelProjectBuilder.build(AopReferenceModelProjectBuilder.java:60)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$4.execute(SpringProjectContributionManager.java:220)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runBuilder(SpringProjectContributionManager.java:217)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:123)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2016-08-21 20:07:08.598
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasRecordedTypeStructures(TypeStructureCache.java:116)
+	at org.springframework.ide.eclipse.core.java.TypeStructureCache.hasStructuralChanges(TypeStructureCache.java:176)
+	at org.springframework.ide.eclipse.core.java.TypeStructureState.hasStructuralChanges(TypeStructureState.java:53)
+	at org.springframework.ide.eclipse.beans.core.internal.model.validation.BeansConfigValidator.getAffectedResources(BeansConfigValidator.java:127)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$ResourceDeltaVisitor.visit(SpringProjectContributionManager.java:346)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:75)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.getAffectedResources(SpringProjectContributionManager.java:160)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:130)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-08-21 20:07:08.621
+!MESSAGE An internal error occurred during: "Updating Git status for repository railro".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.getRepository(IndexDiffCacheEntry.java:184)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$1(IndexDiffCacheEntry.java:179)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$5.updateIndexDiff(IndexDiffCacheEntry.java:524)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffUpdateJob.run(IndexDiffUpdateJob.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
