@@ -1,0 +1,16 @@
+<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+
+<script src="./js/vendor/modernizr.custom.min.js"></script>
+<script src="./js/vendor/jquery-1.10.2.min.js"></script>
+<script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="./js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+<script src="./js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="./js/vendor/masonry.pkgd.min.js"></script>
+<script src="./js/main.js"></script>
+
+<div class="content">
+	<div class="page-main" role="main">
+	    <ul class="gallery" id="gallery"></ul>
+	    <button class="load-more" id="load-more">Load more</button>
+	</div>
+</div>

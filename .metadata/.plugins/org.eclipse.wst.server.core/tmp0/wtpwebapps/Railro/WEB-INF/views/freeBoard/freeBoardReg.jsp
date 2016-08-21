@@ -37,20 +37,12 @@ body {
    		</colgroup>
    	
 
-		<table summary="테이블 구성" >
+		<table summary="테이블 구성" style= " margin-left: auto; margin-right: auto; ">
 		<caption>게시판 글쓰기</caption>	
     		<tr>
 				<td>작성자</td>
 				<td><input type=text name=name size=10 maxlength=8></td>
 			</tr>
-			<tr>
-	 			<td>E-Mail</td>
-	 			<td><input type=text name=email size=30></td>
-    		</tr>
-    		<tr>
-     			<td>홈페이지</td>
-     			<td><input type=text name=homepage size=30></td>
-    		</tr>
     		<tr>
      			<td>제 목</td>
      			<td><input type=text name=title></td>

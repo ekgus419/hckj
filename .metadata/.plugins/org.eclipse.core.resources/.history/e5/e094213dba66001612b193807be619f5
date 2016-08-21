@@ -1,0 +1,8 @@
+<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+
+<div class="content">
+	<div class="page-main" role="main">
+	    <ul class="gallery" id="gallery"></ul>
+	    <button class="load-more" id="load-more">Load more</button>
+	</div>
+</div>

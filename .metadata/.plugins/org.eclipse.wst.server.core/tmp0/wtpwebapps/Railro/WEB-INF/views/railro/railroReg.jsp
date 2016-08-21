@@ -25,7 +25,7 @@
 					<div align="left">내 용</div>
 				</td>
 				<td>
-					<textarea name="BOARD_CONTENT" cols="67" rows="5"></textarea>
+					<textarea name="BOARD_CONTENT" cols="67" rows="10"></textarea>
 				</td>
 			</tr>
 			<tr>
@@ -40,9 +40,9 @@
 			</tr>
 		</table>
 		<div class="btn">
-			<a href="">등록</a>
+			<span><a href="">등록</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="javascript:history.go(-1)">취소</a>
+			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
 		</div>
 	</form>
 </div>
