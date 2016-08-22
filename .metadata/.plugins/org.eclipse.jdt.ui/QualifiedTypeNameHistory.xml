@@ -1,13 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
-<<<<<<< HEAD
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
-=======
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.hongchaegojung.railro.dto.Member"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
->>>>>>> c812f8a7d774aac5a2bf2e2dc6c084c9d49451c3
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>

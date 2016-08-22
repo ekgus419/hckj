@@ -6,7 +6,7 @@ import com.hongchaegojung.railro.dto.Board;
 
 public interface BoardDAO {
 	
-	// 글 전체 개수
+/*	// 글 전체 개수
 	public int getTotalBoardListCount();
 	
 	// 글 검색
@@ -39,6 +39,6 @@ public interface BoardDAO {
 	// 글쓴이인지 확인 
 	public boolean isBoardWriter(int bdNum, String bdId);
 	
-	
+	*/
 	
 }

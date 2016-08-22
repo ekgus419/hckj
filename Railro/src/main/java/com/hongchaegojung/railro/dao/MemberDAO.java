@@ -8,7 +8,7 @@ import com.hongchaegojung.railro.dto.Member;
 
 public interface MemberDAO {
 
-	// 로그인 
+/*	// 로그인 
 	public int login(Member member);
 	
 	// 회원가입
@@ -39,13 +39,13 @@ public interface MemberDAO {
 	public boolean bookRemove(int bdnum);
 	
 	// 내가 쓴 글 목록 
-	public List<Board> getMyBoardList(String writer/*(또는 memberId))*/;
+	public List<Board> getMyBoardList(String writer(또는 memberId));
 	
 	// 내가 쓴 글 목록 수 
-	public int countMyBoardList(String writer/*(또는 memberId))*/;
+	public int countMyBoardList(String writer(또는 memberId));
 	
 	// 출석수(내가 접속한 수) 
 	public int myConnectionCount(int dayCount);
-	
+	*/
 	
 }
