@@ -108,7 +108,7 @@
 		</dependency>  
 		
 		<!-- Tiles 설정  -->
-		<dependency>
+    	<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-core</artifactId>
 			<version>2.2.2</version>
@@ -122,7 +122,7 @@
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-servlet</artifactId>
 			<version>2.2.2</version>
-		</dependency>     
+		</dependency> 
 	</dependencies>
     <build>
         <plugins>
