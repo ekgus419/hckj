@@ -5,7 +5,7 @@ import java.util.List;
 import com.hongchaegojung.railro.dto.Notice;
 
 public interface NoticeDAO {
-	
+/*	
 	// 글 전체 개수
 	public int getTotalNoticeListCount();
 	
@@ -38,5 +38,5 @@ public interface NoticeDAO {
 	
 	// 글쓴이인지 확인 
 	public boolean isBoardWriter(int ID, String WRITER);
-
+*/
 }

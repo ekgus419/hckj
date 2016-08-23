@@ -1,5 +1,8 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
-<div class="header">
-
+<div class="header-btn">
+	<button type="button" onclick="location.href='${pageContext.request.contextPath}/member/login.htm'">로그인</button>
+	<button type="button" onclick="location.href='${pageContext.request.contextPath}/member/join.htm'">회원가입</button>
+</div>		
+<div class="header" onclick="location.href='${pageContext.request.contextPath}/index.htm'">
 </div>

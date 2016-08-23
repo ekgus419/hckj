@@ -1,0 +1,41 @@
+@import url(layout.css);
+
+.container { 
+	width: 971px; 
+	padding: 20px; 
+}
+
+.gallery-box { 
+	width: 760px; 
+	height: 300px; 
+	background: green; 
+	margin: 0 auto; 
+}
+
+.gallery-box .ul-slideshow img { 
+	width: 760px; 
+	height: 300px; 
+}
+
+.board-table { 
+	width: 660px; 
+	margin: 0 auto; 
+	margin-top: 20px;
+}
+
+.board-table table { 
+	text-indent: 8px; 
+	table-layout: fixed; 
+	width: 660px; 
+	font-size: 10px; 
+	text-align: left; 
+	line-height: 20px; 
+}
+
+.board-table table th { 
+	background-color: gray; 
+	color: #fff; 
+	font-size: 12px;
+}
+		
+
