@@ -12,7 +12,7 @@
     		<tr>
      			<td>제 목</td>
      			<td>
-     			<input type=text name=title></td>
+     			<input type=text name=title size="50"></td>
     		</tr>
     		<tr>
      			<td style="vertical-align: top">내 용</td>
