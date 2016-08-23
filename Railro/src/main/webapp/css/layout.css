@@ -24,7 +24,8 @@
 .top-menu {  
 	display: inline-block; 
 	line-height: 35px; 
-	zoom: 1;  
+	zoom: 1; 
+	font-size: 13px; 
 }
 
 .top-menu>li { 
@@ -36,6 +37,7 @@
 	float: none; 
 	position: absolute; 
 	margin: 0 auto;
+	font-size: 13px;
 }
 
 .sub-menu li { 

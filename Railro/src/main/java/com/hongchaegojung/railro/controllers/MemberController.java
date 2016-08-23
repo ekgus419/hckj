@@ -36,4 +36,19 @@ public class MemberController {
 	public String test3() {
 		return "member.mypage";
 	}
+	
+	@RequestMapping(value={"myBoardList.htm"}, method=RequestMethod.GET)
+	public String test4() {
+		return "member.myBoardList";
+	}
+	
+	@RequestMapping(value={"myBookMarkList.htm"}, method=RequestMethod.GET)
+	public String test5() {
+		return "member.myBookMarkList";
+	}
+	
+	@RequestMapping(value={"myInfoEdit.htm"}, method=RequestMethod.GET)
+	public String test6() {
+		return "member.myInfoEdit";
+	}
 }

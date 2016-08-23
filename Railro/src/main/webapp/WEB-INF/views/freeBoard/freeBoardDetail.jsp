@@ -2,11 +2,10 @@
 
 <div class="content">
 	<form name="" method="post" action="" onsubmit="" >
-		<table width="50%">
-	
+		<table width="65%">
     		<tr>
-				<td width="5%">작성자</td>
-				<td width="45%">
+				<td width="10%">작성자</td>
+				<td width="55%">
 				&nbsp;홍혜진
 				</td>
 			</tr>
@@ -30,8 +29,10 @@
 		</table>
 	</form> 
 	<div class="button">
-			<button>수정</button>
-			<button>삭제</button>
-			<button onclick="javasrcipt:history.go(-1)">취소</button>
-		</div>
+		<button>수정</button>
+		&nbsp;&nbsp;
+		<button>삭제</button>
+		&nbsp;&nbsp;
+		<button onclick="javasrcipt:history.go(-1)">취소</button>
+	</div>
 </div>

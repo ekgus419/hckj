@@ -2,8 +2,7 @@
 
 <div class="content">
 	<form name="" method="post" action="" onsubmit="" >
-		<table width="50%">
-
+		<table width="65%">
     		<tr>
 				<td>작성자</td>
 				<td>

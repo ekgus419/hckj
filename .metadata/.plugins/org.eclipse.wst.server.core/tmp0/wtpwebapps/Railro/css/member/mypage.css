@@ -26,48 +26,22 @@ tr{
 }
 
 td{
-	vertical-align: middle;
-}
-
-input[type=text], input[type=password]{
-    padding: 5px 10px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: none;
-    font-size: 12px;
-}
-
-input[type=submit]{
-	padding: 22px 18px;
-    display: inline-block;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: none;
-    font-size: 12px;
+	padding-left: 50px;
 }
 
 .btn{
 	text-align: center;
+	padding: 0;
+	height: 55px;
+	line-height: 55px;
 }
 
-.sub_btn{
-	padding: 20px 0;
-	text-align: center;
-}
-
-.sub_btn a:hover{
-	text-decoration: underline;
-}
-
-.sub_btn input[type=button]{
+input[type=button]{
 	background-color: #ffffff;
-	border: none;
-}
-
-.sub_btn input[type=button]:hover{
-	text-decoration: underline;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px 25px;
+    width: 230px;
+    cursor: pointer;
 }

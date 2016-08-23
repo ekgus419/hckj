@@ -23,6 +23,7 @@
 		<div class="container">
 			<tiles:insertAttribute name="content"></tiles:insertAttribute>
 		</div>
+		
 		<!-- 푸터부분 -->
 		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
 	</div>
