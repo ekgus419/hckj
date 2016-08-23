@@ -17,14 +17,14 @@
     		<tr>
      			<td style="vertical-align: top">내 용</td>
      			<td>
-     			<textarea name=content rows="10" cols="90"></textarea>
+     			<textarea name=content rows="10" cols="auto"></textarea>
      			</td>
     		</tr>
     		
 		</table>
 	</form>
 		<div class="button">
-			<button>수정</button>
+			<button>등록</button>
 			<button onclick="javasrcipt:history.go(-1)">취소</button>
 		</div>
 </div>

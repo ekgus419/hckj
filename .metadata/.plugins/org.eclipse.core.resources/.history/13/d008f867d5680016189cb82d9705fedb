@@ -18,10 +18,6 @@ input[type=text],textarea{
 	margin : 10px 0px 10px 8px;
 }
 
-textarea{
-	width: 100%;
-}
-
 table{
 	margin : 50px auto 10px auto;
 }
