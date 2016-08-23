@@ -2,24 +2,27 @@
 
 <div class="content">
 	<form name="" action="" method="post" onsubmit="">
-		<table class="mypage" width="50%">
+		<table width="50%">
 			<tr>
-				<th colspan="50%">
-					<div class="mypage-title"><span>My Page</span></div>
+				<th>
+					<span>My Page</span>
 				</th>
 			</tr>
 			<tr>
-				<td colspan="50%">
+				<td>
 					<b>홍채고정</b>님
 				</td>
 			</tr>
 			<tr>
-				<td colspan="10%">
-					출석횟수
-					&nbsp;&nbsp;&nbsp;
+				<td>
+					출석횟수 :
+					<b>100</b>회
 				</td>
-				<td colspan="40%">
-					<div align="left"><b>100</b>회</div>
+			</tr>
+			<tr>
+				<td>
+					회원등급 :
+					<b>멤버</b>
 				</td>
 			</tr>
 			<tr>
@@ -27,16 +30,16 @@
 			</tr>
 			<tr>
 				<td class="btn" colspan="100%"> 
-					<input type="button" onclick="" value="내가 쓴 글"/>
+					<input type="button" onclick="location.href='myBoardList.htm'" value="내가 쓴 글"/>
 					&nbsp;&nbsp;&nbsp;
-					<input type="button" onclick="" value="내가 담은 글"/>
+					<input type="button" onclick="location.href='myBookMarkList.htm'" value="내가 담은 글"/>
 				</td>
 			</tr>
 			<tr>
 				<td class="btn" colspan="100%"> 
-					<input type="button" onclick="" value="개인정보수정"/>
+					<input type="button" onclick="location.href='myInfoEdit.htm'" value="개인정보수정"/>
 					&nbsp;&nbsp;&nbsp;
-					<input type="button" onclick="" value="회원탈퇴"/>
+					<input type="button" onclick="location.href=''" value="회원탈퇴"/>
 				</td>
 			</tr>
 		</table>
