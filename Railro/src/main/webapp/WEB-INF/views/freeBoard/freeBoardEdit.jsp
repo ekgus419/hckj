@@ -12,12 +12,12 @@
     		<tr>
      			<td>제 목</td>
      			<td>
-     			<input type=text name=title></td>
+     			<input type=text name=title size="50"></td>
     		</tr>
     		<tr>
      			<td style="vertical-align: top">내 용</td>
      			<td>
-     			<textarea name=content rows="10" cols="90"></textarea>
+     			<textarea name=content rows="10" cols="auto"></textarea>
      			</td>
     		</tr>
     		
