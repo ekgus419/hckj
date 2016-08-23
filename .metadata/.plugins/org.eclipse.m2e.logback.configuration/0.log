@@ -9575,3 +9575,34 @@ java.lang.NullPointerException: null
 2016-08-22 14:53:48,267 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2016-08-22 14:53:48,270 [Worker-130] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-08-22 14:53:48,271 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-23 14:00:50,793 [Worker-140] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-23 14:00:50,797 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-23 14:00:50,809 [Worker-140] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-23 14:00:50,810 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-23 14:02:26,121 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-23 14:02:26,132 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-23 14:02:26,139 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-23 14:02:26,140 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-23 14:04:02,558 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-context:3.2.3.RELEASE
+2016-08-23 14:04:02,570 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-aop:3.2.3.RELEASE
+2016-08-23 14:04:02,581 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-beans:3.2.3.RELEASE
+2016-08-23 14:04:02,597 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-core:3.2.3.RELEASE
+2016-08-23 14:04:02,609 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-expression:3.2.3.RELEASE
+2016-08-23 14:04:02,619 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-webmvc:3.2.3.RELEASE
+2016-08-23 14:04:02,630 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.springframework:spring-web:3.2.3.RELEASE
+2016-08-23 14:04:02,641 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.aspectj:aspectjrt:1.6.10
+2016-08-23 14:04:02,653 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.slf4j:slf4j-api:1.6.6
+2016-08-23 14:04:02,664 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.slf4j:jcl-over-slf4j:1.6.6
+2016-08-23 14:04:02,675 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.slf4j:slf4j-log4j12:1.6.6
+2016-08-23 14:04:02,691 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for javax.inject:javax.inject:1
+2016-08-23 14:04:02,701 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.apache.tiles:tiles-core:2.2.2
+2016-08-23 14:04:02,712 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.apache.tiles:tiles-api:2.2.2
+2016-08-23 14:04:02,723 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for commons-digester:commons-digester:2.0
+2016-08-23 14:04:02,733 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for commons-beanutils:commons-beanutils:1.8.0
+2016-08-23 14:04:02,744 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.apache.tiles:tiles-jsp:2.2.2
+2016-08-23 14:04:02,754 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.apache.tiles:tiles-template:2.2.2
+2016-08-23 14:04:02,765 [Worker-3] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded javadoc for org.apache.tiles:tiles-servlet:2.2.2
+2016-08-23 14:04:06,928 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-23 14:04:06,943 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-08-23 14:04:06,965 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-08-23 14:04:06,968 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
