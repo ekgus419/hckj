@@ -62,6 +62,7 @@ input[type=submit], input[type=reset], input[type=button]{
     box-sizing: border-box;
     resize: none;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .btn{
