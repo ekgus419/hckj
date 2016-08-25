@@ -24,7 +24,7 @@ public interface BoardDAO {
 	public boolean insert(Board board);
 	
 	// 글 수정 
-	public boolean update(Board board);
+	public boolean update(int ID);
 	
 	// 글 삭제 
 	public boolean delete(int ID);
