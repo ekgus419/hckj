@@ -1,14 +1,29 @@
 package com.hongchaegojung.railro.controllers;
 
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.hongchaegojung.railro.dao.FreeBoardDAO;
+import com.hongchaegojung.railro.dto.Board;
 
 @Controller
 @RequestMapping("/freeBoard/*")
 public class FreeBoardController {
+	
+	@Autowired
+	private SqlSession sqlSession;
+	
 	@RequestMapping(value={"freeBoardDetail.htm"},method=RequestMethod.GET)
-	public String test1() {
+	public String freeBoardDetail(final int ID, Model model) {
+		
+		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		Board board = freeDAO.getDetail(ID);
+		model.addAttribute("board",board);
+		
 		return "freeBoard.freeBoardDetail";
 	}
 	
