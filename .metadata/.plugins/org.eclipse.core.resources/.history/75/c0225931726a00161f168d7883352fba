@@ -1,12 +1,5 @@
 package com.hongchaegojung.railro.controllers;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +13,7 @@ import com.hongchaegojung.railro.dto.Board;
 @Controller
 @RequestMapping("/freeBoard/*")
 public class FreeBoardController {
-/*	
+	
 	@Autowired
 	private SqlSession sqlSession;
 	
@@ -71,9 +64,6 @@ public class FreeBoardController {
 	public String test5() {
 		return "freeBoard.freeBoardSearchList";
 	}
-<<<<<<< HEAD
-*/}
-=======
 	
 	
 	// 삭제, 다운로드
@@ -110,4 +100,3 @@ public class FreeBoardController {
 	
 	
 }
->>>>>>> 8df3f09ad77e6d38f71cff255ced4436c4530fb0

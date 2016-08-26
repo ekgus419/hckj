@@ -16,14 +16,12 @@
      			<input type=text name=title size="50" value="${Board.SUBJECT}"></td>
     		</tr>
     		<tr>
-     			<td style="vertical-align: top" >
-     			
-     			내 용
-     			${Board.CONTENTS}
-     			
-     			</td>
+     			<td style="vertical-align: top"  value="${notice.title}">내 용</td>
      			<td>
-     			<textarea name=content rows="10" cols="auto"></textarea>
+     			<textarea name=content rows="10" cols="auto">
+     			 ${Board.CONTENTS}
+     			
+     			</textarea>
      			</td>
     		</tr>
     		
