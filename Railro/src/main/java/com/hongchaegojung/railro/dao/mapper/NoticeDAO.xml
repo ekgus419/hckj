@@ -4,6 +4,14 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.hongchaegojung.railro.dao.NoticeDAO">
+	<select id="getTotalNoticeListCount" resultType="Integer">
+		SELECT COUNT(*) FROM NOTICE
+	</select>
+	
+	<select id="getNoticeList" resultType="com.hongchaegojung.railro.dto.Notice">
+		SELECT * FROM NOTICE
+	</select>
+	
 	<insert id="insert" parameterType="com.hongchaegojung.railro.dto.Notice">
 		INSERT INTO NOTICE
 		( 
@@ -11,7 +19,7 @@
 		)
 		VALUES
 		(
-			NOTICE_SEQ.NEXTVAL, #{TITLE, jdbcType=VARCHAR}, #{CONTENTS, jdbcType=CLOB}, '작성자임', SYSDATE, 0
+			NOTICE_SEQ.NEXTVAL, #{TITLE, jdbcType=VARCHAR}, #{CONTENTS, jdbcType=CLOB}, 4, SYSDATE, 0
 		) 
 	</insert>
 </mapper>

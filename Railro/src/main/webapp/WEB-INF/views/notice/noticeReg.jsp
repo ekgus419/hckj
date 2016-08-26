@@ -39,7 +39,7 @@
 			</tr>
 		</table>
 		<div class="btn">
-			<span><input type="submit" value="등록"/></span>
+			<input type="submit" value="등록"/>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
 		</div>

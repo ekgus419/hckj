@@ -17,7 +17,7 @@ public interface NoticeDAO {
 	public int countSearchNoticeList();
 	
 	// 글 목록 
-	public List<Notice> getNoticeList(int page, int limit);
+	public List<Notice> getNoticeList(/*int page, int limit*/);
 	
 	// 글 상세보기 
 	public Notice getDetail(int ID);
