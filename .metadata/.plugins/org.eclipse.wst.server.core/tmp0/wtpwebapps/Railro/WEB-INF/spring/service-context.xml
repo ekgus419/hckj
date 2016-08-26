@@ -17,10 +17,19 @@
 	<property name="password" value="java1234"></property>
 </bean>
 
+<<<<<<< HEAD
 <!-- 마이바티스연동 -->
 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	<property name="dataSource" ref="dataSource"></property>
 	<property name="mapperLocations" value="classpath:com/hongchaegojung/railro/dao/mapper/*.xml"></property>
+=======
+
+
+<!-- 마이바티스연동 -->
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource" ref="dataSource"></property>
+	<property name="mapperLocations" value="classpath:com.hongchaegojung.railro.dao.mapper/*.xml"></property>
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 </bean>
 
 <!-- 마이바티스연동 -->

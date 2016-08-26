@@ -1,6 +1,7 @@
 package com.hongchaegojung.railro.dto;
 
 import java.sql.Date;
+import java.util.List;
 
 public class Notice { //6°³
 
@@ -10,6 +11,7 @@ public class Notice { //6°³
 	private String WRITER;
 	private Date REGDATE;
 	private int HIT;
+	private List<NoticeFile> noticeFile;
 	
 	public int getID() {
 		return ID;
@@ -47,6 +49,14 @@ public class Notice { //6°³
 	public void setHIT(int hIT) {
 		HIT = hIT;
 	}
+	
+	public List<NoticeFile> getNoticeFile() {
+		return noticeFile;
+	}
+	public void setNoticeFile(List<NoticeFile> noticeFile) {
+		this.noticeFile = noticeFile;
+	}
+	
 	@Override
 	public String toString() {
 		return "Notice [ID=" + ID + ", TITLE=" + TITLE + ", CONTENTS=" + CONTENTS + ", WRITER=" + WRITER + ", REGDATE="

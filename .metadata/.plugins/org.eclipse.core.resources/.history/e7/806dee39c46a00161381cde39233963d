@@ -1,0 +1,8 @@
+package com.test.railro.service;
+
+public interface NoticeService {
+
+	public int getTotalBoardListCount();
+	
+	public void aaaa();
+}

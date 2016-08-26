@@ -12,6 +12,7 @@
 1471935286274	Delete element
 1471935341292	Delete element
 1471937570082	Delete element
+<<<<<<< HEAD
 1472107012012	Rename type 'boardType'
 1472109018483	Delete element
 1472114995167	Move folder
@@ -25,3 +26,8 @@
 1472124111376	Delete element
 1472124155021	Move files
 1472124160726	Delete element
+=======
+1472107908035	Delete element
+1472126525810	Copy compilation unit
+1472129126738	Rename local variable 'lastKey'
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc

@@ -25,17 +25,73 @@ import com.hongchaegojung.railro.dto.BoardFile;
 @RequestMapping("/railro")
 public class RailroController {
 	
+<<<<<<< HEAD
 /*	@Autowired
 	private SqlSession sqlSession;
 	
 	@RequestMapping(value="/railroList.htm", method=RequestMethod.GET)
 	public String getBoardList() {
+=======
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@RequestMapping(value={"railroList.htm"}, method=RequestMethod.GET)
+	public String test1() {
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 		return "railro.railroList";
 	}
 	
 	// method=RequestMethod 를 쓰지 않으면 GET, POST 방식 둘 다 받을 수 있음
+<<<<<<< HEAD
 	@RequestMapping(value="/railroDetail.htm")
 	public String getDetail(){
+=======
+	@RequestMapping(value={"railroDetail.htm"})
+	public String insert(
+			Board board, HttpServletRequest request, Principal principal,
+			// required = false : 파일 첨부가 필수는 아니다, true : 파일 첨부 필수
+			// file 은 IOException 을 던져야 함. 그렇지 않으면 에러뜸
+			@RequestParam(value="file", required=false) List<MultipartFile> files
+			) throws ClassNotFoundException, SQLException, IOException {
+		
+		// BoardFile 을 List 로 받아 boardFiles 에 담음
+		List<BoardFile> boardFiles = new ArrayList<BoardFile>();
+		
+		board.setWRITER(principal.getName());
+		BoardDAO boardDAO = sqlSession.getMapper(BoardDAO.class);
+		boardDAO.insert(board);
+		
+		// files에 담긴 개수만큼 for문을 돌면서 file 에 담아줌
+		for(MultipartFile file : files){
+			
+			// file 이 null 이 아니고, file 이 비어있지 않으면 if문 실행
+			if(file != null && !file.isEmpty()){
+				
+				String fname = file.getOriginalFilename();
+				String path  = request.getServletContext().getRealPath("/customer/upload");
+				String fpath = path + "\\" + fname;
+				
+				FileOutputStream fs = new FileOutputStream(fpath);
+				fs.write(file.getBytes());
+				fs.close();
+				
+				BoardFile boardFile = new BoardFile();
+				boardFile.setORIGINFILENAME(file.getOriginalFilename());
+			
+				// 방금 insert한 게시물의 키를 뽑아와서  boardId 에 담아주고
+				// boardFile 에 boardId 를 셋팅(같은 key 값을 가지게 됨)
+				// inset 구문 2번 쓸 수 없을 때 사용
+				int boardId = boardDAO.lastKey();
+				boardFile.setBOARDID(boardId);
+				
+				boardDAO.insertFile(boardFile);
+				
+			}
+			
+		}
+		
+		board.setBoardFile(boardFiles);
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 		
 		
 		return "railro.railroDetail";
@@ -46,6 +102,7 @@ public class RailroController {
 		return "railro.railroEdit";
 	}
 	
+<<<<<<< HEAD
 	@RequestMapping(value="/railroReg.htm", method=RequestMethod.GET)
 	public String insert(
 			Board board, HttpServletRequest request, Principal principal,
@@ -91,6 +148,10 @@ public class RailroController {
 		}
 		
 		board.setBoardFile(boardFiles);
+=======
+	@RequestMapping(value={"railroReg.htm"}, method=RequestMethod.GET)
+	public String test4() {
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 		
 		
 		return "railro.railroReg";
