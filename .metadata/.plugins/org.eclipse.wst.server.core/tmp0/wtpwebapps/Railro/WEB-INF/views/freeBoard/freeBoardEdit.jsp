@@ -6,16 +6,22 @@
     		<tr>
 				<td>작성자</td>
 				<td>
-				&nbsp;&nbsp;&nbsp;홍혜진
+				 &nbsp;&nbsp;&nbsp;홍혜진
+				${Board.ID}
 				</td>
 			</tr>
     		<tr>
      			<td>제 목</td>
      			<td>
-     			<input type=text name=title size="50"></td>
+     			<input type=text name=title size="50" value="${Board.SUBJECT}"></td>
     		</tr>
     		<tr>
-     			<td style="vertical-align: top">내 용</td>
+     			<td style="vertical-align: top" >
+     			
+     			내 용
+     			${Board.CONTENTS}
+     			
+     			</td>
      			<td>
      			<textarea name=content rows="10" cols="auto"></textarea>
      			</td>

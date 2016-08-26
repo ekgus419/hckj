@@ -21,7 +21,7 @@ import com.hongchaegojung.railro.dto.Board;
 @RequestMapping("/freeBoard/*")
 public class FreeBoardController {
 	
-	@Autowired
+/*	@Autowired
 	private SqlSession sqlSession;
 	
 	@RequestMapping(value={"freeBoardDetail.htm"},method=RequestMethod.GET)
@@ -102,7 +102,7 @@ public class FreeBoardController {
 	}
 	
 	
-	
+	*/
 	
 	
 	

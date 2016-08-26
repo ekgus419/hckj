@@ -1,8 +1,0 @@
-@import url(layout.css);
-
-.button span{
-	background: #4CAF50;
-	float: right;
-}
-
-

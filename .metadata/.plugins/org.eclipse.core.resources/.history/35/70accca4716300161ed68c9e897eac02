@@ -1,5 +1,0 @@
-<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
-
-<div id="header">
-메인 타이틀
-</div>

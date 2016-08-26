@@ -5,7 +5,54 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-08-24T19:30:48Z</updated>
+  <updated>2016-08-25T18:34:32Z</updated>
+  <entry>
+    <title>Spring Cloud Data Flow for Cloud Foundry goes 1.0 GA</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/25/spring-cloud-data-flow-for-cloud-foundry-goes-1-0-ga" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Eric Bottard</name>
+    </author>
+    <id>tag:spring.io,2016-08-25:2597</id>
+    <updated>2016-08-25T18:34:32Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;We are pleased to announce the general availability of Spring Cloud Data Flow for Cloud Foundry version 1.0.0.RELEASE.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Cloud Data Flow for Cloud Foundry provides support for orchestrating long-running (streaming) and short-lived (task/batch) data microservices on Cloud Foundry runtime.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As the successor to Spring XD, this project benefits from a much more decoupled architecture, leveraging the Spring Cloud &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-cloudfoundry"&gt;Deployer for Cloud Foundry&lt;/a&gt; library, which also goes GA today. More details about Spring Cloud Data Flow&amp;#8217;s architecture and its ecosystem can be found in &lt;a href="https://blog.pivotal.io/big-data-pivotal/products/data-goes-cloud-native-with-the-new-spring-cloud-data-flow"&gt;this blog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Stream and Batch/Task Processing are the primary functionalities in Spring Cloud Data Flow and they map to Cloud Foundry Diego&amp;#8217;s &lt;a href="https://docs.cloudfoundry.org/concepts/diego/diego-auction.html#processes"&gt;LRPs and Tasks&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; respectively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Includes developer toolkits to build streaming and batch/task pipelines using the DSL, Shell, REST-APIs, Dashboard, Flo Designer, or any combination of those.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Facilitates test-driven-development at individual data pipeline components along with test fixtures to develop and test "data-centric" apps in isolation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leverages Cloud Foundry&amp;#8217;s runtime capabilities such as security, metrics, operational monitoring, scaling, and reliable execution of streaming and batch/task pipelines.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The reference documentation includes a &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/1.0.0.RELEASE/reference/html/migration-guide.html"&gt;migration guide&lt;/a&gt; from XD to Data Flow&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Please refer to the &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/1.0.0.RELEASE/reference/htmlsingle/#getting-started"&gt;Getting Started&lt;/a&gt; section of the documentation after you&amp;#8217;ve &lt;a href="http://repo.spring.io/release/org/springframework/cloud/spring-cloud-dataflow-server-cloudfoundry/1.0.0.RELEASE/spring-cloud-dataflow-server-cloudfoundry-1.0.0.RELEASE.jar"&gt;downloaded&lt;/a&gt; the 1.0.0.RELEASE of the server.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Make sure to read the core Spring Cloud Data Flow&amp;#8217;s &lt;a href="https://spring.io/blog/2016/07/12/spring-cloud-data-flow-1-0-ga-released"&gt;release-blog&lt;/a&gt; to learn more about all the feature capabilities&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;(1) Task support is an experimental feature available on Cloud Foundry 1.7.12+ only&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Check your Spring Security SAML config - XXE security issue</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/24/check-your-spring-security-saml-config-xxe-security-issue" />
@@ -728,24 +775,5 @@ public class MySqlApplication {&#xD;
 &lt;p&gt;In this webinar, we¡¯ll explore a new project in the Spring Cloud portfolio, Spring Cloud Task, a new framework for developing and orchestrating short-lived microservices. We¡¯ll explore various use cases, build your first task, and discuss how to orchestrate tasks using various techniques. Finally, we¡¯ll peek into the roadmap for the Spring Cloud Task project.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/EB3g-H51AN0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;p&gt;Spring Cloud Data Flow 3 part webinar series:&lt;br/&gt;&lt;a href="https://spring.io/blog/2016/03/30/webinar-replay-stream-processing-in-the-cloud-with-data-microservices"&gt;Spring Cloud Stream&lt;/a&gt;&lt;br/&gt;&lt;a href="https://spring.io/blog/2016/08/19/webinar-replay-data-microservices-with-spring-cloud-data-flow"&gt;Spring Cloud Data Flow&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring IO Platform 2.0.7.RELEASE</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/29/spring-io-platform-2-0-7-release" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Andy Wilkinson</name>
-    </author>
-    <id>tag:spring.io,2016-07-29:2575</id>
-    <updated>2016-07-29T09:44:40Z</updated>
-    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; 2.0.7.RELEASE is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.spring.platform"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Boot 1.3.7.RELEASE&lt;/li&gt;
-  &lt;li&gt;Spring Integration 4.2.9.RELEASE&lt;/li&gt;
-  &lt;li&gt;Spring Web Flow 2.4.4.RELEASE&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/2.0.7.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
