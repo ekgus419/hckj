@@ -1,7 +1,9 @@
 package com.hongchaegojung.railro.dao;
 
 import java.util.List;
+
 import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.BoardFile;
 
 public interface BoardDAO {
 	
@@ -22,6 +24,8 @@ public interface BoardDAO {
 	
 	// 글 등록 
 	public boolean insert(Board board);
+	public int lastKey();
+	public void insertFile(BoardFile boardFile);
 	
 	// 글 수정 
 	public boolean update(Board board);
@@ -37,5 +41,4 @@ public interface BoardDAO {
 	
 	// 글쓴이인지 확인 
 	public boolean isBoardWriter(int ID, String WRITER);
-	
 }
