@@ -18,13 +18,13 @@ public interface MemberDAO {
 	public int countMember(Member member);
 	
 	// 회원목록(조회) 
-	public List<Member member> memberList();
+	public List<Member> memberList();
 	
 	// 회원정보보기 
 	public Member getMember(String memberId);
 	
 	// 회원정보수정 
-	public int(boolean) modifyMember(Member member);
+	public int modifyMember(Member member);
 	
 	// 회원탈퇴 
 	public boolean deleteMember(String memberId);
@@ -46,6 +46,6 @@ public interface MemberDAO {
 	
 	// 출석수(내가 접속한 수) 
 	public int myConnectionCount(int dayCount);
-	*/
 	
+	*/
 }
