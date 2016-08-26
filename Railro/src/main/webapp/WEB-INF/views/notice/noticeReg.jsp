@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <div id="content">
-	<form action="" method="post" enctype="multipart/form-data" name="">
+	<form action="noticeReg.htm" method="post" enctype="multipart/form-data" name="">
 		<input type="hidden" name="BOARD_ID" value="">
 		<table class="register" width="100%">
 			<tr>
@@ -17,7 +17,7 @@
 					<div align="left">제 목</div>
 				</td>
 				<td>
-					<input name="BOARD_SUBJECT" type="text" size="50" maxlength="100" value=""/>
+					<input name="TITLE" type="text" size="50" maxlength="100" value=""/>
 				</td>
 			</tr>
 			<tr>
@@ -25,7 +25,7 @@
 					<div align="left">내 용</div>
 				</td>
 				<td>
-					<textarea name="BOARD_CONTENT" cols="67" rows="10"></textarea>
+					<textarea name="CONTENTS" cols="67" rows="10"></textarea>
 				</td>
 			</tr>
 			<tr>
@@ -35,7 +35,9 @@
 				<td>
 					<input class="upload-name" value="파일선택" disabled="disabled">
 					<label for="upload">찾아보기</label> 
-                    <input type="file" id="upload" class="file_hidden"> 
+                    <input type="file" id="upload" name="file" class="file_hidden"> 
+                    <input type="file" id="upload" name="file" class="file_hidden"> 
+                    <input type="file" id="upload" name="file" class="file_hidden"> 
 				</td>
 			</tr>
 		</table>

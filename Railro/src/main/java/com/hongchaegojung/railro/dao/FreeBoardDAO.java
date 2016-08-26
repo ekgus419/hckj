@@ -3,6 +3,7 @@ package com.hongchaegojung.railro.dao;
 import java.util.List;
 
 import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.BoardFile;
 
 public class FreeBoardDAO implements BoardDAO{
 
@@ -70,6 +71,18 @@ public class FreeBoardDAO implements BoardDAO{
 	public boolean isBoardWriter(int ID, String WRITER) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public int lastKey() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void insertFile(BoardFile boardFile) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

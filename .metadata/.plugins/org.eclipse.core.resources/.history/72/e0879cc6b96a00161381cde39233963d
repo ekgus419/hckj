@@ -1,0 +1,6 @@
+package com.test.railro.controller;
+
+@Controller
+public class NoticeController {
+
+}

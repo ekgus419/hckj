@@ -13,7 +13,7 @@ import com.hongchaegojung.railro.dto.Board;
 @Controller
 @RequestMapping("/freeBoard/*")
 public class FreeBoardController {
-	
+/*	
 	@Autowired
 	private SqlSession sqlSession;
 	
@@ -46,4 +46,4 @@ public class FreeBoardController {
 	public String test5() {
 		return "freeBoard.freeBoardSearchList";
 	}
-}
+*/}

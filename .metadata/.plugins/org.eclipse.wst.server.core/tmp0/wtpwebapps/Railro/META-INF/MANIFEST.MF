@@ -1,10 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
 Built-By: TEST
 Build-Jdk: 1.8.0_101
-=======
-Built-By: chae
-Build-Jdk: 1.8.0_91
->>>>>>> 227933e90cea7fdb00258db62bbd7f6916628cb1
 Created-By: Maven Integration for Eclipse
 

@@ -1,0 +1,9 @@
+package com.test.railro.mapper;
+
+import java.util.List;
+
+public interface NoticeMapper {
+
+	public List<Notice> noticeList();
+	
+}
