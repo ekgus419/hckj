@@ -1,7 +1,0 @@
-package com.test.railro.mapper;
-
-public interface NoticeMapper {
-
-	public List<Notice> noticeList();
-	
-}
