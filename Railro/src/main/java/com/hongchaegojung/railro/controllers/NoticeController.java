@@ -1,14 +1,35 @@
 package com.hongchaegojung.railro.controllers;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.security.Principal;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.ModelAttribute;
+=======
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.hongchaegojung.railro.dao.NoticeDAO;
+import com.hongchaegojung.railro.dto.Notice;
+import com.hongchaegojung.railro.dto.NoticeFile;
 
 import com.hongchaegojung.railro.dao.NoticeDAO;
 import com.hongchaegojung.railro.dto.Notice;
@@ -21,6 +42,7 @@ public class NoticeController {
 	private SqlSession sqlSession;
 	
 	@RequestMapping(value="/noticeList.htm", method=RequestMethod.GET)
+<<<<<<< HEAD
 	public String noticeList(Model model) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
 		
@@ -29,10 +51,14 @@ public class NoticeController {
 		
 		model.addAttribute("listCount", listCount);
 		model.addAttribute("noticeList", list);
+=======
+	public String test1() {
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 		return "notice.noticeList";
 	}
 	
 	@RequestMapping(value="/noticeDetail.htm", method=RequestMethod.GET)
+<<<<<<< HEAD
 	public String test2() {
 		return "notice.noticeDetail";
 	}
@@ -51,6 +77,55 @@ public class NoticeController {
 	
 	@RequestMapping(value="/noticeEdit.htm", method=RequestMethod.GET)
 	public String test4() {
+=======
+	public String getDetail(final int ID, Model model)throws ClassNotFoundException, SQLException, IOException {
+
+		NoticeDAO noticeDao = sqlSession.getMapper(NoticeDAO.class);
+		Notice notice = noticeDao.getDetail(ID);
+		model.addAttribute("notice", notice);
+		
+		return "notice.noticeDetail";
+	}
+
+	// get
+	@RequestMapping(value="/noticeReg.htm", method=RequestMethod.GET)
+	public String insert() {
+		
+		
+		return "notice.noticeReg";
+	}
+
+	// post
+	@RequestMapping(value="/noticeReg.htm", method=RequestMethod.POST)
+	public String insert(Notice notice, HttpServletRequest request, Principal principal) throws ClassNotFoundException, SQLException, IOException{
+		return null;
+		
+		
+	}
+
+	
+	// get
+	@RequestMapping(value="/noticeEdit.htm", method=RequestMethod.GET)
+	public String modify(int ID, Model model) throws ClassNotFoundException, SQLException {
+		
+		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
+		Notice notice = noticeDAO.getDetail(ID);
+		
+		model.addAttribute("notice", notice);
+				
+		return "notice.noticeEdit";
+	}
+	
+	// post
+	@RequestMapping(value="/noticeEdit.htm", method=RequestMethod.POST)
+	public String modify(Notice notice) throws ClassNotFoundException, SQLException{
+		
+	/*	NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
+		noticeDAO.*/
+		
+		
+		
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 		return "notice.noticeEdit";
 	}
 

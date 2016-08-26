@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <div id="content">
-	<form action="" method="post" enctype="multipart/form-data" name="">
+	<form action="" method="POST" enctype="multipart/form-data" name="">
 		<input type="hidden" name="BOARD_ID" value="">
 		<table class="modify" width="100%">
 			<tr>

@@ -4,6 +4,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.hongchaegojung.railro.dao.NoticeDAO">
+<<<<<<< HEAD
 	<select id="getTotalNoticeListCount" resultType="Integer">
 		SELECT COUNT(*) FROM NOTICE
 	</select>
@@ -21,5 +22,28 @@
 		(
 			NOTICE_SEQ.NEXTVAL, #{TITLE, jdbcType=VARCHAR}, #{CONTENTS, jdbcType=CLOB}, 4, SYSDATE, 0
 		) 
+=======
+	
+	<insert id="insert">
+		INSERT INTO Notice
+		VALUES
+		(
+			1,#{TITLE},#{CONTENTS},'고미정',SYSDATE,0
+		)
+		
+	</insert>
+	
+	<!-- 가장 마지막에 저장된 데이터의 키값을 리턴 -->
+	<select id="lastKey">
+		SELECT LAST_INSERT_ID()
+	</select>
+	
+	<insert id="insertFile">
+		INSERT INTO NoticeFile
+		VALUES
+		(
+			<!-- noticeFile values -->
+		)
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 	</insert>
 </mapper>

@@ -1,6 +1,7 @@
 package com.hongchaegojung.railro.dto;
 
 import java.sql.Date;
+import java.util.List;
 
 public class Board { //12°³
 
@@ -17,8 +18,11 @@ public class Board { //12°³
 	private Date REGDATE;
 	private int HIT;
 	
+	private List<BoardFile> boardFile;
+	
 	public int getID() {
 		return ID;
+		
 	}
 	public void setID(int iD) {
 		ID = iD;
@@ -88,6 +92,13 @@ public class Board { //12°³
 	}
 	public void setHIT(int hIT) {
 		HIT = hIT;
+	}
+	
+	public List<BoardFile> getBoardFile() {
+		return boardFile;
+	}
+	public void setBoardFile(List<BoardFile> boardFile) {
+		this.boardFile = boardFile;
 	}
 	@Override
 	public String toString() {
