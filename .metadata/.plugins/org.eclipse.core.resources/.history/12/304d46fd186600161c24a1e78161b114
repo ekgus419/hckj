@@ -1,0 +1,18 @@
+<%@ page contentType="text/html; charset=euc-kr" %>
+
+<html>
+<head>
+<title>쇼핑몰</title>
+<script>
+function windowclose(){
+	opener.document.joinform.MEMBER_ID.value="<%=id %>";
+	self.close();
+}
+</script>
+</head>
+<body bgcolor="#f5f5f5">
+
+나오는지만 확인
+
+</body>
+</html>

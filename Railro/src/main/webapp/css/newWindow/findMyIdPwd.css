@@ -1,0 +1,39 @@
+table{
+	font-size: 12px;
+	margin: 25px auto;
+}
+
+th{
+	font-size: 14px;
+}
+
+td, tr{
+	height: 35px;
+	line-height: 35px;
+}
+
+input[type=text]{
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 12px;
+}
+
+input[type=submit]{
+	padding: 8px 25px;
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 12px;
+	margin-top: 20px;
+}
+
+.btn{
+	text-align: center;
+}

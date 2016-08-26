@@ -1,0 +1,30 @@
+<%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+
+<div class="content">
+	<form name="" action="" method="post" onsubmit="">
+		<table width="50%">
+			<tr>
+				<th colspan="100%">
+					<span>My Page</span>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="100%">
+					<b>홍채고정</b>님
+				</td>
+			</tr>
+			<tr>
+				<td colspan="20%">
+					출석횟수
+				</td>
+				<td colspan="30%">
+					<b>100</b>회
+				</td>
+			</tr>
+			<tr>
+
+			</tr>
+
+		</table>
+	</form>
+</div>

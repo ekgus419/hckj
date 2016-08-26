@@ -1,0 +1,54 @@
+package com.hongchaegojung.railro.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+@RequestMapping("/member/*")
+public class MemberController {
+	@RequestMapping(value={"findMyIdPwd.htm"}, method=RequestMethod.GET)
+	public String findMyIdPwd(){
+		return "newWindow.findMyIdPwd";
+	}
+	
+	@RequestMapping(value={"idCheck.htm"}, method=RequestMethod.GET)
+	public String idCheck(){
+		return "newWindow.idCheck";
+	}
+	
+	@RequestMapping(value={"zipcode.htm"}, method=RequestMethod.GET)
+	public String zipcode(){
+		return "newWindow.zipcode";
+	}
+	
+	@RequestMapping(value={"join.htm"}, method=RequestMethod.GET)
+	public String test1() {
+		return "member.join";
+	}
+	
+	@RequestMapping(value={"login.htm"}, method=RequestMethod.GET)
+	public String test2() {
+		return "member.login";
+	}
+	
+	@RequestMapping(value={"mypage.htm"}, method=RequestMethod.GET)
+	public String test3() {
+		return "member.mypage";
+	}
+	
+	@RequestMapping(value={"myBoardList.htm"}, method=RequestMethod.GET)
+	public String test4() {
+		return "member.myBoardList";
+	}
+	
+	@RequestMapping(value={"myBookMarkList.htm"}, method=RequestMethod.GET)
+	public String test5() {
+		return "member.myBookMarkList";
+	}
+	
+	@RequestMapping(value={"myInfoEdit.htm"}, method=RequestMethod.GET)
+	public String test6() {
+		return "member.myInfoEdit";
+	}
+}

@@ -1,0 +1,105 @@
+@import url(layout.css);
+
+.content{
+	padding: 50px 150px;
+}
+
+form{
+	font-size: 12px;
+}
+
+table {
+    margin : 30px auto;
+    font-size: 12px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr{
+	height: 25px;
+	line-height: 25px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+th,td{
+    text-align: center;
+}
+
+.setting{
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.setting .limit-setting{
+	float: left;
+}
+
+.setting span{
+	float: right;
+	font-size: 12px;
+	padding-top: 13px;
+}
+
+.register-btn{
+	margin-bottom: 50px;
+}
+
+.register-btn span{
+	padding: 6px 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.button1{
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.button{
+	text-align: center;
+	margin-bottom: 50px;
+	padding : 6px 6px;
+	border-radius: 4px;
+}
+
+.search{
+	text-align: center;
+}
+
+input[type=text]{
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 3px 15px;
+}
+
+input[type=submit]{
+	text-align: center;
+	margin-bottom: 50px;
+	padding : 3px 15px;
+	border-radius: 4px;
+}
+
+select{
+	text-align: center;
+	padding : 3px 15px;
+	border-radius: 4px;
+}
+
+.paging{
+	margin-bottom: 30px;
+	font-size: 12px;
+}
+
+
