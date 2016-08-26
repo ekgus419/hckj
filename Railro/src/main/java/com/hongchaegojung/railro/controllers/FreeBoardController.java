@@ -20,8 +20,13 @@ import com.hongchaegojung.railro.dto.Board;
 @Controller
 @RequestMapping("/freeBoard/*")
 public class FreeBoardController {
+<<<<<<< HEAD
 	
 /*	@Autowired
+=======
+/*	
+	@Autowired
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 	private SqlSession sqlSession;
 	
 	@RequestMapping(value={"freeBoardDetail.htm"},method=RequestMethod.GET)
@@ -71,6 +76,9 @@ public class FreeBoardController {
 	public String test5() {
 		return "freeBoard.freeBoardSearchList";
 	}
+<<<<<<< HEAD
+*/}
+=======
 	
 	
 	// 삭제, 다운로드
@@ -107,3 +115,4 @@ public class FreeBoardController {
 	
 	
 }
+>>>>>>> 8df3f09ad77e6d38f71cff255ced4436c4530fb0

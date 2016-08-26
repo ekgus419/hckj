@@ -1,7 +1,12 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <div id="content">
+<<<<<<< HEAD
 	<form action="noticeReg.htm" method="post">
+=======
+	<form action="noticeReg.htm" method="post" enctype="multipart/form-data" name="">
+		<input type="hidden" name="BOARD_ID" value="">
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 		<table class="register" width="100%">
 			<tr>
 				<td>
@@ -16,7 +21,11 @@
 					<div align="left">제 목</div>
 				</td>
 				<td>
+<<<<<<< HEAD
 					<input name="TITLE" type="text" size="50" maxlength="100"/>
+=======
+					<input name="TITLE" type="text" size="50" maxlength="100" value=""/>
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc
 				</td>
 			</tr>
 			<tr>

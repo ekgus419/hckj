@@ -1,6 +1,10 @@
 1471760567005	Delete resource 'k'
 1471828685370	Delete resource 'Servers'
 1471828696636	Rename resource 'Servers2'
+<<<<<<< HEAD
 1472123912592	Move compilation units
 1472123920502	Move compilation units
 1472124118945	Move compilation units
+=======
+1472173480009	Delete resource 'Test2'
+>>>>>>> 8521074db796575873dd59a426f406561b1b8fbc

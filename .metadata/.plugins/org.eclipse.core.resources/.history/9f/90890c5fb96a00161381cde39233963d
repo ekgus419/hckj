@@ -1,0 +1,5 @@
+package com.test.railro.serviceImpl;
+
+public class NoticeServiceImpl implements NoticeService {
+
+}
