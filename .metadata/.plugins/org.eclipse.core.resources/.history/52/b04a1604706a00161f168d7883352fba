@@ -1,0 +1,67 @@
+package com.hongchaegojung.railro.controllers;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.hongchaegojung.railro.dao.FreeBoardDAO;
+import com.hongchaegojung.railro.dto.Board;
+
+@Controller
+@RequestMapping("/freeBoard/*")
+public class FreeBoardController {
+	
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@RequestMapping(value={"freeBoardDetail.htm"},method=RequestMethod.GET)
+	public String freeBoardDetail(final int ID, Model model) {
+		
+		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		Board board = freeDAO.getDetail(ID);
+		model.addAttribute("board",board);
+		
+		return "freeBoard.freeBoardDetail";
+	}
+	
+	@RequestMapping(value={"freeBoardEdit.htm"},method=RequestMethod.GET)
+	public String freeBoardEdit(int ID, Model model) {
+		
+		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		Board board = freeDAO.getDetail(ID);
+		model.addAttribute("board", board);
+		
+		return "freeBoard.freeBoardEdit";
+	}
+	
+	
+	@RequestMapping(value={"freeBoardEdit.htm"},method=RequestMethod.POST)
+	public String freeBoardEdit(Board freeBoard) {
+		
+		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		freeDAO.update(freeBoard);
+		
+		return  "redirect:freeBoardDetail.htm?ID="+freeBoard.getID(); 
+	
+	}
+	
+		@RequestMapping(value={"freeBoardList.htm"},method=RequestMethod.GET)
+	public String test3() {
+		return "freeBoard.freeBoardList";
+	}
+	
+	
+	
+	@RequestMapping(value={"freeBoardInsert.htm"},method=RequestMethod.GET)
+	public String freeBoardInsert() {
+		return "freeBoard.freeBoardInsert";
+	}
+	
+	@RequestMapping(value={"freeBoardSearchList.htm"},method=RequestMethod.GET)
+	public String test5() {
+		return "freeBoard.freeBoardSearchList";
+	}
+}
