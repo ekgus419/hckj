@@ -95,8 +95,4 @@ public class Board { //12°³
 				+ CONTENTS + ", WRITER=" + WRITER + ", REFLOCATION=" + REFLOCATION + ", REREF=" + REREF + ", RELEV="
 				+ RELEV + ", RESEQ=" + RESEQ + ", REGDATE=" + REGDATE + ", HIT=" + HIT + "]";
 	}
-	
-	
-	
-	
 }

@@ -21,7 +21,7 @@ public interface BoardDAO {
 	public Board getDetail(int ID);
 	
 	// 글 등록 
-	public boolean insert(Board board);
+	public void insert(Board board);
 	
 	// 글 수정 
 	public boolean update(Board board);

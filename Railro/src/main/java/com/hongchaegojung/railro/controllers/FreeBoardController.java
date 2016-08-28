@@ -1,28 +1,43 @@
 package com.hongchaegojung.railro.controllers;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.hongchaegojung.railro.dao.BoardDAO;
 import com.hongchaegojung.railro.dao.FreeBoardDAO;
 import com.hongchaegojung.railro.dto.Board;
 
 @Controller
-@RequestMapping("/freeBoard/*")
+@RequestMapping("/freeBoard")
 public class FreeBoardController {
 	
-/*	@Autowired
+	@Autowired
 	private SqlSession sqlSession;
+	
+	@RequestMapping(value="/freeBoardList.htm", method=RequestMethod.GET)
+	public String freeBoardList() {
+		return "freeBoard.freeBoardList";
+	}
+	
+	@RequestMapping(value="/freeBoardReg.htm", method=RequestMethod.GET)
+	public String freeBoardReg() {
+		return "freeBoard.freeBoardReg";
+	}
+	
+	@RequestMapping(value="/freeBoardReg.htm", method=RequestMethod.POST)
+	public String freeBoardReg(@ModelAttribute Board board) {
+		BoardDAO boardDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		boardDAO.insert(board);
+		return "redirect:freeBoardList.htm";
+	}
+	
+	
+	
+/*	
 	
 	@RequestMapping(value={"freeBoardDetail.htm"},method=RequestMethod.GET)
 	public String freeBoardDetail(final int ID, Model model) {
@@ -55,17 +70,10 @@ public class FreeBoardController {
 	
 	}
 	
-		@RequestMapping(value={"freeBoardList.htm"},method=RequestMethod.GET)
-	public String test3() {
-		return "freeBoard.freeBoardList";
-	}
+
 	
 	
 	
-	@RequestMapping(value={"freeBoardInsert.htm"},method=RequestMethod.GET)
-	public String freeBoardInsert() {
-		return "freeBoard.freeBoardInsert";
-	}
 	
 	@RequestMapping(value={"freeBoardSearchList.htm"},method=RequestMethod.GET)
 	public String test5() {

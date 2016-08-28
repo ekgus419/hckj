@@ -5,7 +5,81 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-08-25T18:34:32Z</updated>
+  <updated>2016-08-26T20:01:27Z</updated>
+  <entry>
+    <title>Spring Cloud Data Flow for Mesos 1.0 RC2 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/26/spring-cloud-data-flow-for-mesos-1-0-rc2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Thomas Risberg</name>
+    </author>
+    <id>tag:spring.io,2016-08-26:2600</id>
+    <updated>2016-08-26T20:01:27Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the 1.0.0.RC2 release candidate of Spring Cloud Data Flow for Mesos, a team effort that encompasses many new features under the hood.&lt;/p&gt;
+&lt;p&gt;This release candidate builds upon the recent 1.0 GA release of Spring Cloud Data Flow. Some highlights include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We now run the Spring Cloud Data Flow Server as a Docker image on Marathon, a container orchestration platform for Mesos.&lt;/li&gt;
+  &lt;li&gt;This release adds features to support stream partitioning and scaling&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Currently partitioning and scaling of sinks and processors are handled by using multiple application deployments, one for each app instance, identified by an index appended to the name.&lt;/li&gt;&lt;br/&gt;&lt;li&gt;Scaling of sources is handled by using additional application instances.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Streams are now deployed using Marathon &lt;a href="https://mesosphere.github.io/marathon/docs/application-groups.html"&gt;Application Groups&lt;/a&gt; so it is easier to identify the different apps making up a stream.&lt;/li&gt;
+  &lt;li&gt;We have added support for launching tasks using Chronos, a fault tolerant job scheduler for Mesos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As part of this effort we have developed a simple Java client for interacting with the Chronos API. This &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-mesos/tree/master/src/main/java/org/springframework/cloud/mesos/chronos/client"&gt;Java client&lt;/a&gt; is included in the latest 1.0.2.RELEASE version of the &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-mesos"&gt;Spring Cloud Deployer for Mesos project&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started using Spring Cloud Data Flow for Mesos &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-mesos/docs/1.0.0.RC2/reference/htmlsingle/#_getting_started"&gt;follow these steps&lt;/a&gt; outlined in the reference documentation.&lt;/p&gt;
+&lt;p&gt;For a complete list of changes and improvements, please refer to the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-mesos/issues?q=milestone%3A1.0.0.RC2"&gt;1.0.0.RC2 issues&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Stream Brooklyn.M1 is available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/26/spring-cloud-stream-brooklyn-m1-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Marius Bogoevici</name>
+    </author>
+    <id>tag:spring.io,2016-08-26:2599</id>
+    <updated>2016-08-26T19:19:39Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce the release of the first milestone of the &lt;a href="http://cloud.spring.io/spring-cloud-stream"&gt;Spring Cloud Stream&lt;/a&gt; Brooklyn release train. Spring Cloud Stream Brooklyn.M1 is available for use in the &lt;a href="http://repo.spring.io/libs-milestone-local/org/springframework/cloud/spring-cloud-stream-dependencies/Brooklyn.M1"&gt;Spring Milestone repository&lt;/a&gt;, a detailed description of its features can be found in the &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.M1/reference/htmlsingle/"&gt;reference documentation&lt;/a&gt;. Release notes are available &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-starters/wiki/Brooklyn-Release-Notes"&gt;here&lt;/a&gt; and include important information on the migration path.&lt;/p&gt;&lt;h2&gt;&lt;a href="#from-a-monolith-to-a-release-train" class="anchor" name="from-a-monolith-to-a-release-train"&gt;&lt;/a&gt;From a Monolith to a Release Train&lt;/h2&gt;
+&lt;p&gt;Spring Cloud Stream Brooklyn.M1 succeeds Spring Cloud Stream 1.0. The change in the naming scheme reflects the project&amp;rsquo;s structural changes, in particular switching from a monolithic structure, where the core components and the binder implementations are contained together, to a more decentralized one. In the new structure, the core and binder implementations are separate projects, with their own release cadence. A release train BOM aggregates the release components together and manages their versions.&lt;/p&gt;
+&lt;p&gt;The benefits of this approach are twofold. On one hand, it allows adding new features and fixes to individual implementations at a faster rate. On the other, it lowers the barrier for creating and developing new binders, which as they mature, can become part of a future release train themselves by simply being added to the release train BOM. Finally, it is only fitting for a project that targets the development of microservices not to be a monolith itself!&lt;/p&gt;
+&lt;p&gt;The following components are part of the Brooklyn.M1 release train:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Cloud Stream 1.1.0.M1 (core components)&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Stream Kafka Binder 1.1.0.M1&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Stream Rabbit Binder 1.1.0.M1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let&amp;rsquo;s see what the new release brings.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-is-new" class="anchor" name="what-is-new"&gt;&lt;/a&gt;What is new ?&lt;/h2&gt;
+&lt;p&gt;Spring Cloud Stream Brooklyn.M1 brings some major upgrades to existing components, and introduces new features targeted towards programming model, application interoperability, and the overall developer experience.&lt;/p&gt;&lt;h3&gt;&lt;a href="#apache-kafka-0-9-new-consumer-support" class="anchor" name="apache-kafka-0-9-new-consumer-support"&gt;&lt;/a&gt;Apache Kafka 0.9 new consumer support&lt;/h3&gt;
+&lt;p&gt;The Apache Kafka Binder has been upgraded to use the Kafka new consumer library (introduced with version 0.9), based on &lt;a href="https://projects.spring.io/spring-kafka/"&gt;Spring Kafka&lt;/a&gt; 1.0.x and &lt;a href="https://github.com/spring-projects/spring-integration-kafka"&gt;Spring Integration Kafka&lt;/a&gt; 2.0.x, and currently supports Apache Kafka 0.9. The use of the new client library adds a few benefits:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Applications using the Apache Kafka Binder do not have to have &lt;code&gt;spring.cloud.stream.instanceIndex&lt;/code&gt; set. The new consumer library will take care of assigning partitions to all the instances which are part of a given consumer group, and rebalancing when new instances join or leave - useful especially for scaling consumer applications at runtime. For users that wish to still use a static partition allocation scheme, we will support it by the final release ( &lt;code&gt;spring.cloud.stream.instanceIndex&lt;/code&gt; will still be required in that case).&lt;/li&gt;
+  &lt;li&gt;Support for &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.M1/reference/htmlsingle/#_example_security_configuration"&gt;secured clients with SSL and Kerberos&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The abstractions of Spring Kafka and Spring Integration Kafka will also make adding support for Apache Kafka 0.10 easier too, and it is expected that the final release will support Kafka 0.10 as well.&lt;/p&gt;&lt;h3&gt;&lt;a href="#reactive-programming-support-with-java-8" class="anchor" name="reactive-programming-support-with-java-8"&gt;&lt;/a&gt;Reactive programming support (with Java 8)&lt;/h3&gt;
+&lt;p&gt;In addition to the Spring Integration application model and the &lt;code&gt;@StreamListener&lt;/code&gt; present in version 1.0, this release introduces support for &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.M1/reference/htmlsingle/#_reactive_programming_support"&gt;reactive APIs&lt;/a&gt;, based on &lt;a href="http://projectreactor.io"&gt;Project Reactor&lt;/a&gt;. This feature requires the use of Java 8.&lt;/p&gt;
+&lt;p&gt;Applications can add the &lt;code&gt;spring-cloud-stream-reactive&lt;/code&gt; module as a dependency, enabling the use of reactive types directly as the programming abstraction. In the context of data processing, a functional and reactive programming model is extremely attractive because of the declarative and expressive nature of a reactive composition API, which lets the developer focus on what to do, not how. On the other hand, while processing messages individually is a classic paradigm for enterprise integration, when it comes to stream processing, a developer also needs to think about processing a continuous inbound stream of messages, and describe operations that make sense only in that context, like windowing - by time, or count.&lt;/p&gt;
+&lt;p&gt;Here is an example of a reactive processor for counting words (for determining the most popular tags in the last 5 seconds, every second).&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@StreamListener&#xD;
+@Output(Processor.OUTPUT)&#xD;
+public Flux&amp;lt;WordCount&amp;gt; count (@Input(Processor.Input) Flux&amp;lt;String&amp;gt; flux) {&#xD;
+  return flux.window(ofSeconds(5), ofSeconds(1))&#xD;
+    .flatMap(window -&amp;gt;&#xD;
+      window.groupBy(word -&amp;gt; word)&#xD;
+        .flatMap(group -&amp;gt; group.reduce(0, (count,word) -&amp;gt; count + 1)&#xD;
+          .map(count -&amp;gt; new WordCount(group.key(), count))));&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Additionally, the use of a reactive API allows to integrate with other reactive components, such as reactive web controllers. For a more comprehensive overview of upcoming reactive support in Spring, watch Stephane Maldini and Rossen Stoyanchev&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=Xm-KjMY_Z_w"&gt;keynote at Spring One Platform 2016&lt;/a&gt;, one of the other Reactive talks at Spring One Platform, or read Dave Syer&amp;rsquo;s &lt;a href="https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape"&gt;blog series&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#avro-serialization-and-schema-evolution-support" class="anchor" name="avro-serialization-and-schema-evolution-support"&gt;&lt;/a&gt;Avro serialization and schema evolution support&lt;/h3&gt;
+&lt;p&gt;Spring Cloud Stream Brooklyn.M1 is also adding support for Avro and schema evolution. Starting with this release, applications can include the &lt;code&gt;spring-cloud-stream-schema&lt;/code&gt; module, which contains &lt;code&gt;MessageConverters&lt;/code&gt; with Apache Avro.&lt;/p&gt;
+&lt;p&gt;The Apache Avro serializers support both &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.M1/reference/htmlsingle/#_apache_avro_message_converters"&gt;fixed schemas&lt;/a&gt;, as well as &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.M1/reference/htmlsingle/#_avro_schema_registry_client_message_converters"&gt;dynamically interacting with a schema registry&lt;/a&gt;. You can make your applications interact with a schema registry, by simply adding &lt;code&gt;@EnableSchemaRegistryClient&lt;/code&gt; to your application and setting the &lt;code&gt;application/*+avro&lt;/code&gt; content type on your outbound channels, so that data is sent in Apache Avro format. With this, publisher applications will register schemas for the messages they send, and pass metadata about the subject and version to consumers. Based on that, a consumer can retrieve the writer&amp;rsquo;s schema from the registry and deserialize the messages it received, even if the schema wasn&amp;rsquo;t known to them beforehand.&lt;/p&gt;
+&lt;p&gt;This is an important feature for microservice evolution, as it allows the different components of your system to upgrade or change their schemas and data formats, without breaking the existing ones.&lt;/p&gt;
+&lt;p&gt;The release includes a &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.M1/reference/htmlsingle/#_schema_registry_server"&gt;schema registry server&lt;/a&gt; and a general-purpose &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.M1/reference/htmlsingle/#_schema_registry_client"&gt;schema registry client&lt;/a&gt;. An implementation of the schema registry client for the &lt;a href="http://docs.confluent.io/2.0.0/schema-registry/docs/index.html"&gt;Confluent schema registry&lt;/a&gt; is available as well.&lt;/p&gt;
+&lt;p&gt;Special thanks to &lt;a href="https://twitter.com/vccarvalho"&gt;Vinicius Carvalho&lt;/a&gt; for contributing the schema evolution support!&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-is-next" class="anchor" name="what-is-next"&gt;&lt;/a&gt;What is next ?&lt;/h2&gt;
+&lt;p&gt;In the following weeks, we will continue the development of the Brooklyn release train, with a goal of producing a release candidate. As it is customary with milestones, some API changes are to be expected until the RC. Here are a few intended additional features before the final release:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;add support for Apache Kafka 0.10 via a simple drop-in replacement of the Spring Kafka library with version 1.1;&lt;/li&gt;
+  &lt;li&gt;add support for Reactive binders (including reactive producers and consumers, such as the ones introduced by the &lt;a href="https://github.com/reactor/reactor-kafka"&gt;Reactor Kafka&lt;/a&gt; project);&lt;/li&gt;
+  &lt;li&gt;add support for developing applications using the &lt;a href="http://kafka.apache.org/documentation.html#streams"&gt;Kafka Stream API&lt;/a&gt;;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And, as always, we welcome feedback: either in &lt;a href="https://github.com/spring-cloud/spring-cloud-stream"&gt;GitHub&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/springcloudoss"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud Data Flow for Cloud Foundry goes 1.0 GA</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/25/spring-cloud-data-flow-for-cloud-foundry-goes-1-0-ga" />
@@ -748,32 +822,5 @@ public class MySqlApplication {&#xD;
 &lt;p&gt;The versions of numerous third-party dependencies have also been updated.&lt;/p&gt;
 &lt;p&gt;Please take RC1 for a spin and let us know if you find any problems. All being well, Athens-RELEASE will be available in early August. &lt;strong&gt;Update:&lt;/strong&gt; Athens-RELEASE will now follow shortly after Spring Boot 1.4.1.RELEASE and should be available in mid-September.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Athens-RC1/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Task 1.0.2.RELEASE is now available</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/29/spring-cloud-task-1-0-2-release-is-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Michael Minella</name>
-    </author>
-    <id>tag:spring.io,2016-07-29:2576</id>
-    <updated>2016-07-29T19:54:12Z</updated>
-    <content type="html">&lt;p&gt;We are pleased to announce that Spring Cloud Task 1.0.2.RELEASE is now available via Maven Central, Github and the Pivotal download repository. This release provides some minor enhancements including persisting of the completion of a task when terminated by an external signal. Many thanks to all of those who contributed to this release.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-task/"&gt;Spring Cloud Task Home&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-task"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-cloud-task/1.0.2.RELEASE/reference/htmlsingle/"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;We look forward to your feedback in &lt;a href="https://github.com/spring-cloud/spring-cloud-task/issues"&gt;Github&lt;/a&gt;, &lt;a href="http://stackoverflow.com/tags/spring-cloud-task"&gt;StackOverflow&lt;/a&gt;, to me directly via Twitter &lt;a href="twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt; or at &lt;a href="https://springoneplatform.io/"&gt;SpringOnePlatform&lt;/a&gt; next week!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar Replay: Introducing Spring Cloud Task</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/29/webinar-replay-introducing-spring-cloud-task" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2016-08-19:2589</id>
-    <updated>2016-07-29T13:24:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: Michael Minella, Pivotal&lt;br/&gt;One of the major promises of the cloud is that of flexibility. Today, most applications deployed to the cloud are long running processes that use the flexibility of cloud scaling. But computing is full of short lived tasks that start up, do their work, and then terminate. These tasks are excellent cloud use cases since resources can quickly be provisioned - and reclaimed.&lt;/p&gt;
-&lt;p&gt;In this webinar, we¡¯ll explore a new project in the Spring Cloud portfolio, Spring Cloud Task, a new framework for developing and orchestrating short-lived microservices. We¡¯ll explore various use cases, build your first task, and discuss how to orchestrate tasks using various techniques. Finally, we¡¯ll peek into the roadmap for the Spring Cloud Task project.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/EB3g-H51AN0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;Spring Cloud Data Flow 3 part webinar series:&lt;br/&gt;&lt;a href="https://spring.io/blog/2016/03/30/webinar-replay-stream-processing-in-the-cloud-with-data-microservices"&gt;Spring Cloud Stream&lt;/a&gt;&lt;br/&gt;&lt;a href="https://spring.io/blog/2016/08/19/webinar-replay-data-microservices-with-spring-cloud-data-flow"&gt;Spring Cloud Data Flow&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
