@@ -69,6 +69,13 @@ public class NoticeController {
 		noticeDAO.update(notice);
 		return "redirect:noticeDetail.htm?ID="+notice.getID();
 	}
+	
+	@RequestMapping(value="/noticeDel.htm")
+	public String noticeDel(int ID) {
+		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
+		noticeDAO.delete(ID);
+		return "redirect:noticeList.htm";
+	}
 
 	@RequestMapping(value="/noticeSearchList.htm", method=RequestMethod.GET)
 	public String test5() {

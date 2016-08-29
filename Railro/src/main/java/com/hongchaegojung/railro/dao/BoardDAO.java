@@ -5,8 +5,7 @@ import com.hongchaegojung.railro.dto.Board;
 import com.hongchaegojung.railro.dto.BoardFile;
 
 public interface BoardDAO {
-	
-	
+
 	// 글 전체 개수
 	public int getTotalBoardListCount();
 	
@@ -28,10 +27,10 @@ public interface BoardDAO {
 	public void insertFile(BoardFile boardFile);
 	
 	// 글 수정 
-	public boolean update(Board board);
+	public void update(Board board);
 	
 	// 글 삭제 
-	public boolean delete(int ID);
+	public void delete(int ID);
 	
 	// 글 답변 등록
 	public int replyInsert(Board board);
