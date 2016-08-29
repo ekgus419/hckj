@@ -76,3 +76,19 @@ label {
 	border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+input[type=submit]{
+	padding: 8px 20px;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+select{
+	padding: 5px 8px;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}

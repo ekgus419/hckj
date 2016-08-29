@@ -15,7 +15,7 @@ public interface BoardDAO {
 	public int countSearchBoardList();
 	
 	// 글 목록 
-	public List<Board> getBoardList(int page, int limit);
+	public List<Board> getBoardList();
 	
 	// 글 상세보기 
 	public Board getDetail(int ID);

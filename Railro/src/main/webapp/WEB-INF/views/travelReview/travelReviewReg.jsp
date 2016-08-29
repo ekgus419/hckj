@@ -1,8 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <div id="content">
-	<form action="" method="post" enctype="multipart/form-data" name="">
-		<input type="hidden" name="BOARD_ID" value="">
+	<form action="travelReviewReg.htm" method="post">
 		<table class="register" width="100%">
 			<tr>
 				<td>
@@ -14,10 +13,24 @@
 			</tr>
 			<tr>
 				<td>
+					<div align="left">분 류</div>
+				</td>
+				<td>
+					<select name="SUBJECT">
+						<option value="분류1">분류1</option>
+						<option value="분류2">분류2</option>
+						<option value="분류3">분류3</option>
+						
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
 					<div align="left">제 목</div>
 				</td>
 				<td>
-					<input name="BOARD_SUBJECT" type="text" size="50" maxlength="100" value=""/>
+					<input name="TITLE" type="text" size="50" maxlength="100"/>
 				</td>
 			</tr>
 			<tr>
@@ -25,7 +38,7 @@
 					<div align="left">내 용</div>
 				</td>
 				<td>
-					<textarea name="BOARD_CONTENT" cols="67" rows="10"></textarea>
+					<textarea name="CONTENTS" cols="67" rows="10"></textarea>
 				</td>
 			</tr>
 			<tr>
@@ -40,7 +53,7 @@
 			</tr>
 		</table>
 		<div class="btn">
-			<span><a href="">등록</a></span>
+			<input type="submit" value="등록"></input>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
 		</div>

@@ -1,26 +1,26 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <div id="content">
-	<form action="" method="post" enctype="multipart/form-data" name="">
+	<form method="post" action="travelReviewDetail.htm">
 		<table class="detail" width="100%">
 			<tr>
 				<td colspan="10">
-					제목이 들어가는 부분 
+					${board.TITLE}
 					&nbsp;&nbsp;&nbsp;
 					|
 					&nbsp;&nbsp;&nbsp;
-					<span>분류가 들어가는 부분</span>
+					<span>${board.SUBJECT}</span>
 				</td>
 			</tr>
 			<tr class="title">
-				<td width="73%" >
-				 	subin0113
+				<td width="65%" >
+				 	${board.WRITER}
 				</td>
-				<td width="5%" style="text-align: right;">
-				 	2016/01/13
+				<td width="13%" style="text-align: right;">
+				 	${board.REGDATE}
 				</td>
 				<td width="11%" style="text-align: right;">
-				 	조회 수 3
+				 	조회 수 <b>${board.HIT} </b>	
 				</td>
 				<td width="11%" style="text-align: right;">
 				 	댓글 수 3
@@ -28,78 +28,7 @@
 			</tr>
 			<tr>
 				<td colspan="10">
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
-					내용부분
+				 ${board.CONTENTS} 
 				</td>
 			</tr>
 			<tr>
@@ -109,7 +38,7 @@
 			</tr>
 		</table>
 		<div class="btn">
-			<span><a href="">수정</a></span>
+			<span><a href="travelReviewEdit.htm?ID=${board.ID}">수정</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
