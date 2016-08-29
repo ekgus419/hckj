@@ -70,24 +70,16 @@ public class TravelReviewController {
 		return "redirect:travelReviewDetail.htm?ID="+board.getID();
 	}
 	
-	
-	/*
-	@RequestMapping(value={"freeBoardEdit.htm"},method=RequestMethod.POST)
-	public String freeBoardEdit(Board freeBoard) {
-		
-		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
-		freeDAO.update(freeBoard);
-		
-		return  "redirect:freeBoardDetail.htm?ID="+freeBoard.getID(); 
-	
+	@RequestMapping(value="/travelReviewDel.htm")
+	public String travelReviewDel(int ID) {
+		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
+		travelReDAO.delete(ID);
+		return "redirect:travelReviewList.htm";
 	}
 	
-
 	
 	
-	
-	
-	
+	/* 
 	@RequestMapping(value={"freeBoardSearchList.htm"},method=RequestMethod.GET)
 	public String test5() {
 		return "freeBoard.freeBoardSearchList";
