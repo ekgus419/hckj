@@ -1,35 +1,30 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <div class="content">
-	<form name="" method="post" action="" onsubmit="" >
+	<form method="post" action="freeBoardDetail.htm" >
 		<table width="65%">
     		<tr>
 				<td width="10%">작성자</td>
 				<td width="55%">
-				&nbsp;홍혜진
+				&nbsp;${board.WRITER}
 				</td>
 			</tr>
     		<tr>
      			<td>제 목</td>
      			<td>
-				&nbsp;메롱
+				&nbsp;${board.TITLE}
 				</td>
     		</tr>
     		<tr>
      			<td style="vertical-align: top">내 용</td>
      			<td>
-				&nbsp;상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기
-				상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기
-				상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기
-				상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기
-				상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기
-				상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기상세보기
+				&nbsp;${board.CONTENTS}
 				</td>
     		</tr>
 		</table>
 	</form> 
 	<div class="button">
-		<button>수정</button>
+		<button><a href="freeBoardEdit.htm?ID=${board.ID}">수정</a></button>
 		&nbsp;&nbsp;
 		<button>삭제</button>
 		&nbsp;&nbsp;

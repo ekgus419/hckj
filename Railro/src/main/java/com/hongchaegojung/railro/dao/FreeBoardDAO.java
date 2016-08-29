@@ -1,5 +1,9 @@
 package com.hongchaegojung.railro.dao;
 
-public interface FreeBoardDAO extends BoardDAO{
+import java.util.List;
+
+import com.hongchaegojung.railro.dto.Board;
+
+public interface FreeBoardDAO extends BoardDAO {
 
 }

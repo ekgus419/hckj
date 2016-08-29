@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hongchaegojung.railro.dao.RailroDAO">
+
+	<!-- 게시물 등록 -->
+	<insert id="insert">
+		INSERT INTO BOARD
+		(
+			 ID, TYPE, SUBJECT, TITLE, CONTENTS, WRITER, 
+			 REFLOCATION, REREF, RELEV, RESEQ, REGDATE, HIT
+		)
+		 VALUES
+		(
+			BOARD_SEQ.NEXTVAL, 1, #{SUBJECT}, #{TITLE}, #{CONTENTS},
+			4, 'TEST', 1, 1, 1, SYSDATE, 1 
+		)
+	</insert>
+
+</mapper>

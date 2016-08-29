@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="content">
 	<div class="setting">
@@ -13,7 +14,7 @@
 				개씩 보기
 			</form>
 		</div>
-		<span>글 개수 :</span>
+		<span>글 개수 : <b>${railroListCount}</b> </span>
 	</div>
 	<table class="list" width="100%">
 		<tr class="list-col" align="center" valign="middle">
@@ -36,28 +37,34 @@
 				<div align="center">조회수</div>
 			</td>
 		</tr>
-		<tr class="list_contents" align="center" valign="middle"
-			onmouseover="this.style.backgroundColor='#fcfcfc'"
-			onmouseout="this.style.backgroundColor=''">
-			<td>
-				<div align="center">1</div>
-			</td>
-			<td>
-				<div align="center">분류명</div>
-			</td>	
-			<td>
-				<div align="left">글제목ㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱㄱ</div>
-			</td>
-			<td>
-				<div align="center">수빈</div>
-			</td>
-			<td>
-				<div align="center">2016/01/13</div>
-			</td>	
-			<td>
-				<div align="center">34</div>
-			</td>
-		</tr>
+		
+		<c:forEach var="railro" items="${railroList}">
+		
+			<tr class="list_contents" align="center" valign="middle"
+				onmouseover="this.style.backgroundColor='#fcfcfc'"
+				onmouseout="this.style.backgroundColor=''">
+				<td>
+					<div align="center">${railro.ID}</div>
+				</td>
+				<td>
+					<div align="center">${railro.SUBJECT}</div>
+				</td>	
+				<td>
+				<a href="railroDetail.htm?ID=${railro.ID}">
+					<div align="left">${railro.TITLE}</div>
+				</a>
+				</td>
+				<td>
+					<div align="center">${railro.WRITER}</div>
+				</td>
+				<td>
+					<div align="center">${railro.REGDATE}</div>
+				</td>	
+				<td>
+					<div align="center">${railro.HIT}</div>
+				</td>
+			</tr>
+		</c:forEach>
 	</table>
 	<div class="register-btn" align="right">
 		<span><a href="javascript:void(0)" onclick="location.href='railroReg.htm'">글쓰기</a></span>

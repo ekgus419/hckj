@@ -2,8 +2,10 @@ package com.hongchaegojung.railro.dao;
 
 import java.util.List;
 import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.BoardFile;
 
 public interface BoardDAO {
+	
 	
 	// 글 전체 개수
 	public int getTotalBoardListCount();
@@ -21,7 +23,9 @@ public interface BoardDAO {
 	public Board getDetail(int ID);
 	
 	// 글 등록 
-	public void insert(Board board);
+	public boolean insert(Board board);
+	public int lastKey();
+	public void insertFile(BoardFile boardFile);
 	
 	// 글 수정 
 	public boolean update(Board board);

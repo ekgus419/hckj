@@ -1,9 +1,11 @@
 package com.hongchaegojung.railro.controllers;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,28 +20,21 @@ public class FreeBoardController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/freeBoardList.htm", method=RequestMethod.GET)
-	public String freeBoardList() {
+	@RequestMapping(value={"/freeBoardList.htm"}, method=RequestMethod.GET)
+	public String freeBoardList(Model model) {
+		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		int listCount = freeDAO.getTotalBoardListCount();
+
+		List<Board> list = freeDAO.getBoardList();
+		
+		
+		model.addAttribute("listCount", listCount);
+		model.addAttribute("freeBoardList", list);
+		
 		return "freeBoard.freeBoardList";
-	}
+	}	
 	
-	@RequestMapping(value="/freeBoardReg.htm", method=RequestMethod.GET)
-	public String freeBoardReg() {
-		return "freeBoard.freeBoardReg";
-	}
-	
-	@RequestMapping(value="/freeBoardReg.htm", method=RequestMethod.POST)
-	public String freeBoardReg(@ModelAttribute Board board) {
-		BoardDAO boardDAO = sqlSession.getMapper(FreeBoardDAO.class);
-		boardDAO.insert(board);
-		return "redirect:freeBoardList.htm";
-	}
-	
-	
-	
-/*	
-	
-	@RequestMapping(value={"freeBoardDetail.htm"},method=RequestMethod.GET)
+	@RequestMapping(value="/freeBoardDetail.htm",method=RequestMethod.GET)
 	public String freeBoardDetail(final int ID, Model model) {
 		
 		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
@@ -48,6 +43,28 @@ public class FreeBoardController {
 		
 		return "freeBoard.freeBoardDetail";
 	}
+	
+	@RequestMapping(value="/freeBoardEdit.htm",method=RequestMethod.GET)
+	public String freeBoardEdit(final int ID, Model model) {
+		
+		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		Board board = freeDAO.getDetail(ID);
+		model.addAttribute("board", board);
+		
+		return "freeBoard.freeBoardEdit";
+	}
+	
+	@RequestMapping(value="/freeBoardEdit.htm",method=RequestMethod.POST)
+	public String freeBoardEdit(Board board) {
+		
+		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		freeDAO.update(board);
+		
+		return "redirect:freeBoardDetail.htm?ID="+board.getID();
+	}
+/*	
+	
+	
 	
 	@RequestMapping(value={"freeBoardEdit.htm"},method=RequestMethod.GET)
 	public String freeBoardEdit(int ID, Model model) {
@@ -74,6 +91,10 @@ public class FreeBoardController {
 	
 	
 	
+	@RequestMapping(value={"freeBoardInsert.htm"},method=RequestMethod.GET)
+	public String freeBoardInsert() {
+		return "freeBoard.freeBoardInsert";
+	}
 	
 	@RequestMapping(value={"freeBoardSearchList.htm"},method=RequestMethod.GET)
 	public String test5() {
@@ -110,8 +131,18 @@ public class FreeBoardController {
 	}
 	
 	
+	
 	*/
 	
+	@RequestMapping(value="/freeBoardReg.htm", method=RequestMethod.GET)
+	public String freeBoardReg() {
+		return "freeBoard.freeBoardReg";
+	}
 	
-	
+	@RequestMapping(value="/freeBoardReg.htm", method=RequestMethod.POST)
+	public String freeBoardReg(Board board) {
+		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		freeDAO.insert(board);	
+		return "redirect:freeBoardList.htm";
+	}
 }

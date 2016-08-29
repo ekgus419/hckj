@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="content">
 	<div class="setting">
@@ -13,8 +14,8 @@
 				개씩 보기
 			</form>
 		</div>
-		<span>글 개수 :</span>
-	</div>
+		<span>글 개수 : <b>${listCount}</b></span>
+	</div> 
 	<table width="100%">
 	  <tr>
 	    <th width="10%">글번호</th>
@@ -25,14 +26,16 @@
 	    <th width="10%">작성일</th>
 	  </tr>
 	  
+	 <c:forEach var="freeBoard" items="${freeBoardList}">
 	  <tr>
-	  	<td>1</td>
-	  	<td>내일로</td>
-	  	<td style="text-align: left">제목입니다</td>
-	  	<td>홍혜진</td>
-	  	<td>4</td>
-	  	<td>2016.08.21</td>
+	  	<td> ${freeBoard.ID}</td>
+	  	<td>${freeBoard.SUBJECT}</td>
+	  	<td style="text-align: left"><a href="freeBoardDetail.htm?ID=${freeBoard.ID}">${freeBoard.TITLE}></a></td>
+	  	<td>${freeBoard.WRITER}</td>
+	  	<td>${freeBoard.HIT}</td>
+	  	<td>${freeBoard.REGDATE}</td>
 	  </tr>
+	  </c:forEach>
 	</table>
 	
 	<div class="button1">
