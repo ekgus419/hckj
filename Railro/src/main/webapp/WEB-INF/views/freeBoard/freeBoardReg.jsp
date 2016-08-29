@@ -9,6 +9,20 @@
 				&nbsp;&nbsp;&nbsp;홍혜진
 				</td>
 			</tr>
+			<tr>
+				<td>
+					<div align= "left">분 류 </div>
+				</td>
+				<td>
+				&nbsp;
+				 <select name="SUBJECT">
+					 <option> 분류1 </option>
+					 <option> 분류2 </option>
+					 <option> 분류3 </option>
+					 <option> 분류4 </option>
+				 </select>
+				</td>
+			</tr>
     		<tr>
      			<td>제 목</td>
      			<td>

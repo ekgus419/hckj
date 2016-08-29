@@ -1,3 +1,8 @@
 #Tomcat publish data
+<<<<<<< HEAD
 #Mon Aug 29 16:02:29 KST 2016
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\honghyejin\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
+=======
+#Mon Aug 29 16:07:54 KST 2016
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\SUBIN\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
+>>>>>>> cf3f259e78fed5428a39a3e16a302298add0ee15
