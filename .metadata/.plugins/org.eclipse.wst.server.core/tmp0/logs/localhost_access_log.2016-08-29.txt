@@ -73,3 +73,7 @@
 0:0:0:0:0:0:0:1 - - [29/Aug/2016:15:29:14 +0900] "GET /railro/freeBoard/freeBoardDetail.htm?ID=12 HTTP/1.1" 200 3660
 0:0:0:0:0:0:0:1 - - [29/Aug/2016:15:29:14 +0900] "GET /railro/css/freeBoard/layout.css HTTP/1.1" 404 1056
 0:0:0:0:0:0:0:1 - - [29/Aug/2016:15:29:16 +0900] "GET /railro/freeBoard/freeBoardEdit.htm?ID=12 HTTP/1.1" 200 4019
+127.0.0.1 - - [29/Aug/2016:15:55:27 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [29/Aug/2016:15:55:34 +0900] "GET /railro/railro/railroList.htm HTTP/1.1" 200 11507
+0:0:0:0:0:0:0:1 - - [29/Aug/2016:15:55:34 +0900] "GET /railro/css/railro/layout.css HTTP/1.1" 404 1050
+0:0:0:0:0:0:0:1 - - [29/Aug/2016:15:55:34 +0900] "GET /favicon.ico HTTP/1.1" 404 1016
