@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -33,25 +34,40 @@ public class NoticeController {
 	}
 	
 	@RequestMapping(value="/noticeDetail.htm", method=RequestMethod.GET)
-	public String test2() {
+	public String noticeDetail(final int ID, Model model) {
+		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
+		
+		Notice notice = noticeDAO.getDetail(ID);
+		model.addAttribute("notice", notice);
 		return "notice.noticeDetail";
 	}
 
 	@RequestMapping(value="/noticeReg.htm", method=RequestMethod.GET)
-	public String test3() {
+	public String noticeReg() {
 		return "notice.noticeReg";
 	}
 
 	@RequestMapping(value="/noticeReg.htm", method=RequestMethod.POST)
-	public String test31(@ModelAttribute Notice notice) {
+	public String noticeReg(Notice notice) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
 		noticeDAO.insert(notice);
 		return "redirect:noticeList.htm";
 	}
 	
 	@RequestMapping(value="/noticeEdit.htm", method=RequestMethod.GET)
-	public String test4() {
+	public String noticeEdit(int ID, Model model) {
+		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
+		
+		Notice notice = noticeDAO.getDetail(ID);
+		model.addAttribute("notice", notice);
 		return "notice.noticeEdit";
+	}
+	
+	@RequestMapping(value="/noticeEdit.htm", method=RequestMethod.POST)
+	public String noticeEdit(Notice notice) {
+		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
+		noticeDAO.update(notice);
+		return "redirect:noticeDetail.htm?ID="+notice.getID();
 	}
 
 	@RequestMapping(value="/noticeSearchList.htm", method=RequestMethod.GET)

@@ -42,7 +42,9 @@
 					<div align="center">${notice.ID}</div>
 				</td>	
 				<td>
-					<div align="left">${notice.TITLE}</div>
+					<a href="noticeDetail.htm?ID=${notice.ID}">
+						<div align="left">${notice.TITLE}</div>
+					</a>
 				</td>
 				<td>
 					<div align="center">${notice.WRITER}</div>

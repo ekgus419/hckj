@@ -1,5 +1,5 @@
 package com.hongchaegojung.railro.dao;
 
-public interface RailroDAO {
+public interface RailroDAO extends BoardDAO{
 
 }

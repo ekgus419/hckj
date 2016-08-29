@@ -26,7 +26,7 @@ public interface NoticeDAO {
 	public void insert(Notice notice);
 	
 	// 글 수정 
-	public boolean modify(int ID);
+	public void update(Notice notice);
 	
 	// 글 삭제 
 	public boolean delete(int ID);

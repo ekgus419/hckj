@@ -12,6 +12,10 @@
 		SELECT * FROM NOTICE
 	</select>
 	
+	<select id="getDetail" resultType="com.hongchaegojung.railro.dto.Notice">
+		SELECT * FROM NOTICE WHERE ID=#{ID}
+	</select>
+	
 	<insert id="insert" parameterType="com.hongchaegojung.railro.dto.Notice">
 		INSERT INTO NOTICE
 		( 
@@ -22,4 +26,10 @@
 			NOTICE_SEQ.NEXTVAL, #{TITLE, jdbcType=VARCHAR}, #{CONTENTS, jdbcType=CLOB}, 4, SYSDATE, 0
 		) 
 	</insert>
+	
+	<update id="update" parameterType="com.hongchaegojung.railro.dto.Notice">
+		UPDATE NOTICE
+		SET TITLE=#{TITLE}, CONTENTS=#{CONTENTS}, REGDATE=SYSDATE
+		WHERE ID=#{ID}
+	</update>
 </mapper>

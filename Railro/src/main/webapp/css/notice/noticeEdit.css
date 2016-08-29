@@ -76,3 +76,12 @@ label {
 	border: 1px solid #ccc;
     border-radius: 4px;
 }
+
+input[type=submit]{
+	padding: 8px 20px;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+}

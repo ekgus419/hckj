@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="com.hongchaegojung.railro.dao.BoardDAO"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpRequest"/>
 </qualifiedTypeNameHistroy>
