@@ -81,6 +81,17 @@ public class RailroController {
 		return "redirect:railroDetail.htm?ID=" + board.getID();
 	}
 	
+	// 게시물 삭제
+	@RequestMapping(value="/railroDel.htm")
+	public String railroDel(int ID){
+		
+		BoardDAO railroDAO = sqlSession.getMapper(RailroDAO.class);
+		
+		railroDAO.delete(ID);
+		return "redirect:railroList.htm";
+		
+	}
+	
 }
 	
 /*	// method=RequestMethod 를 쓰지 않으면 GET, POST 방식 둘 다 받을 수 있음
