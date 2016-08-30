@@ -1,8 +1,10 @@
 package com.hongchaegojung.railro.dao;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import org.apache.ibatis.annotations.Insert;
+import org.springframework.util.StringUtils;
 
 import com.hongchaegojung.railro.dto.Notice;
 
@@ -11,13 +13,13 @@ public interface NoticeDAO {
 	public int getTotalNoticeListCount();
 	
 	// 글 검색
-	public List<Notice> searchNoticeList();
+	public List<Notice> searchNoticeList(String keyField, String keyWord);
 	
 	// 글 검색결과 개수
-	public int countSearchNoticeList();
+	public int countSearchNoticeList(String keyField, String keyWord);
 	
 	// 글 목록 
-	public List<Notice> getNoticeList(/*int page, int limit*/);
+	public List<Notice> getNoticeList(int page, int limit);
 	
 	// 글 상세보기 
 	public Notice getDetail(int ID);
@@ -36,4 +38,5 @@ public interface NoticeDAO {
 	
 	// 조회수 업데이트 
 	public void setHitUpdate(int ID);
+	
 }

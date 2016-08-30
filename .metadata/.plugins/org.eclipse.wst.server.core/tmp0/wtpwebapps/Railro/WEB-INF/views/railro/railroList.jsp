@@ -73,12 +73,12 @@
 	이전&nbsp;다음
 	</div>
 	<div class="search" align="center">
-		<form action="" method="get">
+		<form action="railroSearchList.htm" method="get">
 			<select name="keyField">
-				<option value="BOARD_NUM">번호</option>
-				<option value="BOARD_ID">작성자</option>
-				<option value="BOARD_SUBJECT">제목</option>
-				<option value="BOARD_SUBJECT">분류</option>
+				<option value="ID">번호</option>
+				<option value="WRITER">작성자</option>
+				<option value="TITLE">제목</option>
+				<option value="SUBJECT">분류</option>
 			</select>
 			<input type="text" name="keyWord"/>
 			<input class="submit" type="submit" value="검색"/>

@@ -9,7 +9,26 @@
 	</select>
 	
 	<select id="getNoticeList" resultType="com.hongchaegojung.railro.dto.Notice">
-		SELECT * FROM NOTICE
+		SELECT
+		    AAA.*
+		FROM(
+		    SELECT
+		        AA.*
+		    FROM(
+		        SELECT
+		            ROW_NUMBER() OVER (ORDER BY ID DESC) RNUM,
+		            ID,
+		            TITLE,
+		            CONTENTS,
+		            WRITER,
+		            REGDATE,
+		            HIT
+		        FROM
+		            NOTICE
+		    ) AA
+		) AAA
+		WHERE
+		    AAA.RNUM BETWEEN (#{param1}-1)*#{param2}+1 AND (#{param1}-1)*#{param2}+#{param2}	
 	</select>
 	
 	<select id="getDetail" resultType="com.hongchaegojung.railro.dto.Notice">
@@ -36,4 +55,12 @@
 	<delete id="delete">
 		DELETE FROM NOTICE WHERE ID=#{ID}
 	</delete>
+	
+	<select id="searchNoticeList" resultType="com.hongchaegojung.railro.dto.Notice">
+		SELECT * FROM NOTICE WHERE ${param1} LIKE '%${param2}%'
+	</select>
+	
+	<select id="countSearchNoticeList" resultType="Integer">
+		SELECT COUNT(*) FROM NOTICE WHERE ${param1} LIKE '%${param2}%'
+	</select>
 </mapper>

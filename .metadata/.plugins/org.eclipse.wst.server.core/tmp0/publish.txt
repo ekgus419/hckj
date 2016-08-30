@@ -1,8 +1,34 @@
 #Tomcat publish data
+<<<<<<< HEAD
 #Tue Aug 30 15:13:04 KST 2016
+=======
+<<<<<<< HEAD
+#Tue Aug 30 11:59:57 KST 2016
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\honghyejin\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
+>>>>>>>=7f3748870af8f1255e117ab697b703ed8f33a298
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\SUBIN\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
+<<<<<<<=HEAD
+=\=\=\=\=\=\=
+=======
+<<<<<<< HEAD
+#Tue Aug 30 14:37:49 KST 2016
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\TEST\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
+=======
+<<<<<<< HEAD
+#Tue Aug 30 10:50:39 KST 2016
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\honghyejin\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
+=======
+#Tue Aug 30 14:03:44 KST 2016
+>>>>>>> 41780b81a3d8c8cb38651cdab0245d7ecb176155
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\honghyejin\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
 >>>>>>>=051899efdddad143c1ae0bdd2fa0cdd63b7a32f2
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\SUBIN\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\chae\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
 =\=\=\=\=\=\=
+<<<<<<< HEAD
 <<<<<<<=HEAD
+=======
+>>>>>>> 051899efdddad143c1ae0bdd2fa0cdd63b7a32f2
+>>>>>>> 8380d7d9e737573b6a9409e843ede64bb62c0fbf
+>>>>>>> b92a40cc3c25e5a0829a121e1292fa3d9746c0a7
+>>>>>>> 41780b81a3d8c8cb38651cdab0245d7ecb176155

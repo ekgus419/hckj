@@ -38,6 +38,8 @@
 			</tr>
 		</table>
 		<div class="btn">
+			<span><a href="railroList.htm?ID=${board.ID}">목록</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="railroEdit.htm?ID=${board.ID}">수정</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>

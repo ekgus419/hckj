@@ -92,6 +92,22 @@ public class RailroController {
 		
 	}
 	
+	// 게시물 검색
+	@RequestMapping(value="/railroSearchList.htm")
+	public String railroSearchList(String keyField, String keyWord, Model model){
+		
+		BoardDAO railroDAO = sqlSession.getMapper(RailroDAO.class);
+		List<Board> board  = railroDAO.searchBoardList(keyField, keyWord);
+		
+		int listCount = railroDAO.countSearchBoardList(keyField, keyWord);
+		
+		model.addAttribute("board", board);
+		model.addAttribute("listCount", listCount);
+		
+		return "railro.railroSearchList";
+		
+	}
+	
 }
 	
 /*	// method=RequestMethod 를 쓰지 않으면 GET, POST 방식 둘 다 받을 수 있음
