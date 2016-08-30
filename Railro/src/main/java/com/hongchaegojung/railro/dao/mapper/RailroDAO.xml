@@ -34,15 +34,12 @@
 
 	<select id="searchBoardList" resultType="com.hongchaegojung.railro.dto.Board">
 
-
 	</select>
 
 	<!--글 상세보기 -->
 
 	<select id="getDetail" resultType="com.hongchaegojung.railro.dto.Board">
-
 		SELECT * FROM BOARD WHERE ID=#{ID}
-
 	</select>
 
 	
@@ -58,52 +55,31 @@
 	<!--글 삭제 -->
 
 	<delete id="delete">
-
 		DELETE FROM BOARD WHERE ID=#{ID}
-
 	</delete>
 
-
 	<!--글 답변 등록 -->
-
 	<insert id="replyInsert">
-
 	 INSERT INTO BOARD
-
 	 (
-
-	  ID, TYPE, SUBJECT, TITLE, CONTENTS, WRITER, REFLOCATION, REREF, RELEV, RESEQ, REGDATE, HIT
-
+		ID, TYPE, SUBJECT, TITLE, CONTENTS, WRITER, REFLOCATION, REREF, RELEV, RESEQ, REGDATE, HIT
 	 )
-
 	 VALUES
-
 	 (
-
-	  RESEQ.NEXTVAL, #{TYPE}, #{SUBJECT}, #{TITLE}, #{CONTENTS} ,#{WRITER}, #{REFLOCATION}, #{REREF}, #{RELEV}, #{RESEQ}, #{REGDATE}, #{HIT}
-
+		RESEQ.NEXTVAL, #{TYPE}, #{SUBJECT}, #{TITLE}, #{CONTENTS} ,#{WRITER}, #{REFLOCATION}, #{REREF}, #{RELEV}, #{RESEQ}, #{REGDATE}, #{HIT}
 	 )
-
 	</insert>
 
 
 	<!--조회수 업데이트 -->
 
 	<update id="setHitUpdate">
-
-	 UPDATE BOARD SET HIT = HIT+1 WHERE ID=#{ID}
-
+		UPDATE BOARD SET HIT = HIT+1 WHERE ID=#{ID}
 	</update>
 
-	 
-
 	<!--글쓴이 인지 확인 -->
-
 	<select id="isBoardWriter" resultType="Integer">
-
-	 SELECT WRITER FROM BOARD WHERE ID=#{ID}
-
+		SELECT WRITER FROM BOARD WHERE ID=#{ID}
 	</select> 
-	
 
 </mapper>

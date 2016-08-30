@@ -29,7 +29,7 @@ public interface NoticeDAO {
 	public void update(Notice notice);
 	
 	// 글 삭제 
-	public boolean delete(int ID);
+	public void delete(int ID);
 	
 	// 글 답변 등록
 	public int replyInsert(Notice notice);
