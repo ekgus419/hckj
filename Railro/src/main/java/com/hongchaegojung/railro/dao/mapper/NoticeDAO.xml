@@ -28,8 +28,8 @@
 		            HIT
 		        FROM
 		            NOTICE
-		        <if test="param3 != null and param4 != ''">
-		        	WHERE ${param3} LIKE '%${param4}%'
+		        <if test="param2 != null and param3 != ''">
+		        	WHERE ${param2} LIKE '%${param3}%'
 		        </if>
 		    ) AA
 		) AAA

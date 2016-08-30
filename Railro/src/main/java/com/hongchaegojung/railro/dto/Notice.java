@@ -2,7 +2,7 @@ package com.hongchaegojung.railro.dto;
 
 import java.sql.Date;
 
-public class Notice extends Paging{ //6°³
+public class Notice { //6°³
 
 	private int ID;
 	private String TITLE;

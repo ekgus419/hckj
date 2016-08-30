@@ -23,13 +23,12 @@ public class NoticeController {
 	private SqlSession sqlSession;
 	
 	@RequestMapping(value="/noticeList.htm", method=RequestMethod.GET)
-	public String noticeList(String keyField, String keyWord, Notice notice, Model model,
-			Paging paging, @RequestParam(value = "pageNo", required = false) String pageNo
-			) {
+	public String noticeList(Paging paging, String pageNo, String keyField, String keyWord, Model model) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
 		
 		paging.setPageSize(3); // 한 페이지에 보일 게시글 수
 		paging.setPageNo(1); // 현재 페이지 번호
+		
 		if(StringUtils.isNotEmpty(pageNo)){
 			paging.setPageNo(Integer.parseInt(pageNo));
 		}
@@ -44,6 +43,7 @@ public class NoticeController {
 		model.addAttribute("paging", paging);
 		model.addAttribute("listCount", listCount);
 		model.addAttribute("noticeList", list);
+		
 		return "notice.noticeList";
 	}
 	
