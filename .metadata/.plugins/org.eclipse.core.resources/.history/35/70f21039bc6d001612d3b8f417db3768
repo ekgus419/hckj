@@ -12,7 +12,7 @@
 	
 	<!--글 검색 -->
 	<select id="searchBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-	<!-- SELECT * FROM BOARD WHERE TYPE 1, ${keyField} %like '${keyWord}' -->
+		
 	</select>
 	
 	<!--글 검색결과 개수 -->
@@ -22,7 +22,7 @@
 	
 	<!--글 목록  -->
 	<select id="getBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-		SELECT * FROM BOARD WHERE TYPE =1
+		SELECT * FROM BOARD
 	</select>
 	
 	<!--글 상세보기 -->

@@ -29,7 +29,6 @@
 		<button><a href="freeBoardDel.htm?ID=${board.ID}">삭제</a></button>
 		&nbsp;&nbsp;
 		<button><a href="freeBoardList.htm?ID=${board.ID}">목록</a></button>
-		&nbsp;&nbsp;
 		<button onclick="javasrcipt:history.go(-1)">취소</button>
 		
 	</div>
