@@ -26,8 +26,11 @@
 	<div class="button">
 		<button><a href="freeBoardEdit.htm?ID=${board.ID}">수정</a></button>
 		&nbsp;&nbsp;
-		<button>삭제</button>
+		<button><a href="freeBoardDel.htm?ID=${board.ID}">삭제</a></button>
+		&nbsp;&nbsp;
+		<button><a href="freeBoardList.htm?ID=${board.ID}">목록</a></button>
 		&nbsp;&nbsp;
 		<button onclick="javasrcipt:history.go(-1)">취소</button>
+		
 	</div>
 </div>
