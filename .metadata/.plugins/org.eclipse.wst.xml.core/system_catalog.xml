@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   <uri name="http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_0.xsd" uri="jar:file:/C:/Users/SUBIN/Desktop/SU/STS/sts-3.8.0.RELEASE/plugins/org.eclipse.jpt.common.eclipselink.core_1.3.200.v201603180253.jar!/schemas/eclipselink_orm_1_0.xsd"/>
   <uri name="http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_1.xsd" uri="jar:file:/C:/Users/SUBIN/Desktop/SU/STS/sts-3.8.0.RELEASE/plugins/org.eclipse.jpt.common.eclipselink.core_1.3.200.v201603180253.jar!/schemas/eclipselink_orm_1_1.xsd"/>
   <uri name="http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_2.xsd" uri="jar:file:/C:/Users/SUBIN/Desktop/SU/STS/sts-3.8.0.RELEASE/plugins/org.eclipse.jpt.common.eclipselink.core_1.3.200.v201603180253.jar!/schemas/eclipselink_orm_1_2.xsd"/>
@@ -194,6 +196,7 @@
   <public publicId="-//APACHE//DTD LOG4J 1.2//EN" uri="jar:file:/C:/Users/SUBIN/Desktop/SU/STS/sts-3.8.0.RELEASE/plugins/org.springsource.ide.eclipse.commons.ui_3.8.0.201606300730-RELEASE.jar!/dtd/log4j-1.2.dtd" webURL="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"/>
 =======
 <<<<<<< HEAD
+>>>>>>> 41780b81a3d8c8cb38651cdab0245d7ecb176155
   <uri name="http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_0.xsd" uri="jar:file:/C:/Users/chae/Desktop/s/sts-bundle/sts-3.8.1.RELEASE/plugins/org.eclipse.jpt.common.eclipselink.core_1.3.200.v201603180253.jar!/schemas/eclipselink_orm_1_0.xsd"/>
   <uri name="http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_1.xsd" uri="jar:file:/C:/Users/chae/Desktop/s/sts-bundle/sts-3.8.1.RELEASE/plugins/org.eclipse.jpt.common.eclipselink.core_1.3.200.v201603180253.jar!/schemas/eclipselink_orm_1_1.xsd"/>
   <uri name="http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_2.xsd" uri="jar:file:/C:/Users/chae/Desktop/s/sts-bundle/sts-3.8.1.RELEASE/plugins/org.eclipse.jpt.common.eclipselink.core_1.3.200.v201603180253.jar!/schemas/eclipselink_orm_1_2.xsd"/>
@@ -385,6 +388,8 @@
   <public publicId="-//SPRING//DTD BEAN 2.0//EN" uri="jar:file:/C:/Users/chae/Desktop/s/sts-bundle/sts-3.8.1.RELEASE/plugins/org.springframework.beans_4.3.0.20160611-RELEASE.jar!/org/springframework/beans/factory/xml/spring-beans-2.0.dtd" webURL="http://www.springframework.org/dtd/spring-beans-2.0.dtd"/>
   <public publicId="-//LOG4J//DTD LOG4J//EN" uri="jar:file:/C:/Users/chae/Desktop/s/sts-bundle/sts-3.8.1.RELEASE/plugins/org.springsource.ide.eclipse.commons.ui_3.8.1.201607290723-RELEASE.jar!/dtd/log4j-1.2.dtd" webURL="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"/>
   <public publicId="-//APACHE//DTD LOG4J 1.2//EN" uri="jar:file:/C:/Users/chae/Desktop/s/sts-bundle/sts-3.8.1.RELEASE/plugins/org.springsource.ide.eclipse.commons.ui_3.8.1.201607290723-RELEASE.jar!/dtd/log4j-1.2.dtd" webURL="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"/>
+<<<<<<< HEAD
+=======
 =======
   <uri name="http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_0.xsd" uri="jar:file:/C:/Users/honghyejin/Desktop/work/spring-tool-suite-3.8.1.RELEASE-e4.6-win32-x86_64/sts-bundle/sts-3.8.1.RELEASE/plugins/org.eclipse.jpt.common.eclipselink.core_1.3.200.v201603180253.jar!/schemas/eclipselink_orm_1_0.xsd"/>
   <uri name="http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_1.xsd" uri="jar:file:/C:/Users/honghyejin/Desktop/work/spring-tool-suite-3.8.1.RELEASE-e4.6-win32-x86_64/sts-bundle/sts-3.8.1.RELEASE/plugins/org.eclipse.jpt.common.eclipselink.core_1.3.200.v201603180253.jar!/schemas/eclipselink_orm_1_1.xsd"/>
@@ -579,4 +584,5 @@
   <public publicId="-//APACHE//DTD LOG4J 1.2//EN" uri="jar:file:/C:/Users/honghyejin/Desktop/work/spring-tool-suite-3.8.1.RELEASE-e4.6-win32-x86_64/sts-bundle/sts-3.8.1.RELEASE/plugins/org.springsource.ide.eclipse.commons.ui_3.8.1.201607290723-RELEASE.jar!/dtd/log4j-1.2.dtd" webURL="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"/>
 >>>>>>> 7f3748870af8f1255e117ab697b703ed8f33a298
 >>>>>>> b92a40cc3c25e5a0829a121e1292fa3d9746c0a7
+>>>>>>> 41780b81a3d8c8cb38651cdab0245d7ecb176155
 </catalog>
