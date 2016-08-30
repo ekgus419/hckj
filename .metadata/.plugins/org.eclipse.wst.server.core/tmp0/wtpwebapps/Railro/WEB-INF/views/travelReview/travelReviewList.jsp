@@ -73,7 +73,7 @@
 	이전&nbsp;다음
 	</div>
 	<div class="search" align="center">
-		<form action="" method="get">
+		<form action="travelReviewSearchList.htm" method="get">
 			<select name="keyField">
 				<option value="BOARD_NUM">번호</option>
 				<option value="BOARD_ID">작성자</option>
