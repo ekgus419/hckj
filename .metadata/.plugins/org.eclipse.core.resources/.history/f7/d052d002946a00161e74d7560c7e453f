@@ -1,0 +1,46 @@
+package com.hongchaegojung.railro.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.hongchaegojung.railro.dto.Notice;
+
+@Controller
+@RequestMapping("/notice/*")
+public class NoticeController {
+	@RequestMapping(value={"noticeList.htm"}, method=RequestMethod.GET)
+	public String test1() {
+		return "notice.noticeList";
+	}
+	
+	@RequestMapping(value={"noticeDetail.htm"}, method=RequestMethod.GET)
+	public String test2() {
+		return "notice.noticeDetail";
+	}
+
+	@RequestMapping(value={"noticeReg.htm"}, method=RequestMethod.GET)
+	public String test3() {
+		return "notice.noticeReg";
+	}
+
+	@RequestMapping(value={"noticeReg.htm"}, method=RequestMethod.POST)
+	public String test31(String title, String content) {
+		Notice n = new Notice();
+		n.setTITLE(title);
+		n.setCONTENTS(content);
+		return "redirect:notice.noticeList";
+	}
+	
+	@RequestMapping(value={"noticeEdit.htm"}, method=RequestMethod.GET)
+	public String test4() {
+		return "notice.noticeEdit";
+	}
+
+	@RequestMapping(value={"noticeSearchList.htm"}, method=RequestMethod.GET)
+	public String test5() {
+		return "notice.noticeSearchList";
+	}
+
+
+}
