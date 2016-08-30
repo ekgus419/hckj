@@ -24,9 +24,7 @@ public class FreeBoardController {
 	public String freeBoardList(Model model) {
 		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
 		int listCount = freeDAO.getTotalBoardListCount();
-
 		List<Board> list = freeDAO.getBoardList();
-		
 		
 		model.addAttribute("listCount", listCount);
 		model.addAttribute("freeBoardList", list);
@@ -36,8 +34,7 @@ public class FreeBoardController {
 	
 	@RequestMapping(value="/freeBoardDetail.htm",method=RequestMethod.GET)
 	public String freeBoardDetail(final int ID, Model model) {
-		
-		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
 		Board board = freeDAO.getDetail(ID);
 		model.addAttribute("board", board);
 		
@@ -46,7 +43,6 @@ public class FreeBoardController {
 	
 	@RequestMapping(value="/freeBoardEdit.htm",method=RequestMethod.GET)
 	public String freeBoardEdit(final int ID, Model model) {
-		
 		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
 		Board board = freeDAO.getDetail(ID);
 		model.addAttribute("board", board);
@@ -55,13 +51,13 @@ public class FreeBoardController {
 	}
 	
 	@RequestMapping(value="/freeBoardEdit.htm",method=RequestMethod.POST)
-	public String freeBoardEdit(Board board) {
-		
-		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+	public String freeBoardEdit(Board board) {	
+		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
 		freeDAO.update(board);
 		
 		return "redirect:freeBoardDetail.htm?ID="+board.getID();
 	}
+	
 	@RequestMapping(value="/freeBoardDel.htm")
 	public String freeBoardDel(int ID) {
 		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
@@ -69,11 +65,14 @@ public class FreeBoardController {
 		return "redirect:freeBoardList.htm";
 	}
 	
-	@RequestMapping(value="/freeBoardSerchList.htm")
-	public String freeBoardSearchList(String keyFiled, String keyWord){
+	@RequestMapping(value="/freeBoardSearchList.htm")
+	public String freeBoardSearchList(String keyField, String keyWord, Model model){
 		BoardDAO freeDAO = sqlSession.getMapper (FreeBoardDAO.class);
-		freeDAO.searchBoardList(keyFiled, keyWord);
-		return "";		
+		List<Board> sFreeList = freeDAO.searchBoardList(keyField, keyWord);
+		int listCount = freeDAO.countSearchBoardList (keyField, keyWord);
+		model.addAttribute("listCount", listCount);
+		model.addAttribute("sFreeList", sFreeList);
+		return "freeBoard.freeBoardSearchList";		
 	}
 /*	
 	

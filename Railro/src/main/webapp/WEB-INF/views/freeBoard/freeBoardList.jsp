@@ -46,15 +46,16 @@
 	</div>
 
       <!-- 검색입력 폼 -->
-	<form method= post action="freeBoardSearchList.htm">
+	<form method="post" action="freeBoardSearchList.htm">
 		<div class="search">
-		  	<select name="src_name">
+		  	<select name="keyField">
+		  		<option value="ID">번호 </option>
 		        <option value="WRITER">작성자 </option>
 		        <option value="TITLE">제목 </option>
 				<option value="CONTENTS">내용 </option>
 				<option value="SUBJECT">분류 </option>
 		    </select>
-		  	<input type="text" name="src_value" size="15"/>
+		  	<input type="text" name="keyWord" size="15"/>
 			<input type="submit" value="검색"/>
 		</div>
 	 </form>
