@@ -13,9 +13,7 @@
 		
 	 <!--글 검색 --> 
 	 <select id="searchBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-	
-	 <!-- SELECT * FROM BOARD WHERE TYPE=3, ${keyField} LIKE '%${param3}%' #{keyWord} ORDER BY REGDATE DESC -->
-	
+	 SELECT * FROM BOARD WHERE TYPE=3, ${keyField} LIKE '%${param3}%' #{keyWord} ORDER BY REGDATE DESC
 	 </select>
 	 
 	 <!--글 검색결과 개수 -->
