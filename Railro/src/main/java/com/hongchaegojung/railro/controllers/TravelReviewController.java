@@ -76,23 +76,25 @@ public class TravelReviewController {
 		return "redirect:travelReviewList.htm";
 	}
 	
-	@RequestMapping(value="/travelReviewSearchList.htm", method=RequestMethod.GET)
-	public String trvelReviewSearchList(String keyField, String keyWord) {
+	@RequestMapping(value="/travelReviewSearchList.htm")
+	public String trvelReviewSearchList(String keyField, String keyWord, Model model) {
 		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
-		travelReDAO.searchBoardList(keyField, keyWord);
+		List<Board> list = travelReDAO.searchBoardList(keyField, keyWord);
+		int listCount = travelReDAO.countSearchBoardList(keyField, keyWord);
 		
-		
-		return "freeBoard.freeBoardSearchList";
+		model.addAttribute("sList", list);
+		model.addAttribute("listCount", listCount);
+		return "travelReview.travelReviewSearchList";
 	}
+	
+	
+	
 	
 	
 	/* 
 	
-	
 	// 삭제, 다운로드
-	
-
-	@RequestMapping("download.htm")
+		@RequestMapping("download.htm")
 	public void download(String p,  String f, HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String fname = new String(f.getBytes("ISO8859_1"), "UTF-8");
 		response.setHeader("Content-Disposition", "attachement;filename="+new String(fname.getBytes(), "ISO8859_1"));

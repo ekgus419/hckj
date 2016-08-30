@@ -73,7 +73,7 @@
 	이전&nbsp;다음
 	</div>
 	<div class="search" align="center">
-		<form action="travelReviewSearchList.htm" method="get">
+		<form action="travelReviewSearchList.htm" method="post">
 			<select name="keyField">
 				<option value="ID">번호</option>
 				<option value="WRITER">작성자</option>
