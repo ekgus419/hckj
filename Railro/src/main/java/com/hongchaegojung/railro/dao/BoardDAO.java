@@ -10,20 +10,8 @@ public interface BoardDAO {
 	public int getTotalBoardListCount();
 	
 	// 글 검색
-<<<<<<< HEAD
 	public List<Board> searchBoardList(String keyField, String keyWord);
-=======
-<<<<<<< HEAD
-	public List<Board> searchBoardList(String keyField, String keyWord);
-=======
-<<<<<<< HEAD
-	public List<Board> searchBoardList(String keyField, String keyWord);
-=======
-	public List<Board> searchBoardList(String keyFiled,String keyWord);
->>>>>>> 7f3748870af8f1255e117ab697b703ed8f33a298
->>>>>>> 051899efdddad143c1ae0bdd2fa0cdd63b7a32f2
->>>>>>> 8380d7d9e737573b6a9409e843ede64bb62c0fbf
-	
+
 	// 글 검색결과 개수
 	public int countSearchBoardList(String keyField, String keyWord);
 	
