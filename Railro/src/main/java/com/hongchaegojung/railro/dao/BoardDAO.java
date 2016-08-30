@@ -11,10 +11,10 @@ public interface BoardDAO {
 	public int getTotalBoardListCount();
 	
 	// 글 검색
-	public List<Board> searchBoardList();
+	public List<Board> searchBoardList(String keyField, String keyWord);
 	
 	// 글 검색결과 개수
-	public int countSearchBoardList();
+	public int countSearchBoardList(String keyField, String keyWord);
 	
 	// 글 목록 
 	public List<Board> getBoardList();
