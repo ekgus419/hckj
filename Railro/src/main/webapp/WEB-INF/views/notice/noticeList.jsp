@@ -16,6 +16,10 @@
 		</div>
 		<span>글 개수 : <b>${listCount}</b></span>
 	</div>
+	
+	<form name="listForm" action="noticeList.htm">
+	<input type="hidden" name="pageNo" value="" />
+	
 	<table class="list" width="100%">
 		<tr class="list-col" align="center" valign="middle">
 			<td width="10%">
@@ -62,11 +66,21 @@
 		<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
 	</div>
 	<div class="paging" align="center">
-	${listCount/5}
-	이전&nbsp;다음
+		<jsp:include page="paging.jsp" flush="true">
+			<jsp:param name="firstPageNo" value="${paging.firstPageNo}" />
+			<jsp:param name="prevPageNo" value="${paging.prevPageNo}" />
+			<jsp:param name="startPageNo" value="${paging.startPageNo}" />
+			<jsp:param name="pageNo" value="${paging.pageNo}" />
+			<jsp:param name="endPageNo" value="${paging.endPageNo}" />
+			<jsp:param name="nextPageNo" value="${paging.nextPageNo}" />
+			<jsp:param name="finalPageNo" value="${paging.finalPageNo}" />
+		</jsp:include>
 	</div>
+	
+	</form>
+	
 	<div class="search" align="center">
-		<form action="noticeSearchList.htm" method="get">
+		<form action="noticeList.htm" method="get">
 			<select name="keyField">
 				<option value="ID">번호</option>
 				<option value="WRITER">작성자</option>
@@ -77,3 +91,11 @@
 		</form>
 	</div>
 </div>
+
+
+<script type="text/javascript">
+	function goPage(pageNo){
+		document.listForm.pageNo.value = pageNo;
+		document.listForm.submit();
+	}
+</script>

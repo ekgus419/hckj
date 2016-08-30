@@ -2,15 +2,18 @@ package com.hongchaegojung.railro.controllers;
 
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hongchaegojung.railro.dao.NoticeDAO;
 import com.hongchaegojung.railro.dto.Notice;
+import com.hongchaegojung.railro.dto.Paging;
 
 @Controller
 @RequestMapping("/notice")
@@ -20,13 +23,25 @@ public class NoticeController {
 	private SqlSession sqlSession;
 	
 	@RequestMapping(value="/noticeList.htm", method=RequestMethod.GET)
-	public String noticeList(Model model) {
+	public String noticeList(String keyField, String keyWord, Notice notice, Model model,
+			Paging paging, @RequestParam(value = "pageNo", required = false) String pageNo
+			) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
-		int listCount = noticeDAO.getTotalNoticeListCount();
 		
+		paging.setPageSize(3); // 한 페이지에 보일 게시글 수
+		paging.setPageNo(1); // 현재 페이지 번호
+		if(StringUtils.isNotEmpty(pageNo)){
+			paging.setPageNo(Integer.parseInt(pageNo));
+		}
+		paging.setBlockSize(10);
 		
-		List<Notice> list = noticeDAO.getNoticeList(1, 5);
+		int listCount = noticeDAO.getTotalNoticeListCount(keyField, keyWord);
 		
+		paging.setTotalCount(listCount); // 게시물 총 개수
+		
+		List<Notice> list = noticeDAO.getNoticeList(paging, keyField, keyWord);
+		
+		model.addAttribute("paging", paging);
 		model.addAttribute("listCount", listCount);
 		model.addAttribute("noticeList", list);
 		return "notice.noticeList";
@@ -74,7 +89,7 @@ public class NoticeController {
 		return "redirect:noticeList.htm";
 	}
 
-	@RequestMapping(value="/noticeSearchList.htm", method=RequestMethod.GET)
+/*	@RequestMapping(value="/noticeSearchList.htm", method=RequestMethod.GET)
 	public String noticeSearchList(String keyField, String keyWord, Model model) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
 		List<Notice> sNoticeList = noticeDAO.searchNoticeList(keyField, keyWord);
@@ -83,7 +98,7 @@ public class NoticeController {
 		model.addAttribute("sNoticeList", sNoticeList);
 		model.addAttribute("sListCount", sListCount);
 		return "notice.noticeSearchList";
-	}
+	}*/
 
 
 }

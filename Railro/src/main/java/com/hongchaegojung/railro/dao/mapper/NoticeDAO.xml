@@ -6,6 +6,9 @@
 <mapper namespace="com.hongchaegojung.railro.dao.NoticeDAO">
 	<select id="getTotalNoticeListCount" resultType="Integer">
 		SELECT COUNT(*) FROM NOTICE
+		<if test="param1 != null and param2 != ''">
+			WHERE ${param1} LIKE '%${param2}%'
+		</if>
 	</select>
 	
 	<select id="getNoticeList" resultType="com.hongchaegojung.railro.dto.Notice">
@@ -25,10 +28,13 @@
 		            HIT
 		        FROM
 		            NOTICE
+		        <if test="param3 != null and param4 != ''">
+		        	WHERE ${param3} LIKE '%${param4}%'
+		        </if>
 		    ) AA
 		) AAA
 		WHERE
-		    AAA.RNUM BETWEEN (#{param1}-1)*#{param2}+1 AND (#{param1}-1)*#{param2}+#{param2}	
+		    AAA.RNUM BETWEEN #{param1.startRowNum} AND #{param1.endRowNum}
 	</select>
 	
 	<select id="getDetail" resultType="com.hongchaegojung.railro.dto.Notice">
@@ -55,12 +61,5 @@
 	<delete id="delete">
 		DELETE FROM NOTICE WHERE ID=#{ID}
 	</delete>
-	
-	<select id="searchNoticeList" resultType="com.hongchaegojung.railro.dto.Notice">
-		SELECT * FROM NOTICE WHERE ${param1} LIKE '%${param2}%'
-	</select>
-	
-	<select id="countSearchNoticeList" resultType="Integer">
-		SELECT COUNT(*) FROM NOTICE WHERE ${param1} LIKE '%${param2}%'
-	</select>
+
 </mapper>
