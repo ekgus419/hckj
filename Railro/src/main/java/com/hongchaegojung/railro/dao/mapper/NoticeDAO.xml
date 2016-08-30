@@ -28,7 +28,7 @@
 		    ) AA
 		) AAA
 		WHERE
-		    AAA.RNUM BETWEEN 0 AND 5		
+		    AAA.RNUM BETWEEN (#{param1}-1)*#{param2}+1 AND (#{param1}-1)*#{param2}+#{param2}	
 	</select>
 	
 	<select id="getDetail" resultType="com.hongchaegojung.railro.dto.Notice">

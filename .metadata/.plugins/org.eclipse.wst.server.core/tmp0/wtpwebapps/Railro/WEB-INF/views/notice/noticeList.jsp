@@ -5,7 +5,7 @@
 	<div class="setting">
 		<div class="limit-setting">
 			<form action="" method="get">
-				<select name="limit" onchange="limit_submit()">
+				<select name="limit" onchange="this.form.submit()">
 					<option value="5">5</option>
 					<option value="10" selected="selected">10</option>
 					<option value="15">15</option>
@@ -62,6 +62,7 @@
 		<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
 	</div>
 	<div class="paging" align="center">
+	${listCount/5}
 	이전&nbsp;다음
 	</div>
 	<div class="search" align="center">

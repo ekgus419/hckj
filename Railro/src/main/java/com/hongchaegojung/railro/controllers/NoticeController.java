@@ -23,7 +23,9 @@ public class NoticeController {
 	public String noticeList(Model model) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
 		int listCount = noticeDAO.getTotalNoticeListCount();
-		List<Notice> list = noticeDAO.getNoticeList();
+		
+		
+		List<Notice> list = noticeDAO.getNoticeList(1, 5);
 		
 		model.addAttribute("listCount", listCount);
 		model.addAttribute("noticeList", list);

@@ -5,9 +5,6 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-<<<<<<< HEAD
-  <updated>2016-08-29T12:19:00Z</updated>
-=======
   <updated>2016-08-29T16:09:21Z</updated>
   <entry>
     <title>Spring Web Services 2.3.1/2.4.0 are released</title>
@@ -29,7 +26,6 @@
 &lt;p&gt;The artifacts are staged on maven central, &lt;a href="http://repo.spring.io/release"&gt;http://repo.spring.io/release&lt;/a&gt;, and bintray.&lt;/p&gt;
 &lt;p&gt;Cheers!&lt;/p&gt;</content>
   </entry>
->>>>>>> 7f3748870af8f1255e117ab697b703ed8f33a298
   <entry>
     <title>Spring Cloud Camden M1 is available</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/29/spring-cloud-camden-m1-is-available" />
@@ -871,34 +867,4 @@ public class MySqlApplication {&#xD;
 &lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Spring Advocate Josh Long shows off his fancy banner while Spring Boot Dev Stephane Nicoll teaches v1.4. &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/wC5I5gXozb"&gt;pic.twitter.com/wC5I5gXozb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nicholas Eden-Walker (@JinpaLhawang) &lt;a href="https://twitter.com/JinpaLhawang/status/760551095085076480"&gt;August 2, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
 &lt;p&gt;We cannot wait to discover what is going to happen tomorrow &amp;ndash; this is just day &lt;strong&gt;one&lt;/strong&gt; ! Check back here for tomorrow&amp;rsquo;s day 2 wrap up!&lt;/p&gt;</content>
   </entry>
-<<<<<<< HEAD
-  <entry>
-    <title>Spring Tool Suite 3.8.1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/08/03/spring-tool-suite-3-8-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2016-08-03:2578</id>
-    <updated>2016-08-03T00:21:53Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;p&gt;I am happy to announce the 3.8.1 release of the Spring Tool Suite, our Eclipse-based tooling.&lt;/p&gt;
-&lt;p&gt;STS 3.8.1 focuses on fixing existing issues. The list of fixed issues include:&lt;/p&gt;
-&lt;ul&gt;&#xD;
-&lt;li&gt;Spring Boot Dashboard works behind a proxy again&lt;/li&gt;&#xD;
-&lt;li&gt;Assert templates now use JUnit or AssertJ, depending on what is on the classpath of the project&lt;/li&gt;&#xD;
-&lt;li&gt;Fixed an issue with the Groovy-Eclipse m2e connector with missing source folders&lt;/li&gt;&#xD;
-&lt;li&gt;Added an action to jump to the ngrok admin web UI directly from the boot dashboard&lt;/li&gt;&#xD;
-&lt;li&gt;Fixed an issue with the port of a boot app not showing up in the dashboard&lt;/li&gt;&#xD;
-&lt;li&gt;and more...&lt;/li&gt;&#xD;
-&lt;/ul&gt;
-&lt;p&gt;To download the distributions, please go visit:&lt;/p&gt;
-&lt;ul&gt;&#xD;
-&lt;li&gt;Spring Tool Suite: &lt;a href="https://spring.io/tools/sts/all"&gt;https://spring.io/tools/sts/all&lt;/a&gt;&lt;/li&gt;&#xD;
-&lt;/ul&gt;
-&lt;p&gt;Detailed new and noteworthy notes can be found here: &lt;a href="http://docs.spring.io/sts/nan/v381/NewAndNoteworthy.html"&gt;STS 3.8.1 New &amp;amp; Noteworthy&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;</content>
-  </entry>
-=======
->>>>>>> 7f3748870af8f1255e117ab697b703ed8f33a298
 </feed>
