@@ -7,7 +7,7 @@
 
 	<!--글 전체 개수-->
 	<select id="getTotalBoardListCount" resultType="Integer">
-		SELECT COUNT(*) FROM BOARD
+		SELECT COUNT(*) FROM BOARD WHERE TYPE=1
 	</select>
 	
 	<!--글 검색 -->

@@ -21,12 +21,12 @@
 	
 	<!-- 게시물 개수 count -->
 	<select id="getTotalBoardListCount" resultType="Integer">
-		SELECT COUNT(*) FROM BOARD
+		SELECT COUNT(*) FROM BOARD WHERE TYPE=2
 	</select>
 
 	<!-- 게시물 목록 -->
 	<select id="getBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-		SELECT * FROM BOARD WHERE TYPE = 2
+		SELECT * FROM BOARD WHERE TYPE=2
 	</select>
 	
 
