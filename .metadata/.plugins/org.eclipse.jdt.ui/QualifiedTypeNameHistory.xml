@@ -12,4 +12,5 @@
 <fullyQualifiedTypeName name="com.hongchaegojung.railro.dao.RailroDAO"/>
 <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="org.springframework.util.StringUtils"/>
 </qualifiedTypeNameHistroy>

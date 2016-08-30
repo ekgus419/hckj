@@ -36,6 +36,14 @@ tr{
 	margin-bottom: 50px;
 }
 
+.register-btn span{
+	padding: 6px 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
 .paging{
 	margin-bottom: 30px;
 }
@@ -60,12 +68,4 @@ input[type=submit]{
 
 select{
 	padding: 4px 8px;
-}
-
-.register-btn span{
-	padding: 6px 13px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    vertical-align: middle;
 }

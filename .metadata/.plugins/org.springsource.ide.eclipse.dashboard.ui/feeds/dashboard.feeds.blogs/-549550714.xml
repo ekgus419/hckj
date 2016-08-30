@@ -5,7 +5,87 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-08-26T20:01:27Z</updated>
+  <updated>2016-08-29T12:19:00Z</updated>
+  <entry>
+    <title>Spring Cloud Camden M1 is available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/29/spring-cloud-camden-m1-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Marcin Grzejszczak</name>
+    </author>
+    <id>tag:spring.io,2016-08-29:2601</id>
+    <updated>2016-08-29T12:19:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce that Milestone 1 of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud Camden&lt;/a&gt; Release Train is available today. The release can be found in our &lt;a href="https://repo.spring.io/milestone/"&gt;Spring Milestone&lt;/a&gt; repository. We¡¯ve made numerous enhancements and bug fixes! You can check out the &lt;code&gt;Camden.M1&lt;/code&gt; &lt;a href="https://github.com/spring-projects/spring-cloud/wiki/Spring-Cloud-Camden-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The following modules were updated as part of Camden.M1:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;Spring Cloud Build        1.2.0.RELEASE
+Spring Cloud Stream       Brooklyn.M1
+Spring Cloud Bus          1.2.0.M1
+Spring Cloud Config       1.2.0.M1
+Spring Cloud Netflix      1.2.0.M1
+Spring Cloud Consul       1.1.0.M1
+Spring Cloud Contract     1.0.0.M2
+Spring Cloud CLI          1.2.0.M1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The combined release train docs are available &lt;a href="http://cloud.spring.io/spring-cloud-static/spring-cloud.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And, as always, we welcome feedback: either on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on Stack Overflow, or on Twitter.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only)&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;repositories&amp;gt;&#xD;
+    &amp;lt;repository&amp;gt;&#xD;
+        &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;&#xD;
+        &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;&#xD;
+        &amp;lt;url&amp;gt;http://repo.spring.io/milestone&amp;lt;/url&amp;gt;&#xD;
+        &amp;lt;snapshots&amp;gt;&#xD;
+            &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;&#xD;
+        &amp;lt;/snapshots&amp;gt;&#xD;
+    &amp;lt;/repository&amp;gt;&#xD;
+&amp;lt;/repositories&amp;gt;&#xD;
+&amp;lt;dependencyManagement&amp;gt;&#xD;
+  &amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;version&amp;gt;Camden.M1&amp;lt;/version&amp;gt;&#xD;
+    &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+    &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+  &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+&amp;lt;dependencies&amp;gt;&#xD;
+  &amp;lt;dependency&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
+  &amp;lt;/dependency&amp;gt;&#xD;
+  &amp;lt;dependency&amp;gt;&#xD;
+    &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+    &amp;lt;artifactId&amp;gt;spring-cloud-starter-eureka&amp;lt;/artifactId&amp;gt;&#xD;
+  &amp;lt;/dependency&amp;gt;&#xD;
+  ...&#xD;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;buildscript {&#xD;
+  dependencies {&#xD;
+    classpath &amp;quot;io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE&amp;quot;&#xD;
+  }&#xD;
+}&#xD;
+repositories {&#xD;
+    maven {&#xD;
+        url &amp;#39;http://repo.spring.io/milestone&amp;#39;&#xD;
+    }&#xD;
+}&#xD;
+apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
+&#xD;
+dependencyManagement {&#xD;
+  imports {&#xD;
+    mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:Camden.M1&amp;#39;&#xD;
+  }&#xD;
+}&#xD;
+&#xD;
+dependencies {&#xD;
+    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
+    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-eureka&amp;#39;&#xD;
+    ...&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud Data Flow for Mesos 1.0 RC2 released</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/26/spring-cloud-data-flow-for-mesos-1-0-rc2-released" />
@@ -793,34 +873,5 @@ public class MySqlApplication {&#xD;
 &lt;/ul&gt;
 &lt;p&gt;Detailed new and noteworthy notes can be found here: &lt;a href="http://docs.spring.io/sts/nan/v381/NewAndNoteworthy.html"&gt;STS 3.8.1 New &amp;amp; Noteworthy&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring IO Platform Athens RC1</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/07/29/spring-io-platform-athens-rc1" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Andy Wilkinson</name>
-    </author>
-    <id>tag:spring.io,2016-07-29:2577</id>
-    <updated>2016-07-29T20:41:00Z</updated>
-    <content type="html">&lt;p&gt;It&amp;rsquo;s my pleasure to announce that Spring IO Platform Athens-RC1 is available now from the &lt;a href="http://repo.spring.io/milestone/"&gt;Spring milestone repository&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This release is the first to adopt a new alphabetical versioning scheme similar to those already used by Spring Cloud and Spring Data. The theme for the Platform&amp;rsquo;s versions is world cities.&lt;/p&gt;
-&lt;p&gt;The Athens release upgrades the versions of a number of projects:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Framework 4.3&lt;/li&gt;
-  &lt;li&gt;Spring AMQP 1.6&lt;/li&gt;
-  &lt;li&gt;Spring Boot 1.4&lt;/li&gt;
-  &lt;li&gt;Spring Data Hopper&lt;/li&gt;
-  &lt;li&gt;Spring Hateoas 0.20&lt;/li&gt;
-  &lt;li&gt;Spring Integration 4.3&lt;/li&gt;
-  &lt;li&gt;Spring LDAP 2.1&lt;/li&gt;
-  &lt;li&gt;Spring REST Docs 1.1&lt;/li&gt;
-  &lt;li&gt;Spring Security 4.1&lt;/li&gt;
-  &lt;li&gt;Spring Session 1.2&lt;/li&gt;
-  &lt;li&gt;Spring Web Services 2.3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The versions of numerous third-party dependencies have also been updated.&lt;/p&gt;
-&lt;p&gt;Please take RC1 for a spin and let us know if you find any problems. All being well, Athens-RELEASE will be available in early August. &lt;strong&gt;Update:&lt;/strong&gt; Athens-RELEASE will now follow shortly after Spring Boot 1.4.1.RELEASE and should be available in mid-September.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Athens-RC1/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

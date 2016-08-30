@@ -4,10 +4,8 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,7 +22,6 @@ public class NoticeController {
 	@RequestMapping(value="/noticeList.htm", method=RequestMethod.GET)
 	public String noticeList(Model model) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
-		
 		int listCount = noticeDAO.getTotalNoticeListCount();
 		List<Notice> list = noticeDAO.getNoticeList();
 		
@@ -36,7 +33,6 @@ public class NoticeController {
 	@RequestMapping(value="/noticeDetail.htm", method=RequestMethod.GET)
 	public String noticeDetail(final int ID, Model model) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
-		
 		Notice notice = noticeDAO.getDetail(ID);
 		model.addAttribute("notice", notice);
 		return "notice.noticeDetail";
@@ -57,7 +53,6 @@ public class NoticeController {
 	@RequestMapping(value="/noticeEdit.htm", method=RequestMethod.GET)
 	public String noticeEdit(int ID, Model model) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
-		
 		Notice notice = noticeDAO.getDetail(ID);
 		model.addAttribute("notice", notice);
 		return "notice.noticeEdit";
@@ -78,7 +73,13 @@ public class NoticeController {
 	}
 
 	@RequestMapping(value="/noticeSearchList.htm", method=RequestMethod.GET)
-	public String test5() {
+	public String noticeSearchList(String keyField, String keyWord, Model model) {
+		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
+		List<Notice> sNoticeList = noticeDAO.searchNoticeList(keyField, keyWord);
+		int sListCount = noticeDAO.countSearchNoticeList(keyField, keyWord);
+		
+		model.addAttribute("sNoticeList", sNoticeList);
+		model.addAttribute("sListCount", sListCount);
 		return "notice.noticeSearchList";
 	}
 
