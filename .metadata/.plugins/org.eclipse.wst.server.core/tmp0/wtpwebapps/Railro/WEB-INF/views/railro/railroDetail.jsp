@@ -42,7 +42,7 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<span><a href="">삭제</a></span>
+			<span><a href="railroDel.htm?ID=${board.ID}">삭제</a></span>
 		</div>
 	</form>
 </div>

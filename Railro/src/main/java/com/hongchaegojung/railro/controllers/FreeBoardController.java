@@ -62,6 +62,19 @@ public class FreeBoardController {
 		
 		return "redirect:freeBoardDetail.htm?ID="+board.getID();
 	}
+	@RequestMapping(value="/freeBoardDel.htm")
+	public String freeBoardDel(int ID) {
+		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
+		freeDAO.delete(ID);
+		return "redirect:freeBoardList.htm";
+	}
+	
+	@RequestMapping(value="/freeBoardSerchList.htm")
+	public String freeBoardSearchList(String keyFiled, String keyWord){
+		BoardDAO freeDAO = sqlSession.getMapper (FreeBoardDAO.class);
+		freeDAO.searchBoardList(keyFiled, keyWord);
+		return "";		
+	}
 /*	
 	
 	

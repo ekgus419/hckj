@@ -32,4 +32,8 @@
 		SET TITLE=#{TITLE}, CONTENTS=#{CONTENTS}, REGDATE=SYSDATE
 		WHERE ID=#{ID}
 	</update>
+	
+	<delete id="delete">
+		DELETE FROM NOTICE WHERE ID=#{ID}
+	</delete>
 </mapper>

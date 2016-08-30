@@ -5,13 +5,16 @@ import com.hongchaegojung.railro.dto.Board;
 import com.hongchaegojung.railro.dto.BoardFile;
 
 public interface BoardDAO {
-	
-	
+
 	// 글 전체 개수
 	public int getTotalBoardListCount();
 	
 	// 글 검색
+<<<<<<< HEAD
 	public List<Board> searchBoardList(String keyField, String keyWord);
+=======
+	public List<Board> searchBoardList(String keyFiled,String keyWord);
+>>>>>>> 7f3748870af8f1255e117ab697b703ed8f33a298
 	
 	// 글 검색결과 개수
 	public int countSearchBoardList();
