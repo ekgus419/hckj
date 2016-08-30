@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hongchaegojung.railro.dao.FreeBoardDAO">
+
+	<!--글 전체 개수-->
+	<select id="getTotalBoardListCount" resultType="Integer">
+		SELECT COUNT(*) FROM BOARD
+	</select>
+	
+	<!--글 검색 -->
+	<select id="searchBoardList" resultType="com.hongchaegojung.railro.dto.Board">
+	 	SELECT * FROM BOARD WHERE TYPE=1 AND ${param1} LIKE '%${param2}%'
+	</select>
+	
+	<!--글 검색결과 개수 -->
+	<select id="scountSearchBoardList" resultType="Integer">
+		
+	</select>
+	
+	<!--글 목록  -->
+	<select id="getBoardList" resultType="com.hongchaegojung.railro.dto.Board">
+		SELECT * FROM BOARD WHERE TYPE =1
+	</select>
+	
+	<!--글 상세보기 -->
+	<select id="getDetail" resultType="com.hongchaegojung.railro.dto.Board">
+		SELECT * FROM BOARD WHERE ID=#{ID}
+	</select>
+	
+	<!--글 등록 -->
+	<insert id="insert" parameterType="com.hongchaegojung.railro.dto.Board">
+		INSERT INTO BOARD
+		(
+			ID, TYPE, SUBJECT, TITLE, CONTENTS, WRITER, REFLOCATION, REREF, RELEV, RESEQ, REGDATE, HIT
+		)
+		VALUES
+		(
+			BOARD_SEQ.NEXTVAL, 1, '테스트용', #{TITLE, jdbcType=VARCHAR}, #{CONTENTS, jdbcType=CLOB} , 4, '테스트용', 1, 1, 1, SYSDATE, 0
+		)
+	</insert>
+	
+	<!--글 수정 -->
+	<update id="update">
+		UPDATE BOARD SET SUBJECT=#{SUBJECT}, TITLE =#{TITLE},
+		CONTENTS=#{CONTENTS} WHERE ID=#{ID}
+	</update>
+	
+	<!--글 삭제 -->
+	<delete id="delete">
+		DELETE FROM BOARD WHERE ID=#{ID}
+	</delete>
+	
+	<!--글 답변 등록 -->
+	<insert id="replyInsert">
+		INSERT INTO BOARD
+		(
+			ID, TYPE, SUBJECT, TITLE, CONTENTS, WRITER, REFLOCATION, REREF, RELEV, RESEQ, REGDATE, HIT
+		)
+		VALUES
+		(
+			RESEQ.NEXTVAL, #{TYPE}, #{SUBJECT}, #{TITLE}, #{CONTENTS} ,#{WRITER}, #{REFLOCATION}, #{REREF}, #{RELEV}, #{RESEQ}, #{REGDATE}, #{HIT}
+		)
+	</insert>
+	
+	<!--조회수 업데이트 -->
+	<update id="setHitUpdate">
+		UPDATE BOARD SET HIT = HIT+1 WHERE ID=#{ID}
+	</update>
+	
+	<!--글쓴이 인지 확인 -->
+	<select id="isBoardWriter" resultType="Integer">
+		SELECT WRITER FROM BOARD WHERE ID=#{ID}
+	</select>	
+
+</mapper>

@@ -11,9 +11,11 @@
 	  SELECT COUNT(*) FROM BOARD
 	 </select>
 		
-	 <!--글 검색 -->
+	 <!--글 검색 --> 
 	 <select id="searchBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-	  
+	
+	 <!-- SELECT * FROM BOARD WHERE TYPE=3, ${keyField} LIKE '%${param3}%' #{keyWord} ORDER BY REGDATE DESC -->
+	
 	 </select>
 	 
 	 <!--글 검색결과 개수 -->
@@ -23,7 +25,7 @@
 	 
 	 <!--글 목록  -->
 	 <select id="getBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-	  SELECT * FROM BOARD
+	  SELECT * FROM BOARD WHERE TYPE=3
 	 </select>
 	 
 	 <!--글 상세보기 -->
@@ -74,7 +76,7 @@
 		)
 		VALUES
 		(
-			BOARD_SEQ.NEXTVAL, 1, #{SUBJECT}, #{TITLE}, #{CONTENTS}, 4, '혀냐', 1, 1, 1, SYSDATE, 0
+			BOARD_SEQ.NEXTVAL, 3, #{SUBJECT}, #{TITLE}, #{CONTENTS}, 4, '혀냐', 1, 1, 1, SYSDATE, 0
 		)
 	</insert>
 	

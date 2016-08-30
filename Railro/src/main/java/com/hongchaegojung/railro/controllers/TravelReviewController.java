@@ -1,14 +1,13 @@
 package com.hongchaegojung.railro.controllers;
 
 import java.util.List;
-
+import javax.servlet.http.HttpServletRequest;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.hongchaegojung.railro.dao.BoardDAO;
 import com.hongchaegojung.railro.dao.TravelReviewDAO;
 import com.hongchaegojung.railro.dto.Board;
@@ -70,39 +69,29 @@ public class TravelReviewController {
 		return "redirect:travelReviewDetail.htm?ID="+board.getID();
 	}
 	
-	
-	/*
-	@RequestMapping(value={"freeBoardEdit.htm"},method=RequestMethod.POST)
-	public String freeBoardEdit(Board freeBoard) {
-		
-		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
-		freeDAO.update(freeBoard);
-		
-		return  "redirect:freeBoardDetail.htm?ID="+freeBoard.getID(); 
-	
+	@RequestMapping(value="/travelReviewDel.htm")
+	public String travelReviewDel(int ID) {
+		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
+		travelReDAO.delete(ID);
+		return "redirect:travelReviewList.htm";
 	}
 	
-
-	
-	
-	
-	
-	
-	@RequestMapping(value={"freeBoardSearchList.htm"},method=RequestMethod.GET)
-	public String test5() {
+	@RequestMapping(value="/travelReviewSearchList.htm", method=RequestMethod.GET)
+	public String trvelReviewSearchList(String keyField, String keyWord) {
+		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
+		travelReDAO.searchBoardList(keyField, keyWord);
+		
+		
 		return "freeBoard.freeBoardSearchList";
 	}
 	
 	
+	/* 
+	
+	
 	// 삭제, 다운로드
 	
-	@RequestMapping("freeBoardDel.htm")
-	public String freeBoardDel(int ID) {
-		FreeBoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
-		freeDAO.delete(ID);
-		return "redirect:notice.htm";
-	}
-	
+
 	@RequestMapping("download.htm")
 	public void download(String p,  String f, HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String fname = new String(f.getBytes("ISO8859_1"), "UTF-8");
