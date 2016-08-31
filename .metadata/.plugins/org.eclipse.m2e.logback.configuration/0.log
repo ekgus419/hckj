@@ -16943,3 +16943,5 @@ Caused by: java.io.FileNotFoundException: D:\railro\.metadata\.plugins\org.eclip
 2016-08-31 11:27:43,034 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2016-08-31 11:27:43,037 [Worker-36] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-08-31 11:27:43,038 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-08-31 11:32:33,625 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@71c9b873{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2016-08-31 11:32:33,667 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3d0e5ff8{/help,null,UNAVAILABLE}
