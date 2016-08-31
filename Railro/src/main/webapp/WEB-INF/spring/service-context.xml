@@ -19,7 +19,11 @@
 	<!-- 데이터소스 -->
 	<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+<<<<<<< HEAD
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"></property>
+=======
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+>>>>>>> f2318267817b6efa8506b057f0816b627d153e87
 		<property name="username" value="HCKJ"></property>
 		<property name="password" value="java1234"></property>
 	</bean>

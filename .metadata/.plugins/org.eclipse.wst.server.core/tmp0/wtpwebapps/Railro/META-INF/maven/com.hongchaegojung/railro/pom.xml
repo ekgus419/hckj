@@ -168,10 +168,20 @@
 			<artifactId>spring-context-support</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+<<<<<<< HEAD
 	
 	
 	
 	
+=======
+		
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.0</version>
+		</dependency>
+		
+>>>>>>> f2318267817b6efa8506b057f0816b627d153e87
 	</dependencies>
     <build>
         <plugins>

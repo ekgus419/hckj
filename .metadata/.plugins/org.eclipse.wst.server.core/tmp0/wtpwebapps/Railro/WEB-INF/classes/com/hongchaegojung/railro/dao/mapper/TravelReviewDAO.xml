@@ -13,7 +13,7 @@
 		
 	 <!--글 검색 --> 
 	 <select id="searchBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-	 SELECT * FROM BOARD WHERE TYPE=3 AND ${param1} LIKE '%${param2}%'
+	  SELECT * FROM BOARD WHERE TYPE=3 AND ${param1} LIKE '%${param2}%'
 	 </select>
 	 
 	 <!--글 검색결과 개수 -->
