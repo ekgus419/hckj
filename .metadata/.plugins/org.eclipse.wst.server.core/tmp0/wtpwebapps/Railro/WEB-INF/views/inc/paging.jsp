@@ -1,6 +1,18 @@
 <%@ page language="java" contentType="text/html; charSet=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<style>
+.selected{
+	font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+	function goPage(pageNo){
+		document.listForm.pageNo.value = pageNo;
+		document.listForm.submit();
+	}
+</script>
+
 <div class="pagination">
 	<a href="javascript:goPage(${param.firstPageNo})" class="first">처음&nbsp;</a>
 	<a href="javascript:goPage(${param.prevPageNo})" class="prev">이전&nbsp;</a>
@@ -20,15 +32,3 @@
 	<a href="javascript:goPage(${param.finalPageNo})" class="last">마지막</a>
 </div>
 
-<style>
-.selected{
-	font-weight: bold;
-}
-</style>
-
-<script type="text/javascript">
-	function goPage(pageNo){
-		document.listForm.pageNo.value = pageNo;
-		document.listForm.submit();
-	}
-</script>

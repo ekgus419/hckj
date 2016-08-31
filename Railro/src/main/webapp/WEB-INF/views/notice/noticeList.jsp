@@ -4,7 +4,7 @@
 <div class="content">
 	<div class="setting">
 		<div class="limit-setting">
-			<form action="" method="get">
+			<form action="noticeList.htm" method="get">
 				<select name="limit" onchange="this.form.submit()">
 					<option value="5">5</option>
 					<option value="10" selected="selected">10</option>
@@ -62,9 +62,11 @@
 				</tr>
 			</c:forEach>
 		</table>
+		
 		<div class="register-btn" align="right">
 			<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
 		</div>
+		
 		<div class="paging" align="center">
 			<jsp:include page="../inc/paging.jsp" flush="true">
 				<jsp:param name="firstPageNo" value="${paging.firstPageNo}" />
