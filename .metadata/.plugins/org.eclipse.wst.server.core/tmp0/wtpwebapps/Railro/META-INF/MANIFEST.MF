@@ -1,14 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-Built-By: SUBIN
-Build-Jdk: 1.8.0_77
-=======
-<<<<<<< HEAD
->>>>>>> 41780b81a3d8c8cb38651cdab0245d7ecb176155
 Built-By: chae
 Build-Jdk: 1.8.0_91
->>>>>>> b92a40cc3c25e5a0829a121e1292fa3d9746c0a7
 Created-By: Maven Integration for Eclipse
 

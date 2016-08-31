@@ -1,0 +1,22 @@
+package com.hongchaegojung.service;
+
+import com.hongchaegojung.railro.dao.BoardDAO;
+import com.hongchaegojung.railro.dto.Board;
+
+public class ImHitServie implements hitService {
+
+	private BoardDAO boardDAO;
+
+		public void setBoardDAO(BoardDAO boardDAO) {
+			this.boardDAO = boardDAO;
+		}
+
+			@Override
+			public void insertAndPointUpOfMember(Board board, int HIT) {
+
+				boardDAO.insert(board);
+				boardDAO.setHitUpdate(board.getHIT()+ "1");
+				
+			}
+
+}
