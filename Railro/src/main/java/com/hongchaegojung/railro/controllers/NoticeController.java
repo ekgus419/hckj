@@ -29,6 +29,8 @@ public class NoticeController {
 
 		if(StringUtils.isNotEmpty(limit)){
 			paging.setPageSize(Integer.parseInt(limit)); // 한 페이지에 보일 게시글 수 
+		}else{
+			paging.setPageSize(10); // 기본값
 		}
 		
 		paging.setPageNo(1); // 현재 페이지 번호
