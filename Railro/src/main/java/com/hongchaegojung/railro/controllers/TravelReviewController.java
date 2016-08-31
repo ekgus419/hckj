@@ -1,10 +1,13 @@
 package com.hongchaegojung.railro.controllers;
 
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,9 +45,12 @@ public class TravelReviewController {
 		return "redirect:travelReviewList.htm";
 	}
 	
+	
+	@Transactional(isolation=Isolation.READ_UNCOMMITTED)
 	@RequestMapping(value="/travelReviewDetail.htm", method=RequestMethod.GET)
 	public String travelReviewDetail(final int ID, Model model) {
 		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
+		travelReDAO.setHitUpdate(ID);
 		Board board = travelReDAO.getDetail(ID);
 		model.addAttribute("board", board);
 		
@@ -55,7 +61,7 @@ public class TravelReviewController {
 	public String travelReviewEdit(final int ID, Model model) {
 		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
 		Board board = travelReDAO.getDetail(ID);
-		
+	
 		model.addAttribute("board", board);
 		return "travelReview.travelReviewEdit";
 	}
@@ -87,10 +93,10 @@ public class TravelReviewController {
 		return "travelReview.travelReviewSearchList";
 	}
 	
+
 	
-	
-	
-	
+
+
 	/* 
 	
 	// 삭제, 다운로드

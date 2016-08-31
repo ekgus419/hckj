@@ -1,6 +1,9 @@
 INDEX VERSION 1.3+D:\railro\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 3625053346.index
+<<<<<<< HEAD
 3454447321.index
+=======
+>>>>>>> 671571b8aa890f1351ec3f978d96c484f0599c53
 391022312.index
 1542080204.index
 3921967828.index

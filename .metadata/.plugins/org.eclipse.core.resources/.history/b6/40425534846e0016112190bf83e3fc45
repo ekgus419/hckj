@@ -1,0 +1,12 @@
+package com.hongchaegojung.service;
+
+import org.springframework.transaction.annotation.Transactional;
+
+import com.hongchaegojung.railro.dto.Board;
+
+public interface HitService {
+	
+	@Transactional
+	public void insertAndPointUpOfMember(Board board, int HIT);
+
+}

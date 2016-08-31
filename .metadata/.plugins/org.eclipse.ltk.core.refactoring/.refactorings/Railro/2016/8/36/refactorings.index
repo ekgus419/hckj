@@ -1,5 +1,18 @@
 1472449468609	Delete element
+<<<<<<< HEAD
+1472542387357	Delete element
+1472542416109	Rename type 'hitService'
+1472542477441	Move compilation unit
+1472542486728	Delete element
+1472542507649	Copy file
+1472542533628	Delete element
+1472542581321	Delete element
+=======
 1472551847139	Rename type 'Page'
 1472556980071	Move file
+<<<<<<< HEAD
 1472606121247	Copy file
 1472606341406	Delete element
+=======
+>>>>>>> f2318267817b6efa8506b057f0816b627d153e87
+>>>>>>> 671571b8aa890f1351ec3f978d96c484f0599c53
