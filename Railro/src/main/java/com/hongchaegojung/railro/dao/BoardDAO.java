@@ -13,7 +13,11 @@ public interface BoardDAO {
 	
 	// 글 목록 
 	public List<Board> getBoardList(Paging paging, String keyField, String keyWord);
+<<<<<<< HEAD
+	
+=======
 
+>>>>>>> 9c22b33b1ece842a4015a756a4f723039926c542
 	// 글 상세보기 
 	public Board getDetail(int ID);
 	

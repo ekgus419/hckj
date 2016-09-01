@@ -3,4 +3,8 @@
 >>>>>>>=f2318267817b6efa8506b057f0816b627d153e87
 eclipse.preferences.version=1
 module-start-timeout=300000
+<<<<<<< HEAD
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<runtimes>\r\n  <runtime id\="Apache Tomcat v8.0" location\="C\:/Program Files/Apache Software Foundation/Tomcat 8.0" name\="Apache Tomcat v8.0" runtime-type-id\="org.eclipse.jst.server.tomcat.runtime.80" timestamp\="25" vm-install-id\="1472699753039" vm-install-type-id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType"/>\r\n</runtimes>\r\n
+=======
 runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<runtimes>\r\n  <runtime id\="Apache Tomcat v8.0" location\="C\:/Program Files/Apache Software Foundation/Tomcat 8.0" name\="Apache Tomcat v8.0" runtime-type-id\="org.eclipse.jst.server.tomcat.runtime.80" timestamp\="25" vm-install-id\="1472700306294" vm-install-type-id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType"/>\r\n</runtimes>\r\n
+>>>>>>> 9c22b33b1ece842a4015a756a4f723039926c542

@@ -23,6 +23,15 @@ public class TravelReviewController {
 	@Autowired
 	private SqlSession sqlSession;
 	@RequestMapping(value="/travelReviewList.htm", method=RequestMethod.GET)
+<<<<<<< HEAD
+	public String travelReviewList(Model model) {
+//		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
+//		int listCount = travelReDAO.getTotalBoardListCount();
+//		List<Board> list = travelReDAO.getBoardList(); 
+//		
+//		model.addAttribute("listCount", listCount);
+//		model.addAttribute("travelReviewList", list);
+=======
 	public String travelReviewList(Paging paging, String pageNo, String keyField, String keyWord, String limit, Model model) {
 		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
 		int listCount = travelReDAO.getTotalBoardListCount(keyField, keyWord);
@@ -47,6 +56,7 @@ public class TravelReviewController {
 		model.addAttribute("listCount", listCount);
 		model.addAttribute("travelReviewList", list);
 		
+>>>>>>> 9c22b33b1ece842a4015a756a4f723039926c542
 		return "travelReview.travelReviewList";
 	}
 	
@@ -106,12 +116,12 @@ public class TravelReviewController {
 	/*
 	@RequestMapping(value="/travelReviewSearchList.htm")
 	public String trvelReviewSearchList(String keyField, String keyWord, Model model) {
-		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
-		List<Board> list = travelReDAO.searchBoardList(keyField, keyWord);
-		int listCount = travelReDAO.countSearchBoardList(keyField, keyWord);
-		
-		model.addAttribute("sList", list);
-		model.addAttribute("listCount", listCount);
+//		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
+//		List<Board> list = travelReDAO.searchBoardList(keyField, keyWord);
+//		int listCount = travelReDAO.countSearchBoardList(keyField, keyWord);
+//		
+//		model.addAttribute("sList", list);
+//		model.addAttribute("listCount", listCount);
 		return "travelReview.travelReviewSearchList";
 	}*/
 	
