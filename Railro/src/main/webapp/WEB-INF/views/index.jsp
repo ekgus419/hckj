@@ -1,4 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -32,14 +33,16 @@
 				<th><span class="icon-notice"></span>공지사항</th>		
 				<th><a href="javascript:void(0)" onclick="location.href='${pageContext.request.contextPath}/notice/noticeList.htm'">></a></th>			
 			</tr>
-			<tr>
-				<td class="ellipsis">최근공지사항최근공지사항최근공지사항최근공지사항최근공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항</td>
-				<td style="text-align: center;"><strong>2016.08.19</strong></td>
-			</tr>
-			<tr>
-				<td class="ellipsis">최근공지사항최근공지사항최근공지사항최근공지사항최근공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항</td>
-				<td style="text-align: center;"><strong>2016.08.19</strong></td>
-			</tr>
+			<c:forEach var="notice" items="${noticeList}" begin="0" end="3">
+				<tr>
+					<td class="ellipsis">
+						<a href="notice/noticeDetail.htm?ID=${notice.ID}">
+							${notice.TITLE}
+						</a>
+					</td>
+					<td style="text-align: center;"><strong>${notice.REGDATE}</strong></td>
+				</tr>
+			</c:forEach>
 		</table>
 	</div>
 	<div class="board-table">
@@ -52,14 +55,16 @@
 				<th><span class="icon-notice"></span>최근 게시물</th>	
 				<th></th>				
 			</tr>
-			<tr>
-				<td class="ellipsis">최근공지사항최근공지사항최근공지사항최근공지사항최근공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항</td>
-				<td style="text-align: center;"><strong>2016.08.19</strong></td>
-			</tr>
-			<tr>
-				<td class="ellipsis">최근공지사항최근공지사항최근공지사항최근공지사항최근공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항공지사항최근공지사항</td>
-				<td style="text-align: center;"><strong>2016.08.19</strong></td>
-			</tr>
+			<c:forEach var="board" items="${boardList}" begin="0" end="3">
+				<tr>
+					<td class="ellipsis">
+						<a href="railro/railroDetail.htm?ID=${board.ID}">
+							${board.TITLE}
+						</a>
+					</td>
+					<td style="text-align: center;"><strong>${board.REGDATE}</strong></td>
+				</tr>
+			</c:forEach>
 		</table>
 	</div>	
 </div>

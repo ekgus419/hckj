@@ -2,6 +2,8 @@ package com.hongchaegojung.railro.controllers;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,15 +22,18 @@ public class NoticeController {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	@RequestMapping(value="/noticeList.htm", method=RequestMethod.GET)
-	public String noticeList(Paging paging, String pageNo, String keyField, String keyWord, String limit, Model model) {
+	private int pageSize = 10;
+	
+	@RequestMapping(value="/noticeList.htm")
+	public String noticeList(Paging paging, String pageNo, String keyField, String keyWord, Model model, String limit) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
 		int listCount = noticeDAO.getTotalNoticeListCount(keyField, keyWord);
 
-		if(limit != null){
-			paging.setPageSize(Integer.parseInt(limit)); // 한 페이지에 보일 게시글 수 
+		if(limit == null){
+			paging.setPageSize(pageSize);
 		}else{
-			paging.setPageSize(10); // 기본값
+			pageSize = Integer.parseInt(limit);
+			paging.setPageSize(Integer.parseInt(limit));
 		}
 		
 		paging.setPageNo(1); // 현재 페이지 번호

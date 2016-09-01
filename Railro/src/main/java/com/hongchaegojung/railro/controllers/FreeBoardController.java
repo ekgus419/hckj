@@ -26,8 +26,6 @@ public class FreeBoardController {
 		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
 		int listCount = freeDAO.getTotalBoardListCount(keyField, keyWord);
 		
-		// paging.setPageSize(10);
-		
 		if(limit != null){
 			paging.setPageSize(Integer.parseInt(limit)); 
 		}else{
