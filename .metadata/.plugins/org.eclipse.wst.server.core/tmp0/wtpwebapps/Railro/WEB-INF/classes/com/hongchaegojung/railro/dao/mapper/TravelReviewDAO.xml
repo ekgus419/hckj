@@ -11,20 +11,33 @@
 	  SELECT COUNT(*) FROM BOARD WHERE TYPE=3
 	 </select>
 		
-	 <!--글 검색 --> 
-	 <select id="searchBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-	  SELECT * FROM BOARD WHERE TYPE=3 AND ${param1} LIKE '%${param2}%'
-	 </select>
-	 
-	 <!--글 검색결과 개수 -->
-	 <select id="countSearchBoardList" resultType="Integer">
-	  SELECT COUNT(*) FROM BOARD WHERE TYPE=3 AND ${param1} LIKE '%${param2}%'
-	 </select>
-	 
-	 <!--글 목록  -->
+	
+	<!-- 글 목록 합친거 -->
 	 <select id="getBoardList" resultType="com.hongchaegojung.railro.dto.Board">
-	  SELECT * FROM BOARD WHERE TYPE=3
-	 </select>
+		SELECT
+		    AAA.*
+		FROM(
+		    SELECT
+		        AA.*
+		    FROM(
+		        SELECT
+		            ROW_NUMBER() OVER (ORDER BY ID DESC) RNUM,
+		            ID,
+		            TITLE,
+		            CONTENTS,
+		            WRITER,
+		            REGDATE,
+		            HIT
+		        FROM
+		            NOTICE
+		        <if test="param2 != null and param3 != ''">
+		        	WHERE ${param2} LIKE '%${param3}%'
+		        </if>
+		    ) AA
+		) AAA
+		WHERE
+		    AAA.RNUM BETWEEN #{param1.startRowNum} AND #{param1.endRowNum}
+	</select>
 	 
 	 <!--글 상세보기 -->
 	 <select id="getDetail" resultType="com.hongchaegojung.railro.dto.Board">
