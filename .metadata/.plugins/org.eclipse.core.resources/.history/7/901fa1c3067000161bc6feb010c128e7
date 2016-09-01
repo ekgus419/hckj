@@ -7,13 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.hongchaegojung.railro.dao.BoardDAO;
+import com.hongchaegojung.railro.dao.NoticeDAO;
 import com.hongchaegojung.railro.dao.TravelReviewDAO;
 import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.Notice;
 import com.hongchaegojung.railro.dto.Paging;
 
 @Controller
@@ -22,6 +24,7 @@ public class TravelReviewController {
 	
 	@Autowired
 	private SqlSession sqlSession;
+	
 	@RequestMapping(value="/travelReviewList.htm", method=RequestMethod.GET)
 	public String travelReviewList(Paging paging, String pageNo, String keyField, String keyWord, String limit, Model model) {
 		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);

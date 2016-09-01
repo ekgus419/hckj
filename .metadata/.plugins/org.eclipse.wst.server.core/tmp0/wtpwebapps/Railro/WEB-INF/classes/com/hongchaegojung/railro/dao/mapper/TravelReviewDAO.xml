@@ -5,13 +5,14 @@
 
 <mapper namespace="com.hongchaegojung.railro.dao.TravelReviewDAO">
 	
-	
 	 <!--글 전체 개수-->
 	 <select id="getTotalBoardListCount" resultType="Integer">
 	  SELECT COUNT(*) FROM BOARD WHERE TYPE=3
+      <if test="param1 != null and param2 != ''">
+   	  AND ${param1} LIKE '%${param2}%'
+      </if>
 	 </select>
 		
-	
 	<!-- 글 목록 합친거 -->
 	 <select id="getBoardList" resultType="com.hongchaegojung.railro.dto.Board">
 		SELECT
@@ -23,15 +24,22 @@
 		        SELECT
 		            ROW_NUMBER() OVER (ORDER BY ID DESC) RNUM,
 		            ID,
+		            TYPE,
+		            SUBJECT,
 		            TITLE,
 		            CONTENTS,
 		            WRITER,
+		            REFLOCATION,
+		            REREF,
+		            RELEV,
+		            RESEQ,
 		            REGDATE,
 		            HIT
 		        FROM
-		            NOTICE
+		            BOARD
+		        WHERE TYPE=3
 		        <if test="param2 != null and param3 != ''">
-		        	WHERE ${param2} LIKE '%${param3}%'
+		        AND ${param2} LIKE '%${param3}%'
 		        </if>
 		    ) AA
 		) AAA
