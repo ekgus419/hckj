@@ -23,11 +23,11 @@ public class RailroController {
 	// 게시글 목록
 	@RequestMapping(value="/railroList.htm", method=RequestMethod.GET)
 	public String getBoardList(Model model) {
-		BoardDAO railroDAO = sqlSession.getMapper(RailroDAO.class);
+/*		BoardDAO railroDAO = sqlSession.getMapper(RailroDAO.class);
 		int railroListCount = railroDAO.getTotalBoardListCount();
 		List<Board> railroList = railroDAO.getBoardList();
 		model.addAttribute("railroListCount", railroListCount);
-		model.addAttribute("railroList", railroList);
+		model.addAttribute("railroList", railroList);*/
 		return "railro.railroList";
 	} 
 	
@@ -95,14 +95,14 @@ public class RailroController {
 	// 게시물 검색
 	@RequestMapping(value="/railroSearchList.htm")
 	public String railroSearchList(String keyField, String keyWord, Model model){
-		
-		BoardDAO railroDAO = sqlSession.getMapper(RailroDAO.class);
-		List<Board> board  = railroDAO.searchBoardList(keyField, keyWord);
-		
-		int listCount = railroDAO.countSearchBoardList(keyField, keyWord);
-		
-		model.addAttribute("board", board);
-		model.addAttribute("listCount", listCount);
+//		
+//		BoardDAO railroDAO = sqlSession.getMapper(RailroDAO.class);
+//		List<Board> board  = railroDAO.searchBoardList(keyField, keyWord);
+//		
+//		int listCount = railroDAO.countSearchBoardList(keyField, keyWord);
+//		
+//		model.addAttribute("board", board);
+//		model.addAttribute("listCount", listCount);
 		
 		return "railro.railroSearchList";
 		

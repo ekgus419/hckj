@@ -19,8 +19,8 @@
 	<!-- 데이터소스 -->
 	<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"></property>
-		<property name="username" value="HCKJ"></property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+		<property name="username" value="HYEJIN"></property>
 		<property name="password" value="java1234"></property>
 	</bean>
 
@@ -34,7 +34,8 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="mapperLocations" value="classpath:com/hongchaegojung/railro/dao/mapper/*.xml"></property>
-		<property name="transactionFactory"> <!--트랜잭션 추가 -->
+		<property name="transactionFactory"> 
+			<!--트랜잭션 추가 -->
 	    	<bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
 	  	</property> 	
 	</bean>

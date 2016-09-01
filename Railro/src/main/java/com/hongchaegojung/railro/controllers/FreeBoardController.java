@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.hongchaegojung.railro.dao.BoardDAO;
 import com.hongchaegojung.railro.dao.FreeBoardDAO;
 import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.Paging;
 
 @Controller
 @RequestMapping("/freeBoard")
@@ -21,11 +22,29 @@ public class FreeBoardController {
 	private SqlSession sqlSession;
 	
 	@RequestMapping(value={"/freeBoardList.htm"}, method=RequestMethod.GET)
-	public String freeBoardList(Model model) {
+	public String freeBoardList(String limit, Model model, String keyField, String keyWord, Paging paging, String pageNo) {
 		BoardDAO freeDAO = sqlSession.getMapper(FreeBoardDAO.class);
-		int listCount = freeDAO.getTotalBoardListCount();
-		List<Board> list = freeDAO.getBoardList();
+		int listCount = freeDAO.getTotalBoardListCount(keyField, keyWord);
 		
+		// paging.setPageSize(10);
+		
+		if(limit != null){
+			paging.setPageSize(Integer.parseInt(limit)); 
+		}else{
+			paging.setPageSize(10); // ±âº»°ª
+		}
+		
+		paging.setPageNo(1);
+		paging.setBlockSize(10);
+		paging.setTotalCount(listCount);  
+		
+		if(pageNo != null){
+			paging.setPageNo(Integer.parseInt(pageNo));
+		}
+			
+		List<Board> list = freeDAO.getBoardList(paging, keyField, keyWord);
+		
+		model.addAttribute("paging", paging);
 		model.addAttribute("listCount", listCount);
 		model.addAttribute("freeBoardList", list);
 		
@@ -65,15 +84,6 @@ public class FreeBoardController {
 		return "redirect:freeBoardList.htm";
 	}
 	
-	@RequestMapping(value="/freeBoardSearchList.htm")
-	public String freeBoardSearchList(String keyField, String keyWord, Model model){
-		BoardDAO freeDAO = sqlSession.getMapper (FreeBoardDAO.class);
-		List<Board> sFreeList = freeDAO.searchBoardList(keyField, keyWord);
-		int listCount = freeDAO.countSearchBoardList (keyField, keyWord);
-		model.addAttribute("listCount", listCount);
-		model.addAttribute("sFreeList", sFreeList);
-		return "freeBoard.freeBoardSearchList";		
-	}
 /*	
 	
 	

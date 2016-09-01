@@ -5,7 +5,7 @@
 	<div class="setting">
 		<div class="limit-setting">
 			<form action="" method="get">
-				<select name="limit" onchange="limit_submit()">
+				<select name="limit" onchange="this.form.submit()">
 					<option value="5">5</option>
 					<option value="10" selected="selected">10</option>
 					<option value="15">15</option>
@@ -16,37 +16,49 @@
 		</div>
 		<span>글 개수 : <b>${listCount}</b></span>
 	</div> 
-	<table width="100%">
-	  <tr>
-	    <th width="10%">글번호</th>
-	    <th width="10%">분류</th>
-	    <th width="50%" style="text-align: left">제목</th>
-	    <th width="10%">작성자</th>
-	    <th width="10%">조회수</th>
-	    <th width="10%">작성일</th>
-	  </tr>
-	  
-	 <c:forEach var="freeBoard" items="${freeBoardList}">
-	  <tr>
-	  	<td> ${freeBoard.ID}</td>
-	  	<td>${freeBoard.SUBJECT}</td>
-	  	<td style="text-align: left"><a href="freeBoardDetail.htm?ID=${freeBoard.ID}">${freeBoard.TITLE}></a></td>
-	  	<td>${freeBoard.WRITER}</td>
-	  	<td>${freeBoard.HIT}</td>
-	  	<td>${freeBoard.REGDATE}</td>
-	  </tr>
-	  </c:forEach>
-	</table>
 	
-	<div class="button1">
-		<button class="button" onclick="location.href='freeBoardReg.htm'">글등록</button>
-	</div>
-	<div class="paging" align="center">
-	이전&nbsp;다음
-	</div>
+	<form name="listForm" action="freeBoardList.htm">
+		<input type="hidden" name="pageNo" value=""/>
+		<table width="100%">
+		  <tr>
+		    <th width="10%">글번호</th>
+		    <th width="10%">분류</th>
+		    <th width="50%" style="text-align: left">제목</th>
+		    <th width="10%">작성자</th>
+		    <th width="10%">조회수</th>
+		    <th width="10%">작성일</th>
+		  </tr>
+		  
+		 <c:forEach var="freeBoard" items="${freeBoardList}">
+		  <tr>
+		  	<td> ${freeBoard.ID}</td>
+		  	<td>${freeBoard.SUBJECT}</td>
+		  	<td style="text-align: left"><a href="freeBoardDetail.htm?ID=${freeBoard.ID}">${freeBoard.TITLE}></a></td>
+		  	<td>${freeBoard.WRITER}</td>
+		  	<td>${freeBoard.HIT}</td>
+		  	<td>${freeBoard.REGDATE}</td>
+		  </tr>
+		  </c:forEach>
+		</table>
+		
+		<div class="button1">
+			<button class="button" onclick="location.href='freeBoardReg.htm'">글등록</button>
+		</div>
+		<div class="paging" align="center">
+			<jsp:include page="../inc/paging.jsp" flush ="true">
+				<jsp:param name="firstPageNo" value="${paging.firstPageNo}" />
+				<jsp:param name="prevPageNo" value="${paging.prevPageNo}" />
+				<jsp:param name="startPageNo" value="${paging.startPageNo}" />
+				<jsp:param name="pageNo" value="${paging.pageNo}" />
+				<jsp:param name="endPageNo" value="${paging.endPageNo}" />
+				<jsp:param name="nextPageNo" value="${paging.nextPageNo}" />
+				<jsp:param name="finalPageNo" value="${paging.finalPageNo}" />
+			</jsp:include>
+		</div>
+	</form>
 
-      <!-- 검색입력 폼 -->
-	<form method="post" action="freeBoardSearchList.htm">
+    <!-- 검색입력 폼 -->
+	<form method="post" action="freeBoardList.htm">
 		<div class="search">
 		  	<select name="keyField">
 		  		<option value="ID">번호 </option>

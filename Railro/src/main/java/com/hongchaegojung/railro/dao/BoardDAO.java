@@ -4,20 +4,15 @@ import java.util.List;
 
 import com.hongchaegojung.railro.dto.Board;
 import com.hongchaegojung.railro.dto.BoardFile;
+import com.hongchaegojung.railro.dto.Paging;
 
 public interface BoardDAO {
 
 	// 글 전체 개수
-	public int getTotalBoardListCount();
-	
-	// 글 검색
-	public List<Board> searchBoardList(String keyField, String keyWord);
-
-	// 글 검색결과 개수
-	public int countSearchBoardList(String keyField, String keyWord);
+	public int getTotalBoardListCount(String keyField, String keyWord);
 	
 	// 글 목록 
-	public List<Board> getBoardList();
+	public List<Board> getBoardList(Paging paging, String keyField, String keyWord);
 	
 	// 글 상세보기 
 	public Board getDetail(int ID);
