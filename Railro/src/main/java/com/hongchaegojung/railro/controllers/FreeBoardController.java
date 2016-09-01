@@ -1,4 +1,4 @@
-package com.hongchaegojung.railro.controllers;
+/*package com.hongchaegojung.railro.controllers;
 
 import java.util.List;
 
@@ -74,7 +74,7 @@ public class FreeBoardController {
 		model.addAttribute("sFreeList", sFreeList);
 		return "freeBoard.freeBoardSearchList";		
 	}
-/*	
+	
 	
 	
 	
@@ -144,7 +144,7 @@ public class FreeBoardController {
 	
 	
 	
-	*/
+	
 	
 	@RequestMapping(value="/freeBoardReg.htm", method=RequestMethod.GET)
 	public String freeBoardReg() {
@@ -158,3 +158,4 @@ public class FreeBoardController {
 		return "redirect:freeBoardList.htm";
 	}
 }
+*/
