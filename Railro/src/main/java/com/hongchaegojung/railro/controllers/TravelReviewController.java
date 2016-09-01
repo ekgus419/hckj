@@ -7,13 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 import com.hongchaegojung.railro.dao.BoardDAO;
 import com.hongchaegojung.railro.dao.TravelReviewDAO;
 import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.Paging;
 
 @Controller
 @RequestMapping("/travelReview")
@@ -21,8 +22,8 @@ public class TravelReviewController {
 	
 	@Autowired
 	private SqlSession sqlSession;
-	
 	@RequestMapping(value="/travelReviewList.htm", method=RequestMethod.GET)
+<<<<<<< HEAD
 	public String travelReviewList(Model model) {
 //		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
 //		int listCount = travelReDAO.getTotalBoardListCount();
@@ -30,8 +31,36 @@ public class TravelReviewController {
 //		
 //		model.addAttribute("listCount", listCount);
 //		model.addAttribute("travelReviewList", list);
+=======
+	public String travelReviewList(Paging paging, String pageNo, String keyField, String keyWord, String limit, Model model) {
+		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
+		int listCount = travelReDAO.getTotalBoardListCount(keyField, keyWord);
+
+		if(limit != null){
+			paging.setPageSize(Integer.parseInt(limit)); // 한 페이지에 보일 게시글 수 
+		}else{
+			paging.setPageSize(10); // 기본값
+		}
+		
+		paging.setPageNo(1); // 현재 페이지 번호
+		paging.setBlockSize(10);
+		paging.setTotalCount(listCount); // 게시물 총 개수
+		
+		if(pageNo != null){
+			paging.setPageNo(Integer.parseInt(pageNo));
+		}
+
+		List<Board> list = travelReDAO.getBoardList(paging, keyField, keyWord);
+		
+		model.addAttribute("paging", paging);
+		model.addAttribute("listCount", listCount);
+		model.addAttribute("travelReviewList", list);
+		
+>>>>>>> 9c22b33b1ece842a4015a756a4f723039926c542
 		return "travelReview.travelReviewList";
 	}
+	
+	
 	
 	@RequestMapping(value="/travelReviewReg.htm", method=RequestMethod.GET)
 	public String travelReviewReg() {
@@ -82,6 +111,9 @@ public class TravelReviewController {
 		return "redirect:travelReviewList.htm";
 	}
 	
+	
+	
+	/*
 	@RequestMapping(value="/travelReviewSearchList.htm")
 	public String trvelReviewSearchList(String keyField, String keyWord, Model model) {
 //		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
@@ -91,7 +123,7 @@ public class TravelReviewController {
 //		model.addAttribute("sList", list);
 //		model.addAttribute("listCount", listCount);
 		return "travelReview.travelReviewSearchList";
-	}
+	}*/
 	
 
 	

@@ -8,13 +8,7 @@ import com.hongchaegojung.railro.dto.Paging;
 public interface NoticeDAO {
 	// 글 전체 개수
 	public int getTotalNoticeListCount(String keyField, String keyWord);
-/*	
-	// 글 검색
-	public List<Notice> searchNoticeList(String keyField, String keyWord);
-	
-	// 글 검색결과 개수
-	public int countSearchNoticeList(String keyField, String keyWord);
-	*/
+
 	// 글 목록 
 	public List<Notice> getNoticeList(Paging paging, String keyField, String keyWord);
 	

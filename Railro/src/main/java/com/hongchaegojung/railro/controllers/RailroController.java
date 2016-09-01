@@ -1,4 +1,4 @@
-package com.hongchaegojung.railro.controllers;
+/*package com.hongchaegojung.railro.controllers;
 
 import java.util.List;
 
@@ -110,7 +110,7 @@ public class RailroController {
 	
 }
 	
-/*	// method=RequestMethod 를 쓰지 않으면 GET, POST 방식 둘 다 받을 수 있음
+	// method=RequestMethod 를 쓰지 않으면 GET, POST 방식 둘 다 받을 수 있음
 	@RequestMapping(value="/railroDetail.htm")
 	public String getDetail(){
 		
@@ -179,4 +179,5 @@ public class RailroController {
 		
 		return "railro.railroSearchList";
 	}
-	*/
+	
+*/
