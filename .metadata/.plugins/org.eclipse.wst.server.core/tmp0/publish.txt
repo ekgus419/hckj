@@ -1,17 +1,8 @@
 #Tomcat publish data
-<<<<<<< HEAD
-#Thu Sep 01 15:18:34 KST 2016
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\SUBIN\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
-=======
-<<<<<<< HEAD
-#Thu Sep 01 14:43:16 KST 2016
+#Thu Sep 01 15:34:08 KST 2016
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\honghyejin\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
-=======
-#Thu Sep 01 14:51:17 KST 2016
->>>>>>>=b06af7538dcee31436db7be324b51d27e7ec72ec
+>>>>>>>=b07e5f7a97c568ceee3dca8ead2c2af1cee43a81
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\SUBIN\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\chae\\.m2\\repository\\org\\springframework\\spring-web\\3.2.3.RELEASE\\spring-web-3.2.3.RELEASE.jar=WEB-INF/lib/spring-web-3.2.3.RELEASE.jar
 <<<<<<<=HEAD
 =\=\=\=\=\=\=
->>>>>>> 9c22b33b1ece842a4015a756a4f723039926c542
->>>>>>> b07e5f7a97c568ceee3dca8ead2c2af1cee43a81

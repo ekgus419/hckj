@@ -20,11 +20,7 @@
 	<bean name="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
-<<<<<<< HEAD
-		<property name="username" value="HYEJIN"></property>
-=======
 		<property name="username" value="HCKJ"></property>
->>>>>>> 9c22b33b1ece842a4015a756a4f723039926c542
 		<property name="password" value="java1234"></property>
 	</bean>
 

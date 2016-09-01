@@ -54,3 +54,23 @@
 0:0:0:0:0:0:0:1 - - [01/Sep/2016:14:49:36 +0900] "GET /railro/css/reset.css HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [01/Sep/2016:14:49:36 +0900] "GET /railro/images/top_img.png HTTP/1.1" 304 -
 >>>>>>> b07e5f7a97c568ceee3dca8ead2c2af1cee43a81
+127.0.0.1 - - [01/Sep/2016:15:32:47 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:15 +0900] "GET /railro/ HTTP/1.1" 200 6130
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:16 +0900] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:23 +0900] "GET /railro/css/travelReview/layout.css HTTP/1.1" 404 1062
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:24 +0900] "GET /railro/travelReview/travelReviewList.htm HTTP/1.1" 200 7882
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:29 +0900] "GET /railro/css/freeBoard/layout.css HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:29 +0900] "GET /railro/freeBoard/freeBoardList.htm HTTP/1.1" 200 6667
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:31 +0900] "GET /railro/freeBoard/freeBoardList.htm?pageNo=1 HTTP/1.1" 200 6667
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:31 +0900] "GET /railro/css/freeBoard/layout.css HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:33 +0900] "GET /railro/css/freeBoard/layout.css HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:34 +0900] "GET /railro/freeBoard/freeBoardList.htm?limit=5 HTTP/1.1" 200 6326
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:37 +0900] "GET /railro/freeBoard/freeBoardList.htm?pageNo=2 HTTP/1.1" 200 5163
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:37 +0900] "GET /railro/css/freeBoard/layout.css HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:33:45 +0900] "POST /railro/freeBoard/freeBoardList.htm HTTP/1.1" 405 1090
+127.0.0.1 - - [01/Sep/2016:15:35:09 +0900] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:35:11 +0900] "GET /railro/index.htm HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:35:11 +0900] "GET /railro/css/freeBoard/layout.css HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:35:11 +0900] "GET /railro/freeBoard/freeBoardList.htm HTTP/1.1" 200 6667
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:35:16 +0900] "GET /railro/css/freeBoard/layout.css HTTP/1.1" 404 1056
+0:0:0:0:0:0:0:1 - - [01/Sep/2016:15:35:16 +0900] "POST /railro/freeBoard/freeBoardList.htm HTTP/1.1" 200 5601

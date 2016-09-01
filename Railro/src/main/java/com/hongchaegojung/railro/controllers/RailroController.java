@@ -1,4 +1,4 @@
-/*package com.hongchaegojung.railro.controllers;
+package com.hongchaegojung.railro.controllers;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class RailroController {
 		int railroListCount = railroDAO.getTotalBoardListCount();
 		List<Board> railroList = railroDAO.getBoardList();
 		model.addAttribute("railroListCount", railroListCount);
-		model.addAttribute("railroList", railroList);*/
+		model.addAttribute("railroList", railroList); */
 		return "railro.railroList";
 	} 
 	
@@ -92,24 +92,6 @@ public class RailroController {
 		
 	}
 	
-	// 게시물 검색
-	@RequestMapping(value="/railroSearchList.htm")
-	public String railroSearchList(String keyField, String keyWord, Model model){
-//		
-//		BoardDAO railroDAO = sqlSession.getMapper(RailroDAO.class);
-//		List<Board> board  = railroDAO.searchBoardList(keyField, keyWord);
-//		
-//		int listCount = railroDAO.countSearchBoardList(keyField, keyWord);
-//		
-//		model.addAttribute("board", board);
-//		model.addAttribute("listCount", listCount);
-		
-		return "railro.railroSearchList";
-		
-	}
-	
-}
-	
 	// method=RequestMethod 를 쓰지 않으면 GET, POST 방식 둘 다 받을 수 있음
 	@RequestMapping(value="/railroDetail.htm")
 	public String getDetail(){
@@ -122,7 +104,8 @@ public class RailroController {
 	public String update() {
 		return "railro.railroEdit";
 	}
-	
+}
+/*	
 	@RequestMapping(value="/railroReg.htm", method=RequestMethod.GET)
 	public String insert(
 			Board board, HttpServletRequest request, Principal principal,
@@ -171,13 +154,5 @@ public class RailroController {
 		
 		
 		return "railro.railroReg";
-	}
+	}*/
 	
-	@RequestMapping(value="/railroSearchList.htm", method=RequestMethod.GET)
-	public String searchBoardList() {
-		
-		
-		return "railro.railroSearchList";
-	}
-	
-*/
