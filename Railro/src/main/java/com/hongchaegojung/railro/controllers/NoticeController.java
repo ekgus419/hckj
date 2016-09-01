@@ -2,14 +2,12 @@ package com.hongchaegojung.railro.controllers;
 
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hongchaegojung.railro.dao.NoticeDAO;
 import com.hongchaegojung.railro.dto.Notice;
@@ -27,7 +25,7 @@ public class NoticeController {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
 		int listCount = noticeDAO.getTotalNoticeListCount(keyField, keyWord);
 
-		if(StringUtils.isNotEmpty(limit)){
+		if(limit != null){
 			paging.setPageSize(Integer.parseInt(limit)); // 한 페이지에 보일 게시글 수 
 		}else{
 			paging.setPageSize(10); // 기본값
@@ -37,7 +35,7 @@ public class NoticeController {
 		paging.setBlockSize(10);
 		paging.setTotalCount(listCount); // 게시물 총 개수
 		
-		if(StringUtils.isNotEmpty(pageNo)){
+		if(pageNo != null){
 			paging.setPageNo(Integer.parseInt(pageNo));
 		}
 
