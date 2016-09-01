@@ -326,3 +326,4 @@
 0:0:0:0:0:0:0:1 - - [31/Aug/2016:15:32:04 +0900] "GET /railro/notice/noticeList.htm?pageNo=2 HTTP/1.1" 200 8608
 0:0:0:0:0:0:0:1 - - [31/Aug/2016:16:10:09 +0900] "GET /railro/css/notice/layout.css HTTP/1.1" 404 1050
 0:0:0:0:0:0:0:1 - - [31/Aug/2016:16:10:09 +0900] "GET /railro/notice/noticeList.htm?limit=15 HTTP/1.1" 200 13455
+127.0.0.1 - - [31/Aug/2016:16:55:18 +0900] "GET / HTTP/1.1" 404 994

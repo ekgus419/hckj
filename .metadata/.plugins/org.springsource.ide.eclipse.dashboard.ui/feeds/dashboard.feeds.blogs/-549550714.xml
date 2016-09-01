@@ -5,7 +5,71 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-08-30T09:31:12Z</updated>
+  <updated>2016-08-31T11:07:16Z</updated>
+  <entry>
+    <title>Spring REST Docs 1.1.2.RELEASE</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/31/spring-rest-docs-1-1-2-release" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2016-08-31:2604</id>
+    <updated>2016-08-31T11:07:16Z</updated>
+    <content type="html">&lt;p&gt;It&amp;rsquo;s my pleasure to announce that &lt;a href="https://github.com/spring-projects/spring-restdocs"&gt;Spring REST Docs&lt;/a&gt; 1.1.2.RELEASE is available from Maven Central, JCenter, and our &lt;a href="https://repo.spring.io/release"&gt;release repository&lt;/a&gt;. My thanks to everyone who contributed to this release by reporting bugs and opening pull requests.&lt;/p&gt;
+&lt;p&gt;This maintenance release includes a &lt;a href="https://github.com/spring-projects/spring-restdocs/issues?q=milestone%3A1.1.2.RELEASE"&gt;number of bug fixes&lt;/a&gt; and is a recommend upgrade for all Spring REST Docs users. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-restdocs"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-restdocs"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-restdocs/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-restdocs/docs/1.1.2.RELEASE"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security OAuth2 - Client Authentication Issue</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/08/31/spring-security-oauth2-client-authentication-issue" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Joe Grandja</name>
+    </author>
+    <id>tag:spring.io,2016-08-25:2598</id>
+    <updated>2016-08-31T11:07:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Issue &lt;a href="https://github.com/spring-projects/spring-security-oauth/issues/808"&gt;#808&lt;/a&gt; was recently reported that allowed a user to authenticate as a client and obtain an access token via the client_credentials or password grant flow.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This unique scenario occurs when a client and user have the same identifier (clientId and username). The user&amp;#8217;s credentials are used for client authentication during a client_credentials or password grant flow and is successful in obtaining an access token with the authorities of the client.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="the-fix"&gt;&lt;a class="anchor" href="#the-fix"&gt;&lt;/a&gt;The Fix&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This bug has been fixed in &lt;a href="https://github.com/spring-projects/spring-security-oauth/commit/1ed986a8486ab4e84295ee5d0260c790c573e7d7"&gt;1ed986a&lt;/a&gt; and released in 2.0.11.RELEASE.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you¡¯re using Java-based configuration, please update to 2.0.11.RELEASE.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;However, if you¡¯re using XML-based configuration, please take the following actions:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Update to 2.0.11.RELEASE&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Look at this &lt;a href="https://github.com/spring-projects/spring-security-oauth/blob/master/spring-security-oauth2/src/test/java/org/springframework/security/oauth2/config/xml/AuthorizationServerClientCredentialsPasswordValidXmlTests.java"&gt;JUnit test&lt;/a&gt; and it¡¯s associated &lt;a href="https://github.com/spring-projects/spring-security-oauth/blob/master/spring-security-oauth2/src/test/resources/org/springframework/security/oauth2/config/xml/authorization-server-client-credentials-password-valid.xml"&gt;XML configuration&lt;/a&gt; to ensure the &lt;code&gt;AuthenticationManager&lt;/code&gt; for &lt;strong&gt;client authentication&lt;/strong&gt; and the &lt;code&gt;AuthenticationManager&lt;/code&gt; for &lt;strong&gt;user authentication&lt;/strong&gt; is setup the same in your configuration.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As a precautionary step, make sure your XML configuration is &lt;strong&gt;NOT&lt;/strong&gt; setup the same as in this &lt;a href="https://github.com/spring-projects/spring-security-oauth/blob/master/spring-security-oauth2/src/test/java/org/springframework/security/oauth2/config/xml/AuthorizationServerClientCredentialsPasswordInvalidXmlTests.java"&gt;JUnit test&lt;/a&gt; and associated &lt;a href="https://github.com/spring-projects/spring-security-oauth/blob/master/spring-security-oauth2/src/test/resources/org/springframework/security/oauth2/config/xml/authorization-server-client-credentials-password-invalid.xml"&gt;XML configuration&lt;/a&gt; as it demonstrates the original issue.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="credit"&gt;&lt;a class="anchor" href="#credit"&gt;&lt;/a&gt;Credit&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Thank you for reporting this issue &lt;a href="https://github.com/socket70"&gt;Michael Pridemore&lt;/a&gt; and &lt;a href="https://github.com/benkiefer"&gt;Ben Kiefer&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Custom test slice with Spring Boot 1.4</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/30/custom-test-slice-with-spring-boot-1-4" />
@@ -879,73 +943,5 @@ public class MySqlApplication {&#xD;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka"&gt;GitHub&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-kafka"&gt;Help&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-kafka/reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - August 9th, 2016</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/08/09/this-week-in-spring-august-9th-2016" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-08-09:2582</id>
-    <updated>2016-08-09T11:33:00Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m recovering from a &lt;em&gt;crazy&lt;/em&gt; awesome week at SpringOne Platform while visiting customers here in summer-time London.&lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;the &lt;a href="https://blog.jetbrains.com/idea/2016/08/webinar-recording-whats-new-in-intellij-idea-2016-2-for-spring-developers"&gt;IntelliJ IDEA folks have updated their coverage on Spring&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;there were several wrapup blogs from last week&amp;rsquo;s SpringOne Platform event, including the two we published on this very blog for &lt;a href="https://spring.io/blog/2016/08/03/springone-platform-2016-recap-day-1"&gt;day 1&lt;/a&gt;&lt;br/&gt; and &lt;a href="https://spring.io/blog/2016/08/03/springone-platform-2016-recap-day-2"&gt;day 2&lt;/a&gt; and the posts on Pivotal&amp;rsquo;s main blog for &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/features/springone-platform-a-movement-comes-of-age"&gt;day 1&lt;/a&gt;, &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/features/taking-on-the-monolith-with-people-and-tech-springone-platform-day-2"&gt;day 2&lt;/a&gt;, &lt;a href="https://blog.pivotal.io/big-data-pivotal/features/positive-sum-software-springs-new-bounce-springone-platform-day-3"&gt;day 3&lt;/a&gt;, and &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/features/final-call-parting-shots-from-springone-platform"&gt;final call&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;while we&amp;rsquo;re at the Pivotal blog, those of you &lt;a href="https://blog.pivotal.io/pivotal-cloud-foundry/products/blockchain-use-cases-for-blockchain-on-cloud-foundry"&gt;wondering about Blockchain on Cloud Foundry might appreciate this post&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;SpringOne Platform was filled with &lt;em&gt;excellent&lt;/em&gt; keynotes, all of which will be available online already (or soon). Naturally, you &lt;em&gt;have&lt;/em&gt; to watch &lt;a href="http://twitter.com/adrianco"&gt;Adrian Cockroft (@adrianco)&lt;/a&gt; &amp;rsquo;s excellent &lt;a href="https://www.youtube.com/watch?v=DGK6jjamzfY&amp;feature=youtu.be"&gt;&lt;em&gt;Simplifying the Future&lt;/em&gt; keynote&lt;/a&gt;: &amp;ldquo;Let&amp;rsquo;s just do Spring Boot on Cloud Foundry.&amp;rdquo;&lt;/li&gt;
-  &lt;li&gt;want to know about the future of the leading application server on the JVM, Apache Tomcat, for whose development Pivotal is a large sponsor? Check out this InfoQ interview with Pivotal&amp;rsquo;s &lt;a href="https://www.infoq.com/news/2016/08/tomcat9-vs-javaee8?utm_source=infoq&amp;utm_medium=popular_widget&amp;utm_campaign=popular_content_list&amp;utm_content=homepage"&gt;own Mark Thomas&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Last week we had the likes of James Governor from Redmonk and Charles Humble from InfoQ taking in the show and talking about it. I liked &lt;a href="https://www.infoq.com/news/2016/08/springone-diversity?utm_campaign=rightbar_v2&amp;utm_source=infoq&amp;utm_medium=news_link&amp;utm_content=link_text"&gt;Charles Humble&amp;rsquo;s coverage of the first day keynote - &lt;em&gt;Diversity Takes Centre Stage on First Day of the SpringOne Platform Conference&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;and his coverage of the second day, which &lt;a href="https://www.infoq.com/news/2016/08/spring5-m1?utm_campaign=rightbar_v2&amp;utm_source=infoq&amp;utm_medium=news_link&amp;utm_content=link_text"&gt;focused on the Spring 5 framework roadmap&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I also really &lt;a href="https://www.youtube.com/watch?v=m_qndEudyLY"&gt;liked James Governor&amp;rsquo;s quick vlog on SpringOne Platform and his talk&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I loved &lt;a href="https://www.youtube.com/watch?time_continue=2&amp;v=n-gehEPgHy4"&gt;Pivotal CEO Rob Mee&amp;rsquo;s short-and-sweet keynote, as well&lt;/a&gt;. Thanks Rob!&lt;/li&gt;
-  &lt;li&gt;Last week Ordina&amp;rsquo;s JWorks division &lt;a href="https://github.com/ordina-jworks/microservices-dashboard"&gt;announced 1.0 of their Microservices Dashboard, as well&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Last week Stormpath unveiled 1.0 of their Spring Boot SDK &lt;em&gt;live&lt;/em&gt; at the show. &lt;a href="http://go.stormpath.com/spring-boot-security-and-user-management?utm_content=buffer58d04&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer"&gt;Want to learn more? Check out this upcoming webinar&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne Platform 2016 Recap: Day 2</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/08/03/springone-platform-2016-recap-day-2" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-08-04:2581</id>
-    <updated>2016-08-03T20:08:00Z</updated>
-    <content type="html">&lt;p&gt;by &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt; and &lt;a href="http://twitter.com/pieterhumphrey"&gt;Pieter Humphrey&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The excitement has continued at full speed ahead! Today we continued the exploration of how Pivotal is empowering developers to deliver better software and business value for their organizations.&lt;/p&gt;&lt;h2&gt;&lt;a href="#spring" class="anchor" name="spring"&gt;&lt;/a&gt;Spring&lt;/h2&gt;
-&lt;p&gt;Reactive has been a key theme at SpringOne Platform 2016. Microservices highlight the need for reactive programming. It&amp;rsquo;s a truly intense moment for the Spring team as they (re)consider a decade of synchronous programming practices and implementation. While we are starting with the an MVC-like model in web applications, modern cloud native application will ultimately require reactive options from end to end. This is just the beginning.&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Reactive streams enable subscribers to use backpressure to tell publishers know when to consume more data &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/r1TZ1yi9vv"&gt;pic.twitter.com/r1TZ1yi9vv&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kenny Bastani (@kennybastani) &lt;a href="https://twitter.com/kennybastani/status/760898610292678656"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Explaining the importance of non-blocking IO and prioritizing incoming requests based on latency &lt;a href="https://twitter.com/smaldini"&gt;@smaldini&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/ZRPI46aRIQ"&gt;pic.twitter.com/ZRPI46aRIQ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Kenny Bastani (@kennybastani) &lt;a href="https://twitter.com/kennybastani/status/760895711344857088"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;Reactive programming is but the latest in a torrent of innovations, as evidenced by the download stats:&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;In the last 9 months, &lt;a href="https://t.co/xJZy2D0Wj7"&gt;&lt;a href="https://t.co/xJZy2D0Wj7"&gt;https://t.co/xJZy2D0Wj7&lt;/a&gt;&lt;/a&gt; has generated 1,080,533 projects. Awesome community! &lt;a href="https://twitter.com/springboot"&gt;@springboot&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt;&lt;/p&gt;&amp;mdash; St?phane Nicoll (@snicoll) &lt;a href="https://twitter.com/snicoll/status/760944228687974401"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-partner="tweetdeck"&gt;&lt;p lang="en" dir="ltr"&gt;Good job guys! &lt;a href="https://twitter.com/tedtollefson"&gt;@tedtollefson&lt;/a&gt; &lt;a href="https://twitter.com/shawn_sherwood"&gt;@shawn_sherwood&lt;/a&gt; &lt;a href="https://t.co/MGn1ZnnFxx"&gt;&lt;a href="https://t.co/MGn1ZnnFxx"&gt;https://t.co/MGn1ZnnFxx&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Nicholas Drone (@ndrone81) &lt;a href="https://twitter.com/ndrone81/status/761016239510532096"&gt;August 4, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;Today we saw talks on distributed tracing..&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;here&amp;#39;s the &lt;a href="https://twitter.com/hashtag/zipkin?src=hash"&gt;#zipkin&lt;/a&gt; demo app I showed at &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/v9kAk8XsSW"&gt;&lt;a href="https://t.co/v9kAk8XsSW"&gt;https://t.co/v9kAk8XsSW&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Adrian Cole (@adrianfcole) &lt;a href="https://twitter.com/adrianfcole/status/760988597382098944"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;and on how to consume Spring Cloud Services to move above the value line for cloud-native applications and focus instead on the business logic.&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Excellent session by &lt;a href="https://twitter.com/royclarkson"&gt;@royclarkson&lt;/a&gt; &lt;a href="https://twitter.com/habuma"&gt;@habuma&lt;/a&gt; for Spring Cloud Services. Many thanks! &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://twitter.com/spring1platform"&gt;@spring1platform&lt;/a&gt; &lt;a href="https://twitter.com/pivotal"&gt;@pivotal&lt;/a&gt; &lt;a href="https://t.co/q0QV4wiE4i"&gt;pic.twitter.com/q0QV4wiE4i&lt;/a&gt;&lt;/p&gt;&amp;mdash; Matthias Haeussler (@maeddes) &lt;a href="https://twitter.com/maeddes/status/760920752153432064"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;We saw exciting new project announcements..&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Big crowd of people come to hear how &lt;a href="https://twitter.com/SpringData"&gt;@SpringData&lt;/a&gt; Cassandra has become an officially supported project. &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://t.co/NpLyrqsvj5"&gt;pic.twitter.com/NpLyrqsvj5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Greg L. Turnquist (@gregturn) &lt;a href="https://twitter.com/gregturn/status/760964140814917632"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;and updates to old favorites..&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Slides of my &amp;quot;Next Level Redis With Spring&amp;quot; talk &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/9U6A9Lux1e"&gt;&lt;a href="https://t.co/9U6A9Lux1e"&gt;https://t.co/9U6A9Lux1e&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Christoph Strobl (@stroblchristoph) &lt;a href="https://twitter.com/stroblchristoph/status/760636544445054976"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;and examples on how developers are winning at scale with Spring, Spring Boot and Spring Cloud:&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Watching how &lt;a href="https://twitter.com/Domotalk"&gt;@Domotalk&lt;/a&gt; &amp;amp; &lt;a href="https://twitter.com/checketts"&gt;@checketts&lt;/a&gt; impl&amp;#39;ed &lt;a href="https://twitter.com/hashtag/Spring?src=hash"&gt;#Spring&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Cloud?src=hash"&gt;#Cloud&lt;/a&gt; Config Server at &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/springone?src=hash"&gt;#springone&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/Domo?src=hash"&gt;#Domo&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/EverythingAsCode?src=hash"&gt;#EverythingAsCode&lt;/a&gt; &lt;a href="https://t.co/aO9tXn6MD8"&gt;pic.twitter.com/aO9tXn6MD8&lt;/a&gt;&lt;/p&gt;&amp;mdash; Rick Osowski (@rosowski) &lt;a href="https://twitter.com/rosowski/status/760944373613801472"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#keynote-highlights" class="anchor" name="keynote-highlights"&gt;&lt;/a&gt;Keynote Highlights&lt;/h2&gt;
-&lt;p&gt;We saw Google make a splash during their appearance in the keynote..&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Using Google cloud lets you have Google be your SRE team: &lt;a href="https://twitter.com/wattersjames"&gt;@wattersjames&lt;/a&gt; chats with &lt;a href="https://twitter.com/jjhollywood"&gt;@jjhollywood&lt;/a&gt;. &lt;a href="https://twitter.com/hashtag/springone?src=hash"&gt;#springone&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://t.co/DUr2XslMfi"&gt;pic.twitter.com/DUr2XslMfi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Bridget Kromhout (@bridgetkromhout) &lt;a href="https://twitter.com/bridgetkromhout/status/760879727980711936"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;where we learned that we&amp;rsquo;ll be able to consume Google Cloud Platform&amp;rsquo;s capabilities with PivotalCF by the end of the year which means Spring Boot developers will be able to consume Google¡¯s data services natively.&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;By the end of the year, you¡¯ll be able to consume Google data services natively on &lt;a href="https://twitter.com/pivotalcf"&gt;@pivotalcf&lt;/a&gt;. &lt;a href="https://twitter.com/jjhollywood"&gt;@jjhollywood&lt;/a&gt; to &lt;a href="https://twitter.com/wattersjames"&gt;@wattersjames&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/springone?src=hash"&gt;#springone&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt;&lt;/p&gt;&amp;mdash; Bridget Kromhout (@bridgetkromhout) &lt;a href="https://twitter.com/bridgetkromhout/status/760881072565587968"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;and then we learned that PivotalCF is a &lt;em&gt;key enabler&lt;/em&gt; for Java workloads on Microsoft!&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;¡° &lt;a href="https://twitter.com/pivotalcf"&gt;@PivotalCF&lt;/a&gt; is the enabler to bring &lt;a href="https://twitter.com/hashtag/Java?src=hash"&gt;#Java&lt;/a&gt; to &lt;a href="https://twitter.com/Azure"&gt;@Azure&lt;/a&gt; ¡° ? &lt;a href="https://twitter.com/CoreySandersWA"&gt;@CoreySandersWA&lt;/a&gt; &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; cc &lt;a href="https://twitter.com/ealeyner"&gt;@ealeyner&lt;/a&gt; &lt;a href="https://twitter.com/johnjahnke"&gt;@johnjahnke&lt;/a&gt; &lt;a href="https://t.co/ZX64qE2LGL"&gt;pic.twitter.com/ZX64qE2LGL&lt;/a&gt;&lt;/p&gt;&amp;mdash; F a i z P a r k a r (@_CloudNinja) &lt;a href="https://twitter.com/_CloudNinja/status/760888205025484800"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;Microsoft Azure is offering an OSS bear hug!&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;It&amp;#39;s hard not to be impressed by &lt;a href="https://twitter.com/Azure"&gt;@Azure&lt;/a&gt; geographic reach, services, and bear hug of OSS. &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; &lt;a href="https://t.co/5waNPyPGAg"&gt;pic.twitter.com/5waNPyPGAg&lt;/a&gt;&lt;/p&gt;&amp;mdash; Richard Seroter (@rseroter) &lt;a href="https://twitter.com/rseroter/status/760918913362255872"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;And we&amp;rsquo;re looking forward to hearing from Java luminary &lt;a href="http://twitter.com/speakjava"&gt;Simon Ritter&lt;/a&gt; tomorrow as he presents on Java 8 and JDK 9.&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;.&lt;a href="https://twitter.com/AzulSystems"&gt;@AzulSystems&lt;/a&gt;&amp;#39;s &lt;a href="https://twitter.com/speakjava"&gt;@speakjava&lt;/a&gt; presents JDK 8: Lessons Learnt With Lambdas and Streams at &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt; &lt;a href="https://t.co/bZRS7k6S6A"&gt;&lt;a href="https://t.co/bZRS7k6S6A"&gt;https://t.co/bZRS7k6S6A&lt;/a&gt;&lt;/a&gt; &lt;a href="https://t.co/Lb4tD0M9mF"&gt;pic.twitter.com/Lb4tD0M9mF&lt;/a&gt;&lt;/p&gt;&amp;mdash; SpringOne Platform (@spring1platform) &lt;a href="https://twitter.com/spring1platform/status/755192687184252928"&gt;July 19, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#winning-with-software-amp-developers" class="anchor" name="winning-with-software-amp-developers"&gt;&lt;/a&gt;Winning with Software &amp;amp; Developers&lt;/h2&gt;
-&lt;p&gt;Software is what is making or breaking modern organizations. Developers are the kingmakers of this new era where the pace of change has hit unprecedented levels. From telco to finance, media to manufacturing, change is happening.&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Our data team&amp;#39;s &lt;a href="https://twitter.com/jeffreyfkelly"&gt;@jeffreyfkelly&lt;/a&gt; summarizes the emerging theme for &lt;a href="https://twitter.com/hashtag/S1P?src=hash"&gt;#S1P&lt;/a&gt;: Making developers happy. &lt;a href="https://t.co/hbxuiXtpAl"&gt;&lt;a href="https://t.co/hbxuiXtpAl"&gt;https://t.co/hbxuiXtpAl&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&amp;mdash; Pivotal Big Data (@PivotalBigData) &lt;a href="https://twitter.com/PivotalBigData/status/760980320812462080"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;Great comment from &lt;a href="https://twitter.com/wattersjames"&gt;@wattersjames&lt;/a&gt; at &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; - how risk management has changed - the real high risk is not being able to deliver code fast.&lt;/p&gt;&amp;mdash; Charles Humble (@charleshumble) &lt;a href="https://twitter.com/charleshumble/status/760884993488924672"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;&lt;blockquote class="twitter-tweet" data-lang="en"&gt;&lt;p lang="en" dir="ltr"&gt;&amp;quot;if you keep treating developers as a commodity, then you&amp;#39;re on a race to the bottom.&amp;quot; doug safford, allstate. &lt;a href="https://twitter.com/hashtag/s1p?src=hash"&gt;#s1p&lt;/a&gt; it&amp;#39;s the economics&lt;/p&gt;&amp;mdash; Sticky Touchthing (@monkchips) &lt;a href="https://twitter.com/monkchips/status/760922278569717762"&gt;August 3, 2016&lt;/a&gt;&lt;/blockquote&gt;&lt;br/&gt;&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;And that&amp;rsquo;s a wrap! &lt;/p&gt;</content>
   </entry>
 </feed>
