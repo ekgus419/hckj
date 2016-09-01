@@ -70,7 +70,7 @@ th,td{
 input[type=button]{
 	text-align: center;
 	margin-bottom: 50px;
-	padding : 4px 10px;
+	padding : 6px 6px;
 	border-radius: 4px;
 }
 

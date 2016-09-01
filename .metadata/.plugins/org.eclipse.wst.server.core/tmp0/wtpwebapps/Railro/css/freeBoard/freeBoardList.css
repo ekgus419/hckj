@@ -67,10 +67,10 @@ th,td{
 	margin-bottom: 10px;
 }
 
-.button{
+input[type=button]{
 	text-align: center;
 	margin-bottom: 50px;
-	padding : 6px 6px;
+	padding : 4px 10px;
 	border-radius: 4px;
 }
 

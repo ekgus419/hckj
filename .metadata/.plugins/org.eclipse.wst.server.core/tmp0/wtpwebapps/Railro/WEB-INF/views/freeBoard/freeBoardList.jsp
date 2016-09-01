@@ -42,8 +42,9 @@
 		</table>
 		
 		<div class="button1">
-			<button class="button" onclick="location.href='freeBoardReg.htm'">글등록</button>
+			<input type="button" onclick="location.href='freeBoardReg.htm'" value="글등록"/>
 		</div>
+		
 		<div class="paging" align="center">
 			<jsp:include page="../inc/paging.jsp" flush ="true">
 				<jsp:param name="firstPageNo" value="${paging.firstPageNo}" />

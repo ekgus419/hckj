@@ -42,7 +42,9 @@
 		</table>
 		
 		<div class="button1">
-			<input type="button" onclick="location.href='freeBoardReg.htm'" value="글등록"/>
+			<a href="javascript:void(0)" onclick="location.href='freeBoardReg.htm'">
+				<button class="button">글등록</button>
+			</a>
 		</div>
 		
 		<div class="paging" align="center">
