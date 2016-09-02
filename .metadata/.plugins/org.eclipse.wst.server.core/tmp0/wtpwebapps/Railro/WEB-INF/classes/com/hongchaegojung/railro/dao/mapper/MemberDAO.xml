@@ -6,15 +6,49 @@
 <mapper namespace="com.hongchaegojung.railro.dao.MemberDAO">
 	
 	<!--로그인-->
-	<select id="login" resultType="Integer">
+	<select id="login" resultType="String">
 		SELECT PWD FROM MEMBER WHERE ID=#{ID}
 	</select>
 	
 	<!--회원가입-->
-	<select id="join" resultType="Integer">
-		INSERT INTO MEMBER VALUES (#{IDX}, #{ID}, #{PWD}, #{NAME} ,#{AGE}, #{GENDER}, #{INTEREST}, #{PHON}
-		, #{RESEQ}, #{EMAIL}, #{ADDRESS}, #{ZIPCODE}, #{PROFILEURL}, #{JOINDATE}, #{CONFIRMFLAG})
-	</select>
+	<insert id="join" parameterType="com.hongchaegojung.railro.dto.Member">
+		INSERT INTO MEMBER 
+		(
+			IDX,
+			ID,
+			PWD,
+			NAME,
+			BIRTH,
+			GENDER,
+			INTEREST,
+			PHONE,
+			EMAIL,
+			ADDRESS,
+			ADDRESS_DETAIL,
+			ZIPCODE,
+			PROFILEURL,
+			JOINDATE,
+			CONFIRMFLAG
+		)
+		VALUES 
+		(
+			MEMBER_SEQ.NEXTVAL, 
+			#{ID}, 
+			#{PWD}, 
+			#{NAME},
+			#{BIRTH}, 
+			#{GENDER}, 
+			#{INTEREST}, 
+			#{PHONE}, 
+			#{EMAIL}, 
+			#{ADDRESS}, 
+			#{ADDRESS_DETAIL},
+			#{ZIPCODE}, 
+			'테스트용', 
+			SYSDATE, 
+			0
+		)
+	</insert>
 	
 	<!--회원수-->
 	<select id="countMember" resultType="Integer">
@@ -67,5 +101,10 @@
 	
 	<!--출석 수(내가 접속한 수)-->
 	<select id="myConnectionCount">
+	</select>
+	
+	<!-- 우편번호 검색 -->
+	<select id="searchZipcode" parameterType="String" resultType="com.hongchaegojung.railro.dto.Zipcode">
+		SELECT * FROM ZIPCODE WHERE DONG LIKE '%${value}%'
 	</select>
 </mapper>

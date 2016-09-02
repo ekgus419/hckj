@@ -7,7 +7,7 @@ function check(){
 	var gender = joinform.GENDER.value;
 	var interest = joinform.INTEREST.value;
 	var phone = joinform.PHONE.value;
-	var address = joinform.MEMBER_ADDRESS.value;
+	var address = joinform.ADDRESS.value;
 	
 	var forms = document.getElementById("joinform");
 
@@ -81,7 +81,7 @@ function openConfirmId(joinform){
 }
 
 function openZipcode(joinform){			
-	var url="zipcode.htm"
+	var url="../newWindow/zipcode.htm"
 	open(url, "confirm", "toolbar=no,location=no,"
 						+"status=no,menubar=no,"
 						+"scrollbars=yes,resizable=no,"

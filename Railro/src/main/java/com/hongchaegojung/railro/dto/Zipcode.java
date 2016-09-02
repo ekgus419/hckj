@@ -1,0 +1,59 @@
+package com.hongchaegojung.railro.dto;
+
+public class Zipcode {
+	private int ID;
+	private String ZIPCODE;
+	private String SIDO;
+	private String GUGUN;
+	private String DONG;
+	private String RI;
+	private String BUNJI;
+	
+	public int getID() {
+		return ID;
+	}
+	public void setID(int iD) {
+		ID = iD;
+	}
+	public String getZIPCODE() {
+		return ZIPCODE;
+	}
+	public void setZIPCODE(String zIPCODE) {
+		ZIPCODE = zIPCODE;
+	}
+	public String getSIDO() {
+		return SIDO;
+	}
+	public void setSIDO(String sIDO) {
+		SIDO = sIDO;
+	}
+	public String getGUGUN() {
+		return GUGUN;
+	}
+	public void setGUGUN(String gUGUN) {
+		GUGUN = gUGUN;
+	}
+	public String getDONG() {
+		return DONG;
+	}
+	public void setDONG(String dONG) {
+		DONG = dONG;
+	}
+	public String getRI() {
+		return RI;
+	}
+	public void setRI(String rI) {
+		RI = rI;
+	}
+	public String getBUNJI() {
+		return BUNJI;
+	}
+	public void setBUNJI(String bUNJI) {
+		BUNJI = bUNJI;
+	}
+	@Override
+	public String toString() {
+		return "Zipcode [ID=" + ID + ", ZIPCODE=" + ZIPCODE + ", SIDO=" + SIDO + ", GUGUN=" + GUGUN + ", DONG=" + DONG
+				+ ", RI=" + RI + ", BUNJI=" + BUNJI + "]";
+	}	
+}

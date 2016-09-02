@@ -3,7 +3,7 @@
 <script src="${pageContext.request.contextPath}/js/join.js"></script>
 
 <div class="content">
-	<form name="joinform" action="" method="post" onsubmit="return check()">
+	<form name="joinForm" action="join.htm" method="post" onsubmit="return check()">
 		<table class="join" width="80%">
 			<tr>
 				<th colspan="100%">
@@ -68,14 +68,14 @@
 				</td>
 				<td>
 					&nbsp;&nbsp;&nbsp;
-					<input type="text" name="YEAR" size="4" maxlength="4"/>
-					년
-					&nbsp;&nbsp;
-					<input type="text" name="MONTH" size="1" maxlength="2"/>
-					월
-					&nbsp;&nbsp;
-					<input type="text" name="DAY" size="1" maxlength="2"/>
-					일	
+					<input type="text" name="BIRTH" size="10" maxlength="8"/>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+				&nbsp;&nbsp;&nbsp;
+				(생년월일 8자리를 입력해 주세요 (예: 20121211))
 				</td>
 			</tr>
 			<tr>
@@ -105,31 +105,17 @@
 			<tr>
 				<td>
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					메일 수신 여부
-				</td>
-				<td>
-					&nbsp;&nbsp;&nbsp;
-					<input type="radio" name="EMAIL_GET" value="YES" checked/>
-					수신
-					&nbsp;&nbsp;
-					<input type="radio" name="EMAIL_GET" value="NO"/>
-					수신 안함
-				</td>
-			</tr>
-			<tr>
-				<td>
-					&nbsp;&nbsp;&nbsp;&nbsp;
 					관심분야
 				</td>
 				<td>
 					&nbsp;&nbsp;&nbsp;
 					<select name="INTEREST">
-						<option>관심분야1</option>
-						<option>관심분야2</option>
-						<option>관심분야3</option>
-						<option>관심분야4</option>
-						<option>관심분야5</option>
-						<option>관심분야6</option>
+						<option value="관심분야1">관심분야1</option>
+						<option value="관심분야2">관심분야2</option>
+						<option value="관심분야3">관심분야3</option>
+						<option value="관심분야4">관심분야4</option>
+						<option value="관심분야5">관심분야5</option>
+						<option value="관심분야6">관심분야6</option>
 					</select>
 				</td>
 			</tr>
@@ -150,11 +136,8 @@
 				</td>
 				<td>
 					&nbsp;&nbsp;&nbsp;
-					<input type="text" name="ZIPCODE1" size="6" 
-						onkeypress="gNumCheck()" maxlength="3"/>
-					- 
-					<input type="text" name="ZIPCODE2" size="6" 
-						onkeypress="gNumCheck()" maxlength="3" />&nbsp;&nbsp;
+					<input type="text" name="ZIPCODE" size="13" maxlength="13"/>
+					&nbsp;&nbsp;
 					<input type="button" name="zipcode" value="우편번호 검색" 
 						onclick="openZipcode(this.form)" />
 				</td>
@@ -176,7 +159,7 @@
 				</td>
 				<td>
 					&nbsp;&nbsp;&nbsp;
-					<input type="text" name="ADDRESS2" size="50" />
+					<input type="text" name="ADDRESS_DETAIL" size="50" />
 				</td>
 			</tr>
 			<tr>

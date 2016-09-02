@@ -2,18 +2,19 @@ package com.hongchaegojung.railro.dto;
 
 import java.sql.Date;
 
-public class Member { // 13개
+public class Member { 
 	
 	private int IDX;
 	private String ID;
 	private String PWD;
 	private String NAME;
-	private int AGE;
-	private int GENDER;
+	private String BIRTH;
+	private String GENDER;
 	private String INTEREST;
 	private String PHONE;
 	private String EMAIL;
 	private String ADDRESS;
+	private String ADDRESS_DETAIL;
 	private String ZIPCODE;
 	private String PROFILEURL;
 	private Date JOINDATE;
@@ -43,16 +44,16 @@ public class Member { // 13개
 	public void setNAME(String nAME) {
 		NAME = nAME;
 	}
-	public int getAGE() {
-		return AGE;
+	public String getBIRTH() {
+		return BIRTH;
 	}
-	public void setAGE(int aGE) {
-		AGE = aGE;
+	public void setBIRTH(String bIRTH) {
+		BIRTH = bIRTH;
 	}
-	public int getGENDER() {
+	public String getGENDER() {
 		return GENDER;
 	}
-	public void setGENDER(int gENDER) {
+	public void setGENDER(String gENDER) {
 		GENDER = gENDER;
 	}
 	public String getINTEREST() {
@@ -79,6 +80,12 @@ public class Member { // 13개
 	public void setADDRESS(String aDDRESS) {
 		ADDRESS = aDDRESS;
 	}
+	public String getADDRESS_DETAIL() {
+		return ADDRESS_DETAIL;
+	}
+	public void setADDRESS_DETAIL(String aDDRESS_DETAIL) {
+		ADDRESS_DETAIL = aDDRESS_DETAIL;
+	}
 	public String getZIPCODE() {
 		return ZIPCODE;
 	}
@@ -103,18 +110,6 @@ public class Member { // 13개
 	public void setCONFIRMFLAG(int cONFIRMFLAG) {
 		CONFIRMFLAG = cONFIRMFLAG;
 	}
-	@Override
-	public String toString() {
-		return "Member [IDX=" + IDX + ", ID=" + ID + ", PWD=" + PWD + ", NAME=" + NAME + ", AGE=" + AGE + ", GENDER="
-				+ GENDER + ", INTEREST=" + INTEREST + ", PHONE=" + PHONE + ", EMAIL=" + EMAIL + ", ADDRESS=" + ADDRESS
-				+ ", ZIPCODE=" + ZIPCODE + ", PROFILEURL=" + PROFILEURL + ", JOINDATE=" + JOINDATE + ", CONFIRMFLAG="
-				+ CONFIRMFLAG + "]";
-	}
 	
-	
-	
-	
-	
-	
-	
+
 }

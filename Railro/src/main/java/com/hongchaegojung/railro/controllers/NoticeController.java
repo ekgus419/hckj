@@ -33,7 +33,7 @@ public class NoticeController {
 			paging.setPageSize(pageSize);
 		}else{
 			pageSize = Integer.parseInt(limit);
-			paging.setPageSize(Integer.parseInt(limit));
+			paging.setPageSize(pageSize);
 		}
 		
 		paging.setPageNo(1); // 현재 페이지 번호
