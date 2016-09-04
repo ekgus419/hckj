@@ -1,55 +1,62 @@
 package com.hongchaegojung.railro.dao;
 
 import java.util.List;
-import java.util.Vector;
 
 import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.Bookmark;
 import com.hongchaegojung.railro.dto.Member;
+import com.hongchaegojung.railro.dto.Notice;
+import com.hongchaegojung.railro.dto.Paging;
 import com.hongchaegojung.railro.dto.Zipcode;
 
 public interface MemberDAO {
-
-	// 로그인 
-	public int login(Member member);
+	
+	// 아이디로부터 IDX 조회
+	public int getIDX(String ID);
+	
+	// 우편번호 검색
+	public List<Zipcode> searchZipcode(String DONG);
 	
 	// 회원가입
 	public void join(Member member);
 	
 	// 회원 수 
-	public int countMember(Member member);
+	public int countMember();
 	
 	// 회원목록(조회) 
-	public List<Member> memberList();
+	public List<Member> getMemberList();
 	
-	// 회원정보보기 
-	public Member getMember(String memberId);
+	// 회원정보보기 (로그인)
+	public Member getMember(String ID);
 	
 	// 회원정보수정 
-	public int modifyMember(Member member);
+	public void modifyMember(Member member);
 	
 	// 회원탈퇴 
-	public boolean deleteMember(String memberId);
+	public void deleteMember(String ID);
 	
 	// 글 담기
-	public void addBookmark(Board board);
+	public void insertBookmark(Bookmark bookmark);
 	
-	// 글 담기 목록 가져오기
-	public Vector getBookmark(Board board);
+	// 글 담기 목록 가져오기(게시판)
+	public List<Board> getBookmarkList(int MID, String keyField, String keyWord, Paging paging);
+	
+	// 담은 글 개수(게시판)
+	public int countMyBookmarkList(int MID, String keyField, String keyWord);
 	
 	// 글 담기 삭제
-	public boolean bookRemove(int bdnum);
+	public void deleteBookmark(int ID);
 	
-/*	// 내가 쓴 글 목록 
-	public List<Board> getMyBoardList(String writer(또는 memberId));
+	// 내가 쓴 글 목록 
+	public List<Board> getMyBoardList(int IDX, String keyField, String keyWord, Paging paging);
 	
 	// 내가 쓴 글 목록 수 
-	public int countMyBoardList(String writer(또는 memberId)); */
+	public int countMyBoardList(int IDX, String keyField, String keyWord); 
 	
-	// 출석수(내가 접속한 수) 
-	public int myConnectionCount(int dayCount);
+	// 출석 수 업데이트
+	public void updateMyVisit(int IDX);
 	
-	// 우편번호 검색
-	public List<Zipcode> searchZipcode(String DONG);
-	
+	// 출석 수 조회(내가 접속한 수) 
+	public int getMyVisit(int IDX);
 
 }

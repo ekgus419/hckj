@@ -3,7 +3,7 @@
 <script src="${pageContext.request.contextPath}/js/join.js"></script>
 
 <div class="content">
-	<form name="joinForm" action="join.htm" method="post" onsubmit="return check()">
+	<form name="joinform" action="join.htm" method="post" onsubmit="return check(joinform)">
 		<table class="join" width="80%">
 			<tr>
 				<th colspan="100%">

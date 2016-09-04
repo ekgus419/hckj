@@ -1,27 +1,28 @@
-function check(){
+function check(joinform){
+
 	var id = joinform.ID.value;
+	var name = joinform.NAME.value;
 	var pwd = joinform.PWD.value;
 	var pwd_ck = joinform.PWD_CK.value;	
 	var email = joinform.EMAIL.value;
-	var birth = joinform.YEAR.value + joinform.MONTH.value + joinform.DAY.value;
+	var birth = joinform.BIRTH.value;
 	var gender = joinform.GENDER.value;
 	var interest = joinform.INTEREST.value;
 	var phone = joinform.PHONE.value;
-	var address = joinform.ADDRESS.value;
+	var zipcode = joinform.ZIPCODE.value;
+	var address = joinform.ADDRESS_DETAIL.value;
 	
-	var forms = document.getElementById("joinform");
-
-	if ((forms.NAME.value=="")||(forms.NAME.value.length<=1)){
+	if (name == ""||name.length <= 1){
 		alert("이름을 제대로 입력해 주세요.");
-		forms.NAME.focus();
+		joinform.NAME.focus();
         return false;
 	}
-	if(id.length == 0){
+	if(id == "" || id.length == 0){
 		alert("아이디를 입력하세요.");
 		joinform.ID.focus();
 		return false;
 	}
-	if(pwd.length == 0){
+	if(pwd == "" || pwd.length == 0){
 		alert("비밀번호를 입력하세요.");
 		joinform.PWD.focus();
 		return false;
@@ -33,9 +34,9 @@ function check(){
 		joinform.PWD.focus();
 		return false;
 	}
-	if((forms.YEAR.value=="")||(forms.MONTH.value=="")||(forms.DAY.value=="")||(forms.YEAR.value.length<4)){
+	if(birth.length < 8){
 		alert("생년월일을 제대로 입력하세요.");
-      	forms.YEAR.focus();
+      	joinform.BIRTH.focus();
         return false;
  	}
 	if(email.length == 0){
@@ -48,22 +49,17 @@ function check(){
 		joinform.PHONE.focus();
 		return false;
 	} 
-	if((forms.ZIPCODE1.value=="")||(forms.ZIPCODE1.value.length<3)){
-		alert("우편번호 앞의 3자리를 입력해 주세요.");
-      	forms.ZIPCODE1.focus();
+	if((zipcode == "")||(zipcode.length < 6)){
+		alert("우편번호를 제대로 입력해 주세요.");
+      	joinform.ZIPCODE.focus();
         return false;
  	}
- 	if((forms.ZIPCODE2.value=="")||(forms.ZIPCODE2.value.length<3)){
-		alert("우편번호 뒤의 3자리 입력해 주세요.");
-      	forms.ZIPCODE2.focus();
-        return false;
-	}  
 	if(address.length == 0){
-		alert("주소를 입력하세요.");
-		joinform.ADDRESS.focus();
+		alert("상세 주소를 입력하세요.");
+		joinform.ADDRESS_DETAIL.focus();
 		return false;
 	} 
-	alert("성공")
+	alert("회원가입 성공~~~~~~~~~~")
 	return true;
 }
 

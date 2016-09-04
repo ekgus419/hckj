@@ -1,0 +1,137 @@
+package com.hongchaegojung.railro.controllers;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.hongchaegojung.railro.dao.MemberDAO;
+import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.Bookmark;
+import com.hongchaegojung.railro.dto.Member;
+import com.hongchaegojung.railro.dto.Paging;
+
+@Controller
+@RequestMapping("/member")
+public class MemberController {
+	
+	@Autowired
+	private SqlSession sqlSession;
+	
+	private int pageSize = 10;
+
+	@RequestMapping(value="/join.htm", method=RequestMethod.GET)
+	public String join() {	
+		return "member.join";
+	}
+	
+	@RequestMapping(value="/join.htm", method=RequestMethod.POST)
+	public String join(Member member) {
+		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
+		memberDAO.join(member);
+		
+		return "member.login";
+	}
+	
+	@RequestMapping(value="/login.htm", method=RequestMethod.GET)
+	public String login() {
+		return "member.login";
+	}
+	
+	// 시큐리티 추가하면 변경해야 할거
+	
+	@RequestMapping(value="/mypage.htm", method=RequestMethod.GET)
+	public String mypage(Model model, String ID) {
+		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
+		Member member = memberDAO.getMember("subin");
+		
+		model.addAttribute("memberInfo", member);
+		
+		return "member.mypage";
+	}
+	
+	@RequestMapping(value="/myBoardList.htm", method=RequestMethod.GET)
+	public String myBoardList(Model model, String ID, String keyField, String keyWord, String limit, Paging paging, String pageNo) {
+		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
+		
+		int IDX = memberDAO.getIDX("subin");
+		int listCount = memberDAO.countMyBoardList(IDX, keyField, keyWord);
+		
+		if(limit == null){
+			paging.setPageSize(pageSize);
+		}else{
+			pageSize = Integer.parseInt(limit);
+			paging.setPageSize(pageSize);
+		}
+		
+		paging.setPageNo(1); // 현재 페이지 번호
+		paging.setBlockSize(10);
+		paging.setTotalCount(listCount); // 게시물 총 개수
+		
+		if(pageNo != null){
+			paging.setPageNo(Integer.parseInt(pageNo));
+		}
+
+		List<Board> myBoardList = memberDAO.getMyBoardList(IDX, keyField, keyWord, paging);
+		
+		model.addAttribute("paging", paging);
+		model.addAttribute("myBoard", myBoardList);
+		model.addAttribute("listCount", listCount);
+
+		return "member.myBoardList";
+	}
+	
+	@RequestMapping(value="/insertBookmark.htm")
+	public String insertBookmark(String ID, String MID) {
+		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
+		
+		Bookmark bookmark = new Bookmark();
+		bookmark.setBID(Integer.parseInt(ID));
+		bookmark.setMID(memberDAO.getIDX(MID));
+		
+		memberDAO.insertBookmark(bookmark);
+		 
+		return "member.myBookMarkList";
+	}
+	
+	@RequestMapping(value="/myBookMarkList.htm", method=RequestMethod.GET)
+	public String myBookMarkList(Model model, String MID, String keyField, String keyWord, String limit, Paging paging, String pageNo) {
+		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
+		
+		int IDX = memberDAO.getIDX("subin");
+		
+		int listCount = memberDAO.countMyBookmarkList(IDX, keyField, keyWord);
+		
+		if(limit == null){
+			paging.setPageSize(pageSize);
+		}else{
+			pageSize = Integer.parseInt(limit);
+			paging.setPageSize(pageSize);
+		}
+		
+		paging.setPageNo(1); // 현재 페이지 번호
+		paging.setBlockSize(10);
+		paging.setTotalCount(listCount); // 게시물 총 개수
+		
+		if(pageNo != null){
+			paging.setPageNo(Integer.parseInt(pageNo));
+		}
+
+		List<Board> myBookmarkList = memberDAO.getBookmarkList(IDX, keyField, keyWord, paging);
+		
+		model.addAttribute("paging", paging);
+		model.addAttribute("myBookmark", myBookmarkList);
+		model.addAttribute("listCount", listCount);
+
+		return "member.myBookmarkList";
+	}
+	
+	@RequestMapping(value="/myInfoEdit.htm", method=RequestMethod.GET)
+	public String myInfoEdit() {
+		return "member.myInfoEdit";
+	}
+}

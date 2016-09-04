@@ -33,7 +33,7 @@
 		  <tr>
 		  	<td> ${freeBoard.ID}</td>
 		  	<td>${freeBoard.SUBJECT}</td>
-		  	<td style="text-align: left"><a href="freeBoardDetail.htm?ID=${freeBoard.ID}">${freeBoard.TITLE}></a></td>
+		  	<td style="text-align: left"><a href="freeBoardDetail.htm?ID=${freeBoard.ID}">${freeBoard.TITLE}</a></td>
 		  	<td>${freeBoard.WRITER}</td>
 		  	<td>${freeBoard.HIT}</td>
 		  	<td>${freeBoard.REGDATE}</td>

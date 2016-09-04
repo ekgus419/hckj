@@ -24,11 +24,13 @@
 		</table>
 	</form> 
 	<div class="button">
+		<button><a href="freeBoardList.htm?ID=${board.ID}">목록</a></button>
+		&nbsp;&nbsp;
 		<button><a href="freeBoardEdit.htm?ID=${board.ID}">수정</a></button>
 		&nbsp;&nbsp;
 		<button><a href="freeBoardDel.htm?ID=${board.ID}">삭제</a></button>
 		&nbsp;&nbsp;
-		<button><a href="freeBoardList.htm?ID=${board.ID}">목록</a></button>
+		<button><a href="../member/insertBookmark.htm?ID=${board.ID}&&MID=subin">글담기</a></button>
 		&nbsp;&nbsp;
 		<button onclick="javasrcipt:history.go(-1)">취소</button>
 		

@@ -18,6 +18,7 @@ public class Member {
 	private String ZIPCODE;
 	private String PROFILEURL;
 	private Date JOINDATE;
+	private int VISIT;
 	private int CONFIRMFLAG;
 	
 	public int getIDX() {
@@ -103,6 +104,12 @@ public class Member {
 	}
 	public void setJOINDATE(Date jOINDATE) {
 		JOINDATE = jOINDATE;
+	}
+	public int getVISIT() {
+		return VISIT;
+	}
+	public void setVISIT(int vISIT) {
+		VISIT = vISIT;
 	}
 	public int getCONFIRMFLAG() {
 		return CONFIRMFLAG;

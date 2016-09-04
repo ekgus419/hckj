@@ -1,0 +1,54 @@
+package com.hongchaegojung.railro.dao;
+
+import java.util.List;
+
+import com.hongchaegojung.railro.dto.Board;
+import com.hongchaegojung.railro.dto.Bookmark;
+import com.hongchaegojung.railro.dto.Member;
+import com.hongchaegojung.railro.dto.Zipcode;
+
+public interface MemberDAO {
+
+	// 로그인 
+	public Member login(String ID);
+	
+	// 우편번호 검색
+	public List<Zipcode> searchZipcode(String DONG);
+	
+	// 회원가입
+	public void join(Member member);
+	
+	// 회원 수 
+	public int countMember();
+	
+	// 회원목록(조회) 
+	public List<Member> memberList();
+	
+	// 회원정보보기 
+	public Member getMember(String ID);
+	
+	// 회원정보수정 
+	public void modifyMember(Member member);
+	
+	// 회원탈퇴 
+	public void deleteMember(String ID);
+	
+	// 글 담기
+	public void insertBookmark(Bookmark bookmark);
+	
+	// 글 담기 목록 가져오기
+	public List<Bookmark> getBookmark(int MID);
+	
+	// 글 담기 삭제
+	public void deleteBookmark(int ID);
+	
+	// 내가 쓴 글 목록 
+	public List<Board> getMyBookmarkList(int MID);
+	
+	// 내가 쓴 글 목록 수 
+	public int countMyBookmarkList(int MID); 
+	
+	// 출석수(내가 접속한 수) 
+	public int myConnectionCount(int MID);
+
+}

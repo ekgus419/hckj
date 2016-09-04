@@ -35,13 +35,15 @@
 			</tr>
 		</table>
 		<div class="btn">
+			<span><a href="noticeList.htm">목록</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="noticeEdit.htm?ID=${notice.ID}">수정</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<span><a href="noticeList.htm">목록</a></span>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="noticeDel.htm?ID=${notice.ID}">삭제</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span><a href="../member/insertBookmark.htm?ID=${notice.ID}&&MID=subin">글담기</a></span>
 		</div>
 	</form>
 </div>

@@ -4,6 +4,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.hongchaegojung.railro.dao.NoticeDAO">
+
 	<select id="getTotalNoticeListCount" resultType="Integer">
 		SELECT COUNT(*) FROM NOTICE
 		<if test="param1 != null and param2 != ''">
