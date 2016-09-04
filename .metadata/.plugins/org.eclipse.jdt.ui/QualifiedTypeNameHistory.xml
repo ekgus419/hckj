@@ -8,11 +8,11 @@
 <fullyQualifiedTypeName name="com.hongchaegojung.railro.dao.BoardDAO"/>
 <fullyQualifiedTypeName name="com.hongchaegojung.railro.dto.BoardFile"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.security.Principal"/>
 <fullyQualifiedTypeName name="com.hongchaegojung.railro.dao.RailroDAO"/>
 <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Isolation"/>
+<fullyQualifiedTypeName name="java.security.Principal"/>
 </qualifiedTypeNameHistroy>

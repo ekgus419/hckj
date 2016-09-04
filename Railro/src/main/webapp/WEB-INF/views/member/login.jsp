@@ -1,10 +1,20 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <script src="${pageContext.request.contextPath}/js/login.js"></script>
 
 <div class="content">
-	<form name="loginform" action="" method="post" onsubmit="return check()">
-		<table class="join" width="50%">
+  <c:url value="/j_spring_security_check" var ="loginURL" />
+	<form name="loginform" action="${loginURL}" method="post" onsubmit="return check()">
+	  <table class="join" width="50%">
+		 <c:if test="${param.error != null}">
+			  <div>
+			  		로그인 실패. <br />
+			  		<c:if test="${SPRING_SECURITY_LAST_EXCEPTION != null }">
+			  		이유 : <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"></c:out>
+			  		</c:if>
+		 	  </div>
+		 </c:if>
 			<tr>
 				<th colspan="100%">
 					<div class="login-title"><span>로그인</span></div>
@@ -16,7 +26,7 @@
 					&nbsp;&nbsp;&nbsp;
 				</td>
 				<td colspan="30%">
-					<input type="text" name="ID" size="13" maxlength="15"/>
+					<input type="text" name="j_username" size="13" maxlength="15"/>
 					
 				</td>
 				<td rowspan="2" colspan="30%">
@@ -29,7 +39,7 @@
 					&nbsp;&nbsp;&nbsp;
 				</td>
 				<td colspan="30%">
-					<input type="password" name="PWD" size="13" maxlength="20"/>
+					<input type="password" name="j_password" size="13" maxlength="20"/>
 					
 				</td>
 			</tr>

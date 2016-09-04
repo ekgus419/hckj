@@ -1,5 +1,6 @@
 package com.hongchaegojung.railro.controllers;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -53,13 +54,26 @@ public class TravelReviewController {
 	
 	@RequestMapping(value="/travelReviewReg.htm", method=RequestMethod.GET)
 	public String travelReviewReg() {
+		
 		return "travelReview.travelReviewReg";
 	}
 	
 	@RequestMapping(value="/travelReviewReg.htm", method=RequestMethod.POST)
-	public String travelReviewReg(Board board) {
+	public String travelReviewReg(Board board, Principal principal) {
 		BoardDAO travelReDAO = sqlSession.getMapper(TravelReviewDAO.class);
+	
+		
+/*		UserDetails user = (UserDetails) SecurityContextHolder
+				.getContext()
+				.getAuthentication()
+				.getPrincipal();
+		
+		board.setWRITER(user.getUsername());*/
+		
+		board.setWRITER(principal.getName());
+		
 		travelReDAO.insert(board);
+		
 		return "redirect:travelReviewList.htm";
 	}
 	

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/security 
+						http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+						
+<http>
+	<form-login login-page="/member/login.htm" 
+		        authentication-failure-url="/member/login.htm?error"
+		        default-target-url="/index.htm"/>
+	<logout logout-success-url="/index.htm"/>
+	<intercept-url pattern="/*/*Reg.htm" access="ROLE_USER"/>
+</http>
+
+<authentication-manager>
+	<authentication-provider>
+		<jdbc-user-service data-source-ref="dataSource" 
+			 users-by-username-query=
+			 "SELECT ID USERID, PWD PASSWORD, 1 ENABLED FROM MEMBER WHERE ID=?"
+			 authorities-by-username-query=
+			 "SELECT ID USERID, 'ROLE_USER' ROLE_NAME FROM MEMBER WHERE ID=?"  />
+	</authentication-provider>
+</authentication-manager>
+
+</beans:beans>
