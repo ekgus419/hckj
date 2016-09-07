@@ -1,5 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 
 <div class="content">
 	<div class="setting">
@@ -41,9 +43,11 @@
 		  </c:forEach>
 		</table>
 		
+	<security:authorize ifAllGranted="ROLE_USER">
 		<div class="button1">
 			<input type="button" onclick="location.href='freeBoardReg.htm'" value="글등록"/>
 		</div>
+	</security:authorize>
 		
 		<div class="paging" align="center">
 			<jsp:include page="../inc/paging.jsp" flush ="true">

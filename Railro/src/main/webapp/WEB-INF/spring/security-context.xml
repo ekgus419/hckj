@@ -22,7 +22,9 @@
 			 users-by-username-query=
 			 "SELECT ID USERID, PWD PASSWORD, 1 ENABLED FROM MEMBER WHERE ID=?"
 			 authorities-by-username-query=
-			 "SELECT ID USERID, 'ROLE_USER' ROLE_NAME FROM MEMBER WHERE ID=?"  />
+			 "SELECT ID USERID, 'ROLE_USER' ROLE_NAME FROM MEMBER WHERE ID=?"  
+		/>
+			 
 	</authentication-provider>
 </authentication-manager>
 

@@ -40,9 +40,7 @@ public class NewWindowController {
 		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
 		
 		List<Zipcode> zipcodeList = memberDAO.searchZipcode(DONG);
-		
-		System.out.println(zipcodeList);
-		System.out.println("Å©±â´Â " + zipcodeList.size());
+
 
 		model.addAttribute("zipcodeList", zipcodeList);
 		

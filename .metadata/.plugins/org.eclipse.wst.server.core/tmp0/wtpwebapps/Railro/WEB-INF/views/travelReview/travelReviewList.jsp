@@ -1,5 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 
 <div class="content">
 	<div class="setting">
@@ -70,20 +72,24 @@
 			</c:forEach>	
 			
 		</table>
-	<div class="register-btn" align="right">
-		<span><a href="javascript:void(0)" onclick="location.href='travelReviewReg.htm'">글쓰기</a></span>
-	</div>
-	<div class="paging" align="center">
-		<jsp:include page="../inc/paging.jsp" flush="true">
-			<jsp:param name="firstPageNo" value="${paging.firstPageNo}" />
-			<jsp:param name="prevPageNo" value="${paging.prevPageNo}" />
-			<jsp:param name="startPageNo" value="${paging.startPageNo}" />
-			<jsp:param name="pageNo" value="${paging.pageNo}" />
-			<jsp:param name="endPageNo" value="${paging.endPageNo}" />
-			<jsp:param name="nextPageNo" value="${paging.nextPageNo}" />
-			<jsp:param name="finalPageNo" value="${paging.finalPageNo}" />
-		</jsp:include>
-	</div>
+		
+	<security:authorize ifAllGranted="ROLE_USER">
+		<div class="register-btn" align="right">
+			<span><a href="javascript:void(0)" onclick="location.href='travelReviewReg.htm'">글쓰기</a></span>
+		</div>
+	</security:authorize>
+		
+		<div class="paging" align="center">
+			<jsp:include page="../inc/paging.jsp" flush="true">
+				<jsp:param name="firstPageNo" value="${paging.firstPageNo}" />
+				<jsp:param name="prevPageNo" value="${paging.prevPageNo}" />
+				<jsp:param name="startPageNo" value="${paging.startPageNo}" />
+				<jsp:param name="pageNo" value="${paging.pageNo}" />
+				<jsp:param name="endPageNo" value="${paging.endPageNo}" />
+				<jsp:param name="nextPageNo" value="${paging.nextPageNo}" />
+				<jsp:param name="finalPageNo" value="${paging.finalPageNo}" />
+			</jsp:include>
+		</div>
 	
 	</form>	
 	<div class="search" align="center">

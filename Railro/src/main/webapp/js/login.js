@@ -1,4 +1,4 @@
-function check(){
+function check(loginform){
 	var id = loginform.ID.value;
 	var pwd = loginform.PWD.value;
 	

@@ -1,5 +1,6 @@
 package com.hongchaegojung.railro.controllers;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -39,8 +40,11 @@ public class RailroController {
 	
 	// 게시글 등록 POST
 	@RequestMapping(value="/railroReg.htm", method=RequestMethod.POST)
-	public String railroReg(Board board) {
+	public String railroReg(Board board, Principal principal) {
 		BoardDAO railroDAO = sqlSession.getMapper(RailroDAO.class);
+		
+		board.setWRITER(principal.getName());
+
 		railroDAO.insert(board);
 		return "redirect:railroList.htm";
 	}

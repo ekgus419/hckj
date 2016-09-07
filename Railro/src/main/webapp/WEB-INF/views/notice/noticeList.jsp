@@ -69,7 +69,7 @@
 			<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
 		</div>
 		</security:authorize>
-		
+			
 		<div class="paging" align="center">
 			<jsp:include page="../inc/paging.jsp" flush="true">
 				<jsp:param name="firstPageNo" value="${paging.firstPageNo}" />

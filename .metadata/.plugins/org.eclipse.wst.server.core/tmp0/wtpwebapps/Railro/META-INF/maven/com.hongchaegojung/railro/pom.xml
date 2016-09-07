@@ -195,6 +195,14 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 
+		   <!-- Transaction -->
+		<dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-tx</artifactId>
+		  <version>${org.springframework-version}</version>
+		</dependency>
+
+
 	</dependencies>
     <build>
         <plugins>

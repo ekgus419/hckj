@@ -117,6 +117,14 @@ public class Member {
 	public void setCONFIRMFLAG(int cONFIRMFLAG) {
 		CONFIRMFLAG = cONFIRMFLAG;
 	}
+	@Override
+	public String toString() {
+		return "Member [IDX=" + IDX + ", ID=" + ID + ", PWD=" + PWD + ", NAME=" + NAME + ", BIRTH=" + BIRTH
+				+ ", GENDER=" + GENDER + ", INTEREST=" + INTEREST + ", PHONE=" + PHONE + ", EMAIL=" + EMAIL
+				+ ", ADDRESS=" + ADDRESS + ", ADDRESS_DETAIL=" + ADDRESS_DETAIL + ", ZIPCODE=" + ZIPCODE
+				+ ", PROFILEURL=" + PROFILEURL + ", JOINDATE=" + JOINDATE + ", VISIT=" + VISIT + ", CONFIRMFLAG="
+				+ CONFIRMFLAG + "]";
+	}
 	
 
 }

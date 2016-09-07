@@ -1,5 +1,6 @@
 package com.hongchaegojung.railro.controllers;
 
+import java.security.Principal;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -67,8 +68,11 @@ public class NoticeController {
 	}
 
 	@RequestMapping(value="/noticeReg.htm", method=RequestMethod.POST)
-	public String noticeReg(Notice notice) {
+	public String noticeReg(Notice notice, Principal principal) {
 		NoticeDAO noticeDAO = sqlSession.getMapper(NoticeDAO.class);
+		
+		notice.setWRITER(principal.getName());
+		
 		noticeDAO.insert(notice);
 		return "redirect:noticeList.htm";
 	}

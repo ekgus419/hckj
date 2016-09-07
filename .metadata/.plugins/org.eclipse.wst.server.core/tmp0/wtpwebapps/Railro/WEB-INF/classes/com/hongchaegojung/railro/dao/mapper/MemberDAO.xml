@@ -69,7 +69,7 @@
 	
 	<!--회원정보 보기(로그인) -->
 	<select id="getMember" resultType="com.hongchaegojung.railro.dto.Member">
-		SELECT * FROM MEMBER WHERE ID=#{value}
+		SELECT * FROM MEMBER WHERE ID=#{param1}
 	</select>
 	
 	<!--회원정보 수정 -->

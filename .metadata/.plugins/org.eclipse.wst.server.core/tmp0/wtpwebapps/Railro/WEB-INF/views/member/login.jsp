@@ -1,13 +1,13 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
 <script src="${pageContext.request.contextPath}/js/login.js"></script>
 
 <div class="content">
   <c:url value="/j_spring_security_check" var ="loginURL" />
-	<form name="loginform" action="${loginURL}" method="post" onsubmit="return check()">
-	  <table class="join" width="50%">
-		 <c:if test="${param.error != null}">
+	<form name="loginform" action="${loginURL}" method="post" onsubmit="return check(this.form)">
+	  	<c:if test="${param.error != null}">
 			  <div>
 			  		로그인 실패. <br />
 			  		<c:if test="${SPRING_SECURITY_LAST_EXCEPTION != null }">
@@ -15,6 +15,8 @@
 			  		</c:if>
 		 	  </div>
 		 </c:if>
+	  
+	  	<table class="join" width="50%">
 			<tr>
 				<th colspan="100%">
 					<div class="login-title"><span>로그인</span></div>

@@ -1,5 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 
 <div class="content">
 	<div class="setting">
@@ -66,22 +68,26 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<div class="register-btn" align="right">
-		<span><a href="javascript:void(0)" onclick="location.href='railroReg.htm'">글쓰기</a></span>
-	</div>
-	<div class="paging" align="center">
-	이전&nbsp;다음
-	</div>
-	<div class="search" align="center">
-		<form action="railroSearchList.htm" method="get">
-			<select name="keyField">
-				<option value="ID">번호</option>
-				<option value="WRITER">작성자</option>
-				<option value="TITLE">제목</option>
-				<option value="SUBJECT">분류</option>
-			</select>
-			<input type="text" name="keyWord"/>
-			<input class="submit" type="submit" value="검색"/>
-		</form>
-	</div>
+	
+	<security:authorize ifAllGranted="ROLE_USER">
+		<div class="register-btn" align="right">
+			<span><a href="javascript:void(0)" onclick="location.href='railroReg.htm'">글쓰기</a></span>
+		</div>
+	</security:authorize>
+	
+		<div class="paging" align="center">
+		이전&nbsp;다음
+		</div>
+		<div class="search" align="center">
+			<form action="railroSearchList.htm" method="get">
+				<select name="keyField">
+					<option value="ID">번호</option>
+					<option value="WRITER">작성자</option>
+					<option value="TITLE">제목</option>
+					<option value="SUBJECT">분류</option>
+				</select>
+				<input type="text" name="keyWord"/>
+				<input class="submit" type="submit" value="검색"/>
+			</form>
+		</div>
 </div>

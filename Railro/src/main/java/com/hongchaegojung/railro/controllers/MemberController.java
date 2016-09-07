@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.hongchaegojung.railro.dao.MemberDAO;
 import com.hongchaegojung.railro.dto.Board;
 import com.hongchaegojung.railro.dto.Bookmark;
@@ -47,8 +46,9 @@ public class MemberController {
 	@RequestMapping(value="/mypage.htm", method=RequestMethod.GET)
 	public String mypage(Model model, String ID) {
 		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
-		Member member = memberDAO.getMember("subin");
-		
+		Member member = memberDAO.getMember(ID);
+		System.out.println("나오냐" + member);
+		System.out.println("나옴요" + ID);
 		model.addAttribute("memberInfo", member);
 		
 		return "member.mypage";
@@ -58,7 +58,7 @@ public class MemberController {
 	public String myBoardList(Model model, String ID, String keyField, String keyWord, String limit, Paging paging, String pageNo) {
 		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
 		
-		int IDX = memberDAO.getIDX("subin");
+		int IDX = memberDAO.getIDX(ID);
 		int listCount = memberDAO.countMyBoardList(IDX, keyField, keyWord);
 		
 		if(limit == null){
@@ -67,6 +67,7 @@ public class MemberController {
 			pageSize = Integer.parseInt(limit);
 			paging.setPageSize(pageSize);
 		}
+		
 		
 		paging.setPageNo(1); // 현재 페이지 번호
 		paging.setBlockSize(10);
@@ -103,7 +104,7 @@ public class MemberController {
 	public String myBookmarkList(Model model, String MID, String keyField, String keyWord, String limit, Paging paging, String pageNo) {
 		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
 		
-		int IDX = memberDAO.getIDX("subin");
+		int IDX = memberDAO.getIDX(MID);
 		
 		int listCount = memberDAO.countMyBookmarkList(IDX, keyField, keyWord);
 		
