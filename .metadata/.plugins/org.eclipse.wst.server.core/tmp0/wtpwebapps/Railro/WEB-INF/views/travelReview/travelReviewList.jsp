@@ -21,7 +21,6 @@
 	
 	<form name="listForm" action="travelReviewList.htm">
 		<input type="hidden" name="pageNo" value="" />
-	
 		<table class="list" width="100%">
 			<tr class="list-col" align="center" valign="middle">
 				<td width="10%">

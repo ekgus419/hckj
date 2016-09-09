@@ -103,7 +103,7 @@
 		)
 		VALUES
 		(
-			BOOKMARK_SEQ.NEXTVAL, #{MID}, #{BID}
+			BOOKMARK_SEQ.NEXTVAL, #{MID, jdbcType=NUMBER}, #{BID, jdbcType=NUMBER}
 		)
 	</insert>
 	

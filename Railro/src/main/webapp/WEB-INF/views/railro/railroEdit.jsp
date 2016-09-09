@@ -8,7 +8,7 @@
 					<div align="left">작성자</div>
 				</td>
 				<td>
-				 	${board.WRITER}
+				 	 ${board.ID}
 				</td>
 			</tr>
 			<tr>
@@ -17,10 +17,10 @@
 				</td>
 				<td>
 					<select name="SUBJECT">
-						<option>분류1</option>
-						<option>분류2</option>
-						<option>분류3</option>
-						<option>분류4</option>
+						<option value="분류1">분류1</option>
+						<option value="분류2">분류2</option>
+						<option value="분류3">분류3</option>
+						
 					</select>
 				</td>
 			</tr>
@@ -34,10 +34,12 @@
 			</tr>
 			<tr>
 				<td >
-					<div align="left" style="position: absolute">내 용</div>
+					<div align="left">내 용</div>
 				</td>
 				<td>
-					<textarea name="CONTENTS" cols="67" rows="10">${board.CONTENTS}</textarea>
+					<textarea name="CONTENTS" cols="67" rows="10">
+						${board.CONTENTS}
+					</textarea>
 				</td>
 			</tr>
 			<tr>

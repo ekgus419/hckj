@@ -17,13 +17,14 @@
 				</td>
 				<td>
 					<select name="SUBJECT">
-						<option>분류1</option>
-						<option>분류2</option>
-						<option>분류3</option>
-						<option>분류4</option>
+						<option value="분류1">분류1</option>
+						<option value="분류2">분류2</option>
+						<option value="분류3">분류3</option>
+						
 					</select>
 				</td>
-			</tr>			
+			</tr>
+			
 			<tr>
 				<td>
 					<div align="left">제 목</div>
@@ -52,7 +53,7 @@
 			</tr>
 		</table>
 		<div class="btn">
-			<input type="submit" value="등록" />
+			<input type="submit" value="등록"></input>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
 		</div>

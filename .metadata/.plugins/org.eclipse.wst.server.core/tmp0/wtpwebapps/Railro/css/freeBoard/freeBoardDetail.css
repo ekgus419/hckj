@@ -1,25 +1,43 @@
 @import url(layout.css);
 
+.content{
+}
+
 form{
 	font-size: 12px;
+	padding: 50px 200px;
+}
+
+.detail{
+	
+}
+
+span{
+	color: #8C8C8C;
+}
+
+tr, td{
+	padding: 0 10px;
+	border-bottom: 1px solid #eaeaea;
 }
 
 tr{
-	height: 40px;
-	line-height: 40px;	
+	height: 35px;
+	line-height: 35px;
 }
 
-table{
-	margin : 50px auto 10px auto;
+
+.title{
+	background-color: #eaeaea;
 }
 
-.button{
+.btn{
 	text-align: center;
-	margin: 50px auto;
+	margin-top: 40px;
 }
 
-.button button{
-	padding : 5px 8px;
-	border-radius: 4px;
-
+.btn span{
+	padding: 8px 20px;
+	border: 1px solid #ccc;
+    border-radius: 4px;
 }

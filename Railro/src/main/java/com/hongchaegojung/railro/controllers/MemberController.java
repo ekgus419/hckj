@@ -30,6 +30,7 @@ public class MemberController {
 	
 	@RequestMapping(value="/join.htm", method=RequestMethod.POST)
 	public String join(Member member) {
+		
 		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
 		memberDAO.join(member);
 		
@@ -40,16 +41,18 @@ public class MemberController {
 	public String login() {
 		return "member.login";
 	}
-	
-	// 시큐리티 추가하면 변경해야 할거
+
 	
 	@RequestMapping(value="/mypage.htm", method=RequestMethod.GET)
 	public String mypage(Model model, String ID) {
 		MemberDAO memberDAO = sqlSession.getMapper(MemberDAO.class);
 		Member member = memberDAO.getMember(ID);
+		
 		System.out.println("나오냐" + member);
 		System.out.println("나옴요" + ID);
-		model.addAttribute("memberInfo", member);
+		
+		model.addAttribute("memberInfo",member);
+	
 		
 		return "member.mypage";
 	}

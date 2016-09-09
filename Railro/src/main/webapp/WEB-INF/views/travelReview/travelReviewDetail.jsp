@@ -45,6 +45,8 @@
 			<span><a href="travelReviewList.htm?ID=${board.ID}">목록</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="travelReviewDel.htm?ID=${board.ID}">삭제</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span><a href="../member/insertBookmark.htm?ID=${board.ID}">글담기</a></span>
 		</div>
 	</form>
 </div>

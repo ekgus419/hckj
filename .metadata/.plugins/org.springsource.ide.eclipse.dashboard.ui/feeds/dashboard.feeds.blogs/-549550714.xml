@@ -5,7 +5,117 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-08-31T11:07:16Z</updated>
+  <updated>2016-09-08T14:13:49Z</updated>
+  <entry>
+    <title>Spring for Apache Kafka 1.1.0 Milestone 2 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/09/08/spring-for-apache-kafka-1-1-0-milestone-2-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Gary Russell</name>
+    </author>
+    <id>tag:spring.io,2016-09-08:2607</id>
+    <updated>2016-09-08T14:13:49Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;I am pleased to announce that the second milestone for Spring for Apache Kafka version 1.1.0.M2 is now available in the &lt;a href="https://repo.spring.io/milestone"&gt;spring milestone repo&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This includes some bug fixes and the following new features:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The ability to process a batch of messages (&lt;a href="https://spring.io/blog/2016/08/23/spring-for-apache-kafka-1-1-0-milestone-1-available"&gt;introduced in the last milestone&lt;/a&gt;) is now available when using the &lt;code&gt;@KafkaListener&lt;/code&gt; annotation, for example&amp;#8230;&amp;#8203;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@KafkaListener(id = "list", topics = "myTopic",
+                          containerFactory = "batchFactory")
+public void listen(List&amp;lt;String&amp;gt; list) {
+    ...
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You can now perform seek operations from the listener - this allows setting an initial offset when partitions are assigned by Kafka when using group management.
+You can also perform arbitrary seek operations after initialization.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;code&gt;KafkaTemplate&lt;/code&gt; now provides access to the &lt;code&gt;metrics&lt;/code&gt; and &lt;code&gt;partitionsFor&lt;/code&gt; methods on the &lt;code&gt;Producer&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In addition, the first milestone of &lt;code&gt;spring-integration-kafka&lt;/code&gt; version 2.1 is now available, utilizing the &lt;code&gt;spring-kafka&lt;/code&gt; 1.1.0.M2 version.
+It also supports batch payloads.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;See the &lt;a href="http://projects.spring.io/spring-kafka/"&gt;project page&lt;/a&gt; for links to documentation and more information.&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Stream Brooklyn.RC1 is available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/09/08/spring-cloud-stream-brooklyn-rc1-is-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Marius Bogoevici</name>
+    </author>
+    <id>tag:spring.io,2016-09-08:2608</id>
+    <updated>2016-09-08T13:59:36Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce the release of the first release candidate of the &lt;a href="http://cloud.spring.io/spring-cloud-stream"&gt;Spring Cloud Stream&lt;/a&gt; Brooklyn release train. Spring Cloud Stream Brooklyn.RC1 is available for use in the &lt;a href="http://repo.spring.io/libs-milestone-local/org/springframework/cloud/spring-cloud-stream-dependencies/Brooklyn.RC1"&gt;Spring Milestone repository&lt;/a&gt;, a detailed description of its features can be found in the &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.RC1/reference/htmlsingle/"&gt;reference documentation&lt;/a&gt;. Release notes are available &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-starters/wiki/Brooklyn-Release-Notes"&gt;here&lt;/a&gt; and include important information on the migration path.&lt;/p&gt;
+&lt;p&gt;As this release follows closely the previous &lt;a href="https://spring.io/blog/2599-spring-cloud-stream-brooklyn-m1-is-available/edit"&gt;milestone release&lt;/a&gt; it contains a small number of fixes, and one major addition, which is support for Kafka 0.10 via &lt;a href="http://docs.spring.io/spring-cloud-stream/docs/Brooklyn.RC1/reference/htmlsingle/#_using_the_binder_with_apache_kafka_0_10"&gt;drop-in dependency replacement&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We plan to have a general availability release in the next couple of weeks. &lt;/p&gt;
+&lt;p&gt;Due to the timeline, the following features (which were intended for 1.1.0.RELEASE) will be deferred to version 1.2 (development on which will start soon after the GA release):&lt;br/&gt;- add support for Reactive binders (including reactive producers and consumers, such as the ones introduced by the &lt;a href="https://github.com/reactor/reactor-kafka"&gt;Reactor Kafka&lt;/a&gt; project);&lt;br/&gt;- add support for developing applications using the &lt;a href="http://kafka.apache.org/documentation.html#streams"&gt;Kafka Stream API&lt;/a&gt;;&lt;/p&gt;
+&lt;p&gt;And, as always, we welcome feedback: either in &lt;a href="https://github.com/spring-cloud/spring-cloud-stream"&gt;GitHub&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/springcloudoss"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Session 1.2.2 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/09/07/spring-session-1-2-2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2016-09-07:2606</id>
+    <updated>2016-09-07T19:36:01Z</updated>
+    <content type="html">&lt;p&gt;I&amp;rsquo;m pleased to announce the release of Spring Session 1.2.2.RELEASE. &lt;a href="https://github.com/spring-projects/spring-session/issues?q=milestone%3A1.2.2"&gt;This release contains&lt;/a&gt; numerous bug fixes and trivial enhancements. Some of the highlights include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Fixes and improvements for supporting &lt;a href="http://docs.spring.io/spring-session/docs/current/reference/html5/#httpsession-multi"&gt;multiple sessions&lt;/a&gt; in the same browser when working with Tomcat 8.5 &lt;a href="https://github.com/spring-projects/spring-session/issues/605"&gt;#605&lt;/a&gt; &lt;a href="https://github.com/spring-projects/spring-session/issues/611"&gt;#611&lt;/a&gt; &lt;a href="https://github.com/spring-projects/spring-session/issues/615"&gt;#615&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Improvements for JDBC support to work with DB2 &lt;a href="https://github.com/spring-projects/spring-session/pull/600"&gt;#600&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-session/issues/594"&gt;Unregistered GemFire Instantiator causes deserialization issues on app restarts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-session/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-session/docs/current/reference/html5/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-session"&gt;Help&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - September 6th, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/09/06/this-week-in-spring-september-6th-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-09-06:2605</id>
+    <updated>2016-09-06T03:35:24Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in Shanghai, China and Hangzhou, China where I spoke at the &lt;em&gt;ginormous&lt;/em&gt; Huawei Connect conference in Shanghai and where I&amp;rsquo;ll be working with Alibaba and Huawei for a week or so. I&amp;rsquo;ll also be speaking at the Hangzhou Java User Group, too. &lt;/p&gt;
+&lt;p&gt;(Can you believe we&amp;rsquo;re already in September?? Seriously blown away! 2017 is just around the corner!)&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m also, technically, on vacation, so I&amp;rsquo;ll keep this post to a minimum! :) &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring REST Docs lead Andy Wilkinson &lt;a href="https://spring.io/blog/2016/08/31/spring-rest-docs-1-1-2-release"&gt;has just announced Spring REST Docs 1.1.2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Security ninja Joe Grandja just announced a &lt;a href="https://spring.io/blog/2016/08/31/spring-security-oauth2-client-authentication-issue"&gt;very important fix for Spring Security OAuth 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring ninja St?phane Nicoll put together a &lt;em&gt;very&lt;/em&gt; interesting article on how &lt;a href="https://spring.io/blog/2016/08/30/custom-test-slice-with-spring-boot-1-4"&gt;to write a custom spring Boot test &lt;em&gt;slice&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;our buddy Eugene is back at it again, with updates to his guide on &lt;a href="http://www.baeldung.com/spring-cloud-netflix-hystrix"&gt;using Spring Cloud&amp;rsquo;s Netflix Hystrix support&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;learn more about &lt;a href="https://www.iancollington.com/centralised-configuration-using-spring-boot/"&gt;Spring Cloud&amp;rsquo;s Config Server&lt;/a&gt; in this nice post from Ian Collington.&lt;/li&gt;
+  &lt;li&gt;I love &lt;a href="http://www.forbes.com/sites/andrewcave/2016/08/31/paul-maritzs-vision-for-pivotal-and-the-battle-with-amazon-over-open-source-cloud-computing"&gt;this Forbes.com interview with Paul Maritz&lt;/a&gt; (Pivotal&amp;rsquo;s founding CEO, current-chairman, former top Microsoft executive, and former VMWare CEO on his dreams&lt;/li&gt;
+  &lt;li&gt;I&amp;rsquo;m honored to be included on &lt;a href="http://techbeacon.com/java-leaders-you-should-follow-twitter"&gt;a TechBeacon roundup of Java folks in the Twitterverse you might like to follow&lt;/a&gt;. The list is pretty good. About half of those people are &lt;em&gt;definitely&lt;/em&gt; worth a follow, so check it out!&lt;/li&gt;
+  &lt;li&gt;I did a Chinese-language &lt;a href="http://www.infoq.com/cn/news/2016/09/bug-fix-speed-matters-microservi"&gt;interview with InfoQ on microservices and cloud-native applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this isn&amp;rsquo;t a Pivotal project, per se, but I thought it interesting; Netflix&amp;rsquo;s just announced a new tool &lt;a href="http://techblog.netflix.com/2016/09/netflix-data-benchmark-benchmarking.html"&gt;called NDBench Runner that helps to benchmark data stores&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This is interesting: a thin JavaScript library called Hybind &lt;a href="http://www.swisspush.org/web/2016/08/30/spring-data-rest-hybind"&gt;to bind to Spring Data REST / HATEOAS hypermedia resources&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The Baeldung blog has a nice post &lt;a href="http://www.baeldung.com/swagger-2-documentation-for-spring-rest-api"&gt;on setting up Swagger with a Spring REST API&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;There are multiple ways to acheive CORS in a Spring MVC application. If you&amp;rsquo;re using an older variant of Spring MVC, before Spring Framework 4.2, then this post on &lt;a href="http://www.veli.io/enable-cors-spring-boot"&gt;creating a &lt;code&gt;javax.servlet.Filter&lt;/code&gt; will work ideally&lt;/a&gt;. Otherwise, check out &lt;a href="https://spring.io/guides/gs/rest-service-cors/"&gt;this Spring guide on CORS&lt;/a&gt; and &lt;a href="https://spring.io/blog/2015/06/08/cors-support-in-spring-framework"&gt;this Spring announcement blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;wow! this is an exhaustive look &lt;a href="http://www.dineshonjava.com/2016/08/spring-boot-actuator-complete-guide.html#.V84zypN96EI"&gt;at Spring Boot&amp;rsquo;s Actuator&lt;/a&gt; on the &lt;em&gt;Dinesh on Java&lt;/em&gt; blog.&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring REST Docs 1.1.2.RELEASE</title>
     <link rel="alternate" href="https://spring.io/blog/2016/08/31/spring-rest-docs-1-1-2-release" />
@@ -691,257 +801,6 @@ public Flux&amp;lt;WordCount&amp;gt; count (@Input(Processor.Input) Flux&amp;lt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-spinnaker"&gt;Source&lt;/a&gt; | &lt;a href="https://circleci.com/gh/spring-cloud/spring-cloud-spinnaker"&gt;PR CI&lt;/a&gt; | &lt;a href="https://jenkins.spring.io/view/All/job/spring-cloud-spinnaker/"&gt;Master CI&lt;/a&gt; | &lt;a href="http://www.spinnaker.io/docs"&gt;Docs&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spinnaker"&gt;Questions&lt;/a&gt; | &lt;a href="http://join.spinnaker.io/"&gt;Slack&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - August 16th, 2016</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/08/16/this-week-in-spring-august-16th-2016" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-08-16:2585</id>
-    <updated>2016-08-16T12:43:32Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Since we last spoke I&amp;rsquo;ve presented at conferences and to customers in London, Beijing, Shanghai and Singapore - where I am now. Tomorrow, Wednesday, I&amp;rsquo;ll be speaking &lt;a href="http://www.meetup.com/singasug/events/233028592/"&gt;at the Singapore Spring Meetup&lt;/a&gt; - join me! It&amp;rsquo;s been quite a few days!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Data ninja Mark Paluch has done another &lt;a href="https://spring.io/blog/2016/08/15/managing-your-database-secrets-with-vault"&gt;great post looking at Spring Cloud Vault&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Security lead Rob Winch &lt;a href="https://spring.io/blog/2016/08/12/spring-security-4-1-2-released"&gt;just announced Spring Security 4.1.2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Integration ninja Artem Bilan just announced &lt;a href="https://spring.io/blog/2016/08/12/spring-for-apache-kafka-1-0-3-available-now"&gt;Spring for Apache Kafka 1.0.3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out this deck to &lt;a href="http://www.slideshare.net/SpringCentral/spring-boot-paypal"&gt;learn about how Spring Boot is used at PayPal&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I liked my buddy Richard Seroter&amp;rsquo;s review &lt;a href="https://seroter.wordpress.com/2016/08/09/enterprises-fighting-back-spring-boot-is-the-best-and-other-springone-platform-takeaways/"&gt;of our SpringOne Platform event a few weeks ago&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I loved Camille Fournier&amp;rsquo;s post on some real-life architecture patterns of microservices and, particularly, her observations on the challenges of &lt;a href="https://medium.com/@skamille/microservices-real-architectural-patterns-68bd83bbb6cd#.hkk55wlwk"&gt;a monorepo or a monolithic application and how it relates to human dynamics&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Mitsuyuki Shiiba, on the Hatena blog, put together a brief &lt;a href="http://bufferings.hatenablog.com/entry/2016/08/09/073802"&gt;and essential look at Pivotal&amp;rsquo;s Reactor project&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I&amp;rsquo;m seeing this a lot in the work I&amp;rsquo;m doing in the last few years, and thought this post was interesting: &lt;a href="http://www.information-age.com/technology/cloud-and-virtualisation/123461817/why-businesses-have-reignited-search-paas-field-dreams"&gt;why businesses are rediscovering PaaS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Some cool videos going up recently from the Cloud Foundry foundation, including this, &lt;a href="https://www.youtube.com/watch?v=Ue_ArLRs00E&amp;feature=youtu.be"&gt;Does Cloud Foundry Support Containers&lt;/a&gt;, and this, &lt;a href="https://www.cloudfoundry.org/grape-up-revisits-cloud-foundry-udp-voip-and-beyond/"&gt;Grape Up Revisits Cloud Foundry: UDP, VoIP, and Beyond!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I liked Rafael Salerno&amp;rsquo;s blog on &lt;a href="http://salerno-rafael.blogspot.sg/2016/08/spring-cloud-netflix-how-works-service.html"&gt;understanding service registration and discovery with Spring Cloud&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Managing your Database Secrets with Vault</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/08/15/managing-your-database-secrets-with-vault" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Mark Paluch</name>
-    </author>
-    <id>tag:spring.io,2016-07-19:2561</id>
-    <updated>2016-08-15T06:29:03Z</updated>
-    <content type="html">&lt;p&gt;In my previous post about &lt;a href="https://spring.io/blog/2016/06/24/managing-secrets-with-vault"&gt;Managing Secrets with Vault&lt;/a&gt;, I introduced you to Vault and how to store arbitrary secrets using the generic secret backend. Vault can manage more than just secret data like API keys, passwords, and other sensitive string-like data. Today we¡¯re taking a look at Vault¡¯s integration with databases, services, and certificates.&lt;/p&gt;&lt;h2&gt;&lt;a href="#database-credentials-tend-to-be-static" class="anchor" name="database-credentials-tend-to-be-static"&gt;&lt;/a&gt;Database credentials tend to be static&lt;/h2&gt;
-&lt;p&gt;When it comes to databases, the regular workflow of getting credentials applying for a database is asking some operator or a self-service tool to give you credentials so your application can log into the database. At this point, credentials are considered static. Credentials get usually changed in case the database is migrated or if there¡¯s a security breach. &lt;/p&gt;
-&lt;p&gt;With &lt;a href="https://github.com/spring-cloud-incubator/spring-cloud-vault-config"&gt;Spring Cloud Vault&lt;/a&gt; you can store username and password inside Vault instead your application configuration. &lt;a href="https://cloud.spring.io/spring-cloud-config/"&gt;Spring Config Server&lt;/a&gt; is also a good choice; it allows you to &lt;a href="http://cloud.spring.io/spring-cloud-static/spring-cloud.html#_encryption_and_decryption"&gt;store encrypted secrets&lt;/a&gt; in your config repository. Your credentials are protected.&lt;/p&gt;
-&lt;p&gt;There&amp;rsquo;s one caveat: Long-lived credentials are a good target for leakage. Leaked credentials can give access to an unintended party. A few databases implement restrictions on source hosts. In some cases, a database user can be restricted to a group of hosts. That restriction prevents access from other hosts. Still, every user and process that has access to a permitted machine can use the leaked credentials. But how do you discover that leakage? You might find the leak if your data was leaked to the public or the internet but that¡¯s not always the case. For other cases, the unintended party may read or change your data, and it¡¯s fairly sure the leak remains undiscovered for quite a while.&lt;/p&gt;
-&lt;p&gt;Let¡¯s make credentials short-lived.&lt;/p&gt;&lt;h2&gt;&lt;a href="#vault-and-databases" class="anchor" name="vault-and-databases"&gt;&lt;/a&gt;Vault and Databases&lt;/h2&gt;
-&lt;p&gt;Vault comes with a variety of integrations to different systems. Some of them integrate with &lt;a href="https://www.vaultproject.io/docs/secrets/postgresql/index.html"&gt;PostgreSQL&lt;/a&gt; and &lt;a href="https://www.vaultproject.io/docs/secrets/mysql/index.html"&gt;MySQL&lt;/a&gt; as secret backend. A secret backend can provide secrets. In this case, secret backend does not mean that secret data is stored in PosgreSQL/MySQL. It means that Vault can create (and revoke) users for databases on demand.&lt;/p&gt;
-&lt;p&gt;To generate database credentials, you need to set up a role first. Roles control the permission context for database credentials generation. A role defines the permissions that are associated with the credentials. That concept maps well if you run different applications and each application requires different database permissions.&lt;br/&gt;A role also defines the max lease time for obtained credentials. The lease is in Vault-speak the duration the credentials are valid. Vault revokes credentials from the database system once they are expired. Some databases, like PostgreSQL, have built-in support for password expiry with the &lt;code&gt;CREATE ROLE ¡¦ VALID UNTIL ¡¦&lt;/code&gt; clause.&lt;/p&gt;&lt;h2&gt;&lt;a href="#first-steps-with-vault-and-mysql" class="anchor" name="first-steps-with-vault-and-mysql"&gt;&lt;/a&gt;First steps with Vault and MySQL&lt;/h2&gt;
-&lt;p&gt;Now how to get started with Vault and MySQL?&lt;/p&gt;
-&lt;p&gt;You need an initialized and unsealed Vault server and a running MySQL server. See the &lt;a href="https://spring.io/blog/2016/06/24/managing-secrets-with-vault#wait-there-rsquo-s-hope"&gt;previous post&lt;/a&gt; how to setup Vault.&lt;/p&gt;
-&lt;p&gt;Then you can set up the MySQL backend along the connection details and role declaration:&lt;/p&gt;
-&lt;p&gt;First, mount the &lt;code&gt;mysql&lt;/code&gt; secret backend with &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$ vault mount mysql&#xD;
-Successfully mounted &amp;#39;mysql&amp;#39; at &amp;#39;mysql&amp;#39;!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Each mount correlates to one MySQL server. If you want to generate credentials for multiple servers, then you need to mount the backend multiple times using different paths.&lt;/p&gt;
-&lt;p&gt;Once the backend is mounted, you need to supply the control connection details that consist of a username/password combination and the host and port. The control connection is used to create and revoke users.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$ vault write mysql/config/connection \&#xD;
-	connection_url=&amp;quot;root:root@tcp(127.0.0.1:3306)/&amp;quot;&#xD;
-Success! Data written to: mysql/config/connection
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The role contains the scripts for user creation and the authorization. You can include multiple commands if you wish to do so. Vault will execute these commands on each credential generation:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$ vault write mysql/roles/readonly \&#xD;
-	sql=&amp;quot;CREATE USER &amp;#39;{{name}}&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED BY &amp;#39;{{password}}&amp;#39;;GRANT SELECT ON *.* TO &amp;#39;{{name}}&amp;#39;@&amp;#39;%&amp;#39;;&amp;quot;&#xD;
-Success! Data written to: mysql/roles/readonly
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Vault is now ready to generate credentials for the &lt;code&gt;readonly&lt;/code&gt; role. You can obtain credentials with&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$ vault read mysql/creds/readonly&#xD;
-Key            	Value&#xD;
----            	-----&#xD;
-lease_id       	mysql/creds/readonly/2e7cd1d0-e313-158e-c9a4-1dd3c3277642&#xD;
-lease_duration 	2592000&#xD;
-lease_renewable	true&#xD;
-password       	04cf512a-57f8-d146-9cf5-ec2bd829ca8c&#xD;
-username       	token-10a8b69f-a
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;and verify they work using the &lt;code&gt;mysql&lt;/code&gt; console application:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$ mysql -h 127.0.0.1 -utoken-10a8b69f-a -p04cf512a-57f8-d146-9cf5-ec2bd829ca8c&#xD;
-Welcome to the MySQL monitor.  Commands end with ; or \g.&#xD;
-Your MySQL connection id is 5&#xD;
-...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now that we know our Vault/MySQL integration is working we can use it inside a Spring Boot application with Spring Cloud Vault.&lt;/p&gt;
-&lt;p&gt;Grab a Spring Boot project. &lt;a href="http://start.spring.io"&gt;start.spring.io&lt;/a&gt; is a good starting point.&lt;/p&gt;
-&lt;p&gt;Include the Spring Cloud Vault Starter, the Database dependency, &lt;code&gt;spring-jdbc&lt;/code&gt; and the MySQL driver in your project.&lt;br/&gt;Add the following code to your build configuration file. These lines include all required dependencies.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Maven&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;dependency&amp;gt;&#xD;
-	&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-	&amp;lt;artifactId&amp;gt;spring-cloud-vault-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
-	&amp;lt;version&amp;gt;1.0.0.BUILD-SNAPSHOT&amp;lt;/version&amp;gt;&#xD;
-&amp;lt;/dependency&amp;gt;&#xD;
-&#xD;
-&amp;lt;dependency&amp;gt;&#xD;
-	&amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-	&amp;lt;artifactId&amp;gt;spring-cloud-vault-config-databases&amp;lt;/artifactId&amp;gt;&#xD;
-	&amp;lt;version&amp;gt;1.0.0.BUILD-SNAPSHOT&amp;lt;/version&amp;gt;&#xD;
-&amp;lt;/dependency&amp;gt;&#xD;
-&#xD;
-&amp;lt;dependency&amp;gt;&#xD;
-	&amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;&#xD;
-	&amp;lt;artifactId&amp;gt;spring-jdbc&amp;lt;/artifactId&amp;gt;&#xD;
-&amp;lt;/dependency&amp;gt;&#xD;
-&#xD;
-&amp;lt;dependency&amp;gt;&#xD;
-	&amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt;&#xD;
-	&amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt;&#xD;
-&amp;lt;/dependency&amp;gt;&#xD;
-&#xD;
-&amp;lt;repositories&amp;gt;&#xD;
-	&amp;lt;repository&amp;gt;&#xD;
-		&amp;lt;id&amp;gt;spring-snapshots&amp;lt;/id&amp;gt;&#xD;
-		&amp;lt;name&amp;gt;Spring Snapshots&amp;lt;/name&amp;gt;&#xD;
-		&amp;lt;url&amp;gt;https://repo.spring.io/libs-snapshot&amp;lt;/url&amp;gt;&#xD;
-		&amp;lt;snapshots&amp;gt;&#xD;
-			&amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;&#xD;
-		&amp;lt;/snapshots&amp;gt;&#xD;
-	&amp;lt;/repository&amp;gt;&#xD;
-&amp;lt;/repositories&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Gradle&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;repositories {&#xD;
-	maven {&#xD;
-		url &amp;#39;https://repo.spring.io/libs-snapshot&amp;#39;&#xD;
-	}&#xD;
-}&#xD;
-&#xD;
-dependencies {&#xD;
-	compile(&amp;quot;org.springframework.cloud:spring-cloud-vault-starter-config:1.0.0.BUILD-SNAPSHOT&amp;quot;)&#xD;
-	compile(&amp;quot;org.springframework.cloud:spring-cloud-vault-config-databases:1.0.0.BUILD-SNAPSHOT&amp;quot;)&#xD;
-	compile(&amp;quot;org.springframework:spring-jdbc:4.3.1.RELEASE&amp;quot;)&#xD;
-	compile(&amp;quot;mysql:mysql-connector-java:5.1.39&amp;quot;)&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href="#setup-the-configuration" class="anchor" name="setup-the-configuration"&gt;&lt;/a&gt;Setup the configuration&lt;/h2&gt;
-&lt;p&gt;Spring Cloud Vault uses by default the generic secret backend. In our case we don¡¯t need the generic backend. So we need to disable the &lt;code&gt;generic&lt;/code&gt; backend and enable the MySQL backend. All configuration needs to be specified in the bootstrap configuration. For this example we use &lt;code&gt;bootstrap.yml&lt;/code&gt; in &lt;code&gt;src/main/resources&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint yml"&gt;spring.cloud.vault:&#xD;
-		token: 9a63de21-8af7-311a-9a5a-151b6a0d4795&#xD;
-		scheme: http&#xD;
-		generic:&#xD;
-			enabled: false&#xD;
-		mysql:&#xD;
-			enabled: true&#xD;
-			role: readonly&#xD;
-&#xD;
-spring.datasource.url: jdbc:mysql://127.0.0.1:3306		
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We don¡¯t add any database credentials to the config file. These would usually be &lt;code&gt;spring.datasource.username&lt;/code&gt; and &lt;code&gt;spring.datasource.password&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;spring.cloud.vault.scheme&lt;/code&gt; is set to &lt;code&gt;http&lt;/code&gt; because we¡¯ve started Vault in plaintext HTTP mode (&lt;code&gt;spring.cloud.vault.scheme&lt;/code&gt; defaults to &lt;code&gt;https&lt;/code&gt;). Don¡¯t do this in production. Plaintext makes the whole secret story useless as all listeners on the network can see your secrets&lt;br/&gt;Please note that the token used in the example is the root token. &lt;/p&gt;
-&lt;p&gt;You can create new tokens with:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint bash"&gt;$ vault token-create&#xD;
-Key            	Value&#xD;
----            	-----&#xD;
-token          	728d26ae-53a6-d8b6-d7a0-c5f62238ea55&#xD;
-token_accessor 	2fd7dcba-39d0-04d3-8d6b-096c3529cf14&#xD;
-token_duration 	0&#xD;
-token_renewable	true&#xD;
-token_policies 	[root]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;That¡¯s apparently all you need to do for the Vault MySQL integration with your Spring Boot application.&lt;/p&gt;
-&lt;p&gt;Let¡¯s quickly add some code to your application so you can test the integration with real code.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;&lt;br/&gt;@SpringBootApplication&#xD;
-public class MySqlApplication {&#xD;
-	public static void main(String[] args) {&#xD;
-		SpringApplication.run(MySqlApplication.class, args);&#xD;
-	}&#xD;
-&#xD;
-	@Autowired&#xD;
-	DataSource dataSource;&#xD;
-&#xD;
-	@PostConstruct&#xD;
-	private void postConstruct() throws Exception {&#xD;
-&#xD;
-		try (Connection connection = dataSource.getConnection();&#xD;
-				Statement statement = connection.createStatement()) {&#xD;
-				&#xD;
-			ResultSet resultSet = statement.executeQuery(&amp;quot;SELECT CURRENT_USER();&amp;quot;);&#xD;
-			resultSet.next();&#xD;
-&#xD;
-			System.out.println(&amp;quot;Connection works with User: &amp;quot; + resultSet.getString(1));&#xD;
-&#xD;
-			resultSet.close();&#xD;
-		}&#xD;
-	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Then start your application. The code produces an output like:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Connection works with User: token-...&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Spring Cloud Vault obtains database credentials at startup and stores those using the default property names so Spring Boot can pick these.&lt;/p&gt;&lt;h2&gt;&lt;a href="#other-services" class="anchor" name="other-services"&gt;&lt;/a&gt;Other services&lt;/h2&gt;
-&lt;p&gt;Vault supports several other integrations. We¡¯ve built support for integrations we also support in Spring Boot.&lt;/p&gt;
-&lt;p&gt;You can use the following services and databases:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;PostgreSQL and MySQL - Generates credentials to be used with JDBC and Spring Data JPA&lt;/li&gt;
-  &lt;li&gt;Apache Cassandra - Generates credentials to be used with the Datastax client and Spring Data Cassandra&lt;/li&gt;
-  &lt;li&gt;Hashicorp Consul - Generates an ACL token that can be used together with Spring Cloud Consul&lt;/li&gt;
-  &lt;li&gt;RabbitMQ - Generates credentials to be used with Spring AMQP&lt;/li&gt;
-  &lt;li&gt;Amazon AWS - Generates Access key and secret key to be used with Spring Cloud AWS&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You can view a complete example in our examples repository at &lt;a href="https://github.com/mp911de/spring-cloud-vault-config-samples/tree/master/mysql"&gt;https://github.com/mp911de/spring-cloud-vault-config-samples&lt;/a&gt;.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security 4.1.2 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/08/12/spring-security-4-1-2-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2016-08-12:2584</id>
-    <updated>2016-08-12T14:51:50Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;I&amp;#8217;m pleased to announce the release of Spring Security 4.1.2.RELEASE which resolves some minor issues including fixes for the new &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.x/reference/htmlsingle/#mvc-requestmatcher"&gt;MvcRequestMatcher&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For details refer to the &lt;a href="https://github.com/spring-projects/spring-security/issues?q=is%3Aclosed+milestone%3A4.1.2"&gt;changelog&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id="contributions" class="sect0"&gt;&lt;a class="anchor" href="#contributions"&gt;&lt;/a&gt;Contributions&lt;/h1&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Without the community we couldn&amp;#8217;t be the successful project we are today. I&amp;#8217;d like to thank everyone that created issues &amp;amp; provided feedback.&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id="feedback-please" class="sect0"&gt;&lt;a class="anchor" href="#feedback-please"&gt;&lt;/a&gt;Feedback Please&lt;/h1&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If you have feedback on this release, I encourage you to reach out via &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;StackOverflow&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-security/issues"&gt;GitHub Issues&lt;/a&gt;, or via the comments section. You can also ping me &lt;a href="https://twitter.com/rob_winch"&gt;@rob_winch&lt;/a&gt; or Joe &lt;a href="https://twitter.com/joe_grandja"&gt;@joe_grandja&lt;/a&gt; on Twitter.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Of course the best feedback comes in the form of &lt;a href="https://github.com/spring-projects/spring-security/blob/master/CONTRIBUTING.md"&gt;contributions&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.2.RELEASE/reference/htmlsingle/"&gt;Reference&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/4.1.2.RELEASE/guides/html5/"&gt;Guides&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring for Apache Kafka 1.0.3 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/08/12/spring-for-apache-kafka-1-0-3-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Artem Bilan</name>
-    </author>
-    <id>tag:spring.io,2016-08-12:2583</id>
-    <updated>2016-08-12T14:36:36Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;It is my pleasure to announce that the Spring for Apache Kafka &lt;a href="https://github.com/spring-projects/spring-kafka/milestone/9?closed=1"&gt;1.0.3&lt;/a&gt; maintenance release &lt;a href="http://projects.spring.io/spring-kafka/"&gt;is available now&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As usual, thanks to the community for any feedback and contribution as always!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This release contains several important bug fixes, including a memory leak when using manual acknowledgments; therefore an upgrade is highly recommended.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The addressed issues can be found &lt;a href="https://github.com/spring-projects/spring-kafka/milestone/9?closed=1"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The project now properly handles kafka messages with &lt;code&gt;null&lt;/code&gt; payloads, which is a common use case used to "delete" a key when using
-&lt;a href="https://cwiki.apache.org/confluence/display/KAFKA/Log+Compaction"&gt;Kafka Log Compaction&lt;/a&gt;.
-&lt;code&gt;@KafkaListener&lt;/code&gt; methods will now receive a &lt;code&gt;null&lt;/code&gt; argument for such messages.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;code&gt;spring-messaging&lt;/code&gt; (and hence &lt;code&gt;spring-integration-kafka&lt;/code&gt;) doesn&amp;#8217;t support messages with a &lt;code&gt;null&lt;/code&gt; payload. In &lt;code&gt;spring-integration-kafka&lt;/code&gt; (version &lt;a href="https://github.com/spring-projects/spring-integration-kafka/milestone/3?closed=1"&gt;2.0.1&lt;/a&gt;)  such messages are represented with a payload of type &lt;code&gt;KafkaNull&lt;/code&gt; - see the &lt;a href="https://github.com/spring-projects/spring-integration-kafka"&gt;Project README&lt;/a&gt; for complete details.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka"&gt;GitHub&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-kafka"&gt;Help&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-kafka/reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</content>
   </entry>
 </feed>

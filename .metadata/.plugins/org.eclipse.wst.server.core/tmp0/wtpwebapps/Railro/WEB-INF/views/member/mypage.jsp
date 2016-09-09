@@ -9,7 +9,8 @@
 		</tr>
 		<tr>
 			<td>
-				<b>${memberInfo.NAME}</b>님
+				<b>${memberInfo.ID}</b>님
+				<%-- ${memberInfo.NAME} --%>
 			</td>
 		</tr>
 		<tr>

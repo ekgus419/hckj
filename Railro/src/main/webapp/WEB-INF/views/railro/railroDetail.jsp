@@ -1,11 +1,11 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <div id="content">
-	<form action="railroDetail.htm" method="post">
+	<form method="post" action="railroDetail.htm">
 		<table class="detail" width="100%">
 			<tr>
 				<td colspan="10">
-					 ${board.TITLE} 
+					${board.TITLE}
 					&nbsp;&nbsp;&nbsp;
 					|
 					&nbsp;&nbsp;&nbsp;
@@ -20,7 +20,7 @@
 				 	${board.REGDATE}
 				</td>
 				<td width="11%" style="text-align: right;">
-				 	조회 수 <b>${board.HIT}</b>
+				 	조회 수 <b>${board.HIT} </b>	
 				</td>
 				<td width="11%" style="text-align: right;">
 				 	댓글 수 3
@@ -28,7 +28,7 @@
 			</tr>
 			<tr>
 				<td colspan="10">
-					${board.CONTENTS}
+				 ${board.CONTENTS} 
 				</td>
 			</tr>
 			<tr>
@@ -38,13 +38,15 @@
 			</tr>
 		</table>
 		<div class="btn">
-			<span><a href="railroList.htm?ID=${board.ID}">목록</a></span>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="railroEdit.htm?ID=${board.ID}">수정</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span><a href="railroList.htm?ID=${board.ID}">목록</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<span><a href="railroDel.htm?ID=${board.ID}">삭제</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span><a href="../member/insertBookmark.htm?ID=${board.ID}">글담기</a></span>
 		</div>
 	</form>
 </div>

@@ -1,38 +1,52 @@
 <%@ page language="java" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
-<div class="content">
-	<form method="post" action="freeBoardDetail.htm" >
-		<table width="65%">
-    		<tr>
-				<td width="10%">작성자</td>
-				<td width="55%">
-				&nbsp;${board.WRITER}
+<div id="content">
+	<form method="post" action="freeBoardDetail.htm">
+		<table class="detail" width="100%">
+			<tr>
+				<td colspan="10">
+					${board.TITLE}
+					&nbsp;&nbsp;&nbsp;
+					|
+					&nbsp;&nbsp;&nbsp;
+					<span>${board.SUBJECT}</span>
 				</td>
 			</tr>
-    		<tr>
-     			<td>제 목</td>
-     			<td>
-				&nbsp;${board.TITLE}
+			<tr class="title">
+				<td width="65%" >
+				 	${board.WRITER}
 				</td>
-    		</tr>
-    		<tr>
-     			<td style="vertical-align: top">내 용</td>
-     			<td>
-				&nbsp;${board.CONTENTS}
+				<td width="13%" style="text-align: right;">
+				 	${board.REGDATE}
 				</td>
-    		</tr>
+				<td width="11%" style="text-align: right;">
+				 	조회 수 <b>${board.HIT} </b>	
+				</td>
+				<td width="11%" style="text-align: right;">
+				 	댓글 수 3
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10">
+				 ${board.CONTENTS} 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10">
+					첨부파일 목록
+				</td>
+			</tr>
 		</table>
-	</form> 
-	<div class="button">
-		<button><a href="freeBoardList.htm?ID=${board.ID}">목록</a></button>
-		&nbsp;&nbsp;
-		<button><a href="freeBoardEdit.htm?ID=${board.ID}">수정</a></button>
-		&nbsp;&nbsp;
-		<button><a href="freeBoardDel.htm?ID=${board.ID}">삭제</a></button>
-		&nbsp;&nbsp;
-		<button><a href="../member/insertBookmark.htm?ID=${board.ID}&&MID=subin">글담기</a></button>
-		&nbsp;&nbsp;
-		<button onclick="javasrcipt:history.go(-1)">취소</button>
-		
-	</div>
+		<div class="btn">
+			<span><a href="freeBoardEdit.htm?ID=${board.ID}">수정</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span><a href="javascript:void(0)" onclick="javascript:history.go(-1)">취소</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span><a href="freeBoardList.htm?ID=${board.ID}">목록</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span><a href="freeBoardDel.htm?ID=${board.ID}">삭제</a></span>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span><a href="../member/insertBookmark.htm?ID=${board.ID}">글담기</a></span>
+		</div>
+	</form>
 </div>
