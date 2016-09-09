@@ -64,11 +64,45 @@
 			</c:forEach>
 		</table>
 		
-		<security:authorize ifAllGranted="ROLE_USER">
+		
+		<%-- <security:authorize url="/admin">
+			<li><a href="/admin">관리자</a></li>
+		</security:authorize> --%>
+		
+		<%-- <security:authorize access="hasRole('ROLE_USER')">
+		    This text is only visible to a user
+		    <br/>
+		</security:authorize>
+		<security:authorize access="hasRole('ROLE_ADMIN')">
+		    This text is only visible to an admin
+		    <br/>
+		</security:authorize> --%>
+		
+		
+<%-- 원본 		<security:authorize ifAllGranted="ROLE_USER">
 		<div class="register-btn" align="right">
 			<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
 		</div>
+		</security:authorize> --%>
+		
+	<%-- 	<security:authorize access="hasRole('ROLE_USER')">
+		    This text is only visible to a user
+		    <br/>
 		</security:authorize>
+		<security:authorize access="hasRole('ROLE_ADMIN')">
+		    <div class="register-btn" align="right">
+				<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
+			</div>
+		</security:authorize>  --%>
+		
+		<security:authorize url="/admin">
+			<div class="register-btn" align="right">
+				<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
+			</div>
+		</security:authorize>
+
+
+		
 			
 		<div class="paging" align="center">
 			<jsp:include page="../inc/paging.jsp" flush="true">

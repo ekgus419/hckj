@@ -12,10 +12,7 @@
 		        authentication-failure-url="/member/login.htm?error"
 		        default-target-url="/index.htm"/>
 	<logout logout-success-url="/index.htm"/>
-	<intercept-url pattern="/freeBoard/*Reg.htm" access="ROLE_USER"/>
-	<intercept-url pattern="/railro/*Reg.htm" access="ROLE_USER"/>
-	<intercept-url pattern="/travelRiview/*Reg.htm" access="ROLE_USER"/>
-
+	<intercept-url pattern="/*/*Reg.htm" access="ROLE_USER"/>
 	<intercept-url pattern="/notice/noticeReg.htm" access="ROLE_ADMIN"/>
 
     <!-- access denied page -->

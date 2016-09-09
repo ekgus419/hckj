@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/security 
+						http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+						
+
+  <http pattern="/resource/**" security="none" />
+  <http auto-config="true">
+    <intercept-url pattern="/login**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+    <intercept-url pattern="/login-auto/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+    <intercept-url pattern="/admin**" access="ROLE_ADMIN" />
+    <intercept-url pattern="/**" access="ROLE_USER" />
+ 
+    <!-- access denied page -->
+    <access-denied-handler error-page="/403" />
+    <form-login login-page="/login" default-target-url="/"
+      authentication-failure-url="/login?error" username-parameter="username"
+      password-parameter="password" login-processing-url="/authentication" />
+    <logout invalidate-session="true" logout-success-url="/login?logout" />
+  </http>
+ 
+  <beans:bean id="passwordEncoder"  class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+    <beans:constructor-arg value="256" />
+  </beans:bean>
+ 
+  <authentication-manager>
+    <authentication-provider ref="authenticationProvider">
+    </authentication-provider>
+  </authentication-manager>
+</beans:beans>

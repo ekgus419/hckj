@@ -85,7 +85,7 @@
 		</div>
 		</security:authorize> --%>
 		
-	<%-- 	<security:authorize access="hasRole('ROLE_USER')">
+		<security:authorize access="hasRole('ROLE_USER')">
 		    This text is only visible to a user
 		    <br/>
 		</security:authorize>
@@ -93,15 +93,8 @@
 		    <div class="register-btn" align="right">
 				<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
 			</div>
-		</security:authorize>  --%>
+		</security:authorize> 
 		
-		<security:authorize url="/admin">
-			<div class="register-btn" align="right">
-				<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
-			</div>
-		</security:authorize>
-
-
 		
 			
 		<div class="paging" align="center">

@@ -12,20 +12,8 @@
 		        authentication-failure-url="/member/login.htm?error"
 		        default-target-url="/index.htm"/>
 	<logout logout-success-url="/index.htm"/>
-	<intercept-url pattern="/freeBoard/*Reg.htm" access="ROLE_USER"/>
-	<intercept-url pattern="/railro/*Reg.htm" access="ROLE_USER"/>
-	<intercept-url pattern="/travelRiview/*Reg.htm" access="ROLE_USER"/>
-
+	<intercept-url pattern="/*/*Reg.htm" access="ROLE_USER"/>
 	<intercept-url pattern="/notice/noticeReg.htm" access="ROLE_ADMIN"/>
-
-    <!-- access denied page -->
-    <access-denied-handler error-page="/403" />
-    <form-login login-page="/member/login.htm" default-target-url="/index.htm"
-		        authentication-failure-url="/member/login.htm?error"
-      password-parameter="password" login-processing-url="/authentication" />
-	<logout logout-success-url="/index.htm"/>
-
-
 </http>
 
 <authentication-manager>
