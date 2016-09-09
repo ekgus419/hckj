@@ -39,7 +39,7 @@
 			<td class="btn" colspan="100%"> 
 				<input type="button" onclick="location.href='myInfoEdit.htm'" value="개인정보수정"/>
 				&nbsp;&nbsp;&nbsp;
-				<input type="button" onclick="location.href=''" value="회원탈퇴"/>
+				<input type="button" onclick="location.href='${pageContext.request.contextPath}/index.htm'" value="회원탈퇴"/>
 			</td>
 		</tr>
 	</table>
