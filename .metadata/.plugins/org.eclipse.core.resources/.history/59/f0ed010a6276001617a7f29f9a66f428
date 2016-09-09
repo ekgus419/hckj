@@ -37,10 +37,10 @@
 			 "SELECT ID USERID, 'ROLE_USER' ROLE_NAME FROM MEMBER WHERE ID=?"  />
 		
 		<!-- 관리자 계정(DB에 추가하는거 공부 따로 해야함(개별 DB라 이렇게 했어). - 이렇게해도 상관은 없음) -->	
-	<!-- 	  <user-service>
+		  <user-service>
              <user name="admin" password="admin" authorities="ROLE_ADMIN"/>
           </user-service>
- -->
+
 
 
 			 

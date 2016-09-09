@@ -59,12 +59,6 @@
 		WHERE ID=#{ID}
 	</update>
 	
-	
-	<!--조회수 업데이트 -->
-	 <update id="setHitUpdate">
-	  UPDATE NOTICE SET HIT = HIT+1 WHERE ID=#{ID}
-	 </update>
-	
 	<delete id="delete">
 		DELETE FROM NOTICE WHERE ID=#{ID}
 	</delete>

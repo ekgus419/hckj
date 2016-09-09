@@ -95,13 +95,19 @@
 			</div>
 		</security:authorize>  --%>
 		
-		<security:authorize url="/admin">
+	<%-- 	<security:authorize access="hasRole('ROLE_AMDIN')">
 			<div class="register-btn" align="right">
 				<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
 			</div>
+		</security:authorize> --%>
+
+
+		<security:authorize ifAllGranted="ROLE_USER">
+		<div class="register-btn" align="right">
+			<span><a href="javascript:void(0)" onclick="location.href='noticeReg.htm'">글쓰기</a></span>
+		</div>
 		</security:authorize>
-
-
+		
 		
 			
 		<div class="paging" align="center">
